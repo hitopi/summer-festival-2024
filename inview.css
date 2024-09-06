@@ -114,15 +114,18 @@
     width: 150px;  /* 各クラッカーの幅 */
     position: absolute;
     bottom: 0px;
+    z-index: 1000;  /* 高い値を指定して前面に表示 */
 }
 
 .crackerstyle img:nth-of-type(1) {
     left: 0px;
+    z-index: 1000;  /* 高い値を指定 */
 }
 
 .crackerstyle img:nth-of-type(2) {
     right: 0px;
     transform: scale(-1, 1);  /* 画像を左右逆向きにする */
+    z-index: 1000;  /* 高い値を指定 */
 }
 
 /* メディアクエリ */
