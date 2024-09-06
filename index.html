@@ -2,20 +2,19 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>納涼祭・ホームページ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- ビューポートの設定：モバイル対応 -->
-    <meta name="description" content="ここにサイト説明を入れます"> <!-- サイトの説明を入れるメタタグ -->
-    
+    <meta name="description" content="納涼祭の紹介ページです"> <!-- サイトの説明を入れるメタタグ -->
+    <title>納涼祭・ホームページ</title>
+
     <!-- Vegasスライドショー用のCSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
-
     <!-- サイト全体のスタイルシート -->
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animation.css"> <!-- アニメーション用のスタイルシート -->
     <link rel="stylesheet" href="inview.css"> <!-- 要素が表示された時のアニメーション用のスタイルシート -->
 </head>
 
-<body class="home"> <!-- bodyタグにクラス"home"を追加して、このページがトップページであることを示す -->
+<body class="home">
 
 <header>
     <!-- ヘッダー部分 -->
@@ -27,14 +26,13 @@
 
     <!-- 言語選択メニュー -->
     <ul id="lang-nav">
-        <li><a href="">English</a></li> <!-- 英語版リンク -->
+        <li><a href="#">English</a></li> <!-- 英語版リンク -->
     </ul>
 
     <!-- スライドショー部分 -->
-	<div id="mainimg">
-	    <img src="https://github.com/hitopi/summer-festival-2024/raw/main/mainimg_bg.png" alt="" id="kazari">
-	</div>
-
+    <div id="mainimg">
+        <img src="https://github.com/hitopi/summer-festival-2024/raw/main/mainimg_bg.png" alt="" id="kazari">
+    </div>
 </header>
 
 <div id="container"> <!-- コンテンツ全体を囲むコンテナ -->
@@ -49,81 +47,75 @@
     </ul>
 </nav>
 
-<main> <!-- メインコンテンツ部分 -->
+<main>
+    <!-- イベント情報セクション -->
+    <section>
+        <h2 class="flag">イベント情報<span>Event</span></h2>
 
-<section>
-    <h2 class="flag">イベント情報<span>Event</span></h2>
-
-    <!-- イベントのリスト表示 -->
-    <div class="list-container">
-
-        <div class="list blur">
-            <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/%E7%B4%8D%E6%B6%BC%E7%A5%AD%E3%83%AD%E3%82%B4.png" alt=""></figure>
-            <div class="text">
-                <h4>流しそうめん・スーパ―ボールすくい</h4>
-                <p>ここに説明を入れます。サンプルテキスト。</p>
+        <!-- イベントのリスト表示 -->
+        <div class="list-container">
+            <div class="list blur">
+                <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/%E7%B4%8D%E6%B6%BC%E7%A5%AD%E3%83%AD%E3%82%B4.png" alt=""></figure>
+                <div class="text">
+                    <h4>流しそうめん・スーパ―ボールすくい</h4>
+                    <p>ここに説明を入れます。サンプルテキスト。</p>
+                </div>
+                <p class="btn"><a href="event.html">詳しくみる</a></p>
+                <span class="icon">女子医</span>
             </div>
-            <p class="btn"><a href="event.html">詳しくみる</a></p>
-            <span class="icon">女子医</span>
-        </div>
-	    
-        <div class="list blur">
-            <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/%E7%B4%8D%E6%B6%BC%E7%A5%AD%E3%83%AD%E3%82%B4.png" alt=""></figure>
-            <div class="text">
-                <h4>射的</h4>
-                <p>ここに説明を入れます。サンプルテキスト。</p>
+
+            <div class="list blur">
+                <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/%E7%B4%8D%E6%B6%BC%E7%A5%AD%E3%83%AD%E3%82%B4.png" alt=""></figure>
+                <div class="text">
+                    <h4>射的</h4>
+                    <p>ここに説明を入れます。サンプルテキスト。</p>
+                </div>
+                <p class="btn"><a href="event.html">詳しくみる</a></p>
+                <span class="icon">総機</span>
             </div>
-            <p class="btn"><a href="event.html">詳しくみる</a></p>
-            <span class="icon">総機</span>
-        </div>
-	    
-        <div class="list blur">
-            <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/%E7%B4%8D%E6%B6%BC%E7%A5%AD%E3%83%AD%E3%82%B4.png" alt=""></figure>
-            <div class="text">
-                <h4>わたあめ・たこ焼き</h4>
-                <p>ここに説明を入れます。サンプルテキスト。</p>
+
+            <div class="list blur">
+                <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/%E7%B4%8D%E6%B6%BC%E7%A5%AD%E3%83%AD%E3%82%B4.png" alt=""></figure>
+                <div class="text">
+                    <h4>わたあめ・たこ焼き</h4>
+                    <p>ここに説明を入れます。サンプルテキスト。</p>
+                </div>
+                <p class="btn"><a href="event.html">詳しくみる</a></p>
+                <span class="icon">生医<br>生専</span>
             </div>
-            <p class="btn"><a href="event.html">詳しくみる</a></p>
-            <span class="icon">生医<br>生専</span>
-        </div>
-	    
-        <div class="list blur">
-            <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/%E7%B4%8D%E6%B6%BC%E7%A5%AD%E3%83%AD%E3%82%B4.png" alt=""></figure>
-            <div class="text">
-                <h4>スイカ割り</h4>
-                <p>ここに説明を入れます。サンプルテキスト。</p>
+
+            <div class="list blur">
+                <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/%E7%B4%8D%E6%B6%BC%E7%A5%AD%E3%83%AD%E3%82%B4.png" alt=""></figure>
+                <div class="text">
+                    <h4>スイカ割り</h4>
+                    <p>ここに説明を入れます。サンプルテキスト。</p>
+                </div>
+                <p class="btn"><a href="event.html">詳しくみる</a></p>
+                <span class="icon">電生</span>
             </div>
-            <p class="btn"><a href="event.html">詳しくみる</a></p>
-            <span class="icon">電生</span>
+        </div>
+    </section>
+
+    <!-- 商品情報セクション -->
+    <section class="bg1">
+        <h2 class="cracker">今月のおすすめ商品<span>Shopping</span></h2>
+
+        <div class="list-container">
+            <div class="list-square blur">
+                <figure><img src="images/sample6.jpg" alt=""></figure>
+                <div class="text">
+                    <h4>Sample Title</h4>
+                    <p>ここに説明を入れます。サンプルテキスト。</p>
+                </div>
+                <span class="icon">おすすめ</span>
+            </div>
         </div>
 
-        <!-- 他のイベント情報は省略 -->
-        
-    </div>
-</section>
-
-<!-- 商品情報のセクション -->
-<section class="bg1">
-    <h2 class="cracker">今月のおすすめ商品<span>Shopping</span></h2>
-
-    <div class="list-container">
-        <div class="list-square blur">
-            <figure><img src="images/sample6.jpg" alt=""></figure>
-            <div class="text">
-                <h4>Sample Title</h4>
-                <p>ここに説明を入れます。サンプルテキスト。</p>
-            </div>
-            <span class="icon">おすすめ</span>
-        </div>
-        <!-- 他の商品情報は省略 -->
-    </div>
-    
-    <p class="btn"><a href="shopping.html">もっとみる<i class="fas fa-angle-double-right"></i></a></p>
-</section>
-
+        <p class="btn"><a href="shopping.html">もっとみる<i class="fas fa-angle-double-right"></i></a></p>
+    </section>
 </main>
 
-</div> <!--/#container-->
+</div> <!-- /#container -->
 
 <!-- jQueryとVegas.jsの読み込み -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
