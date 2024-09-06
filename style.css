@@ -749,6 +749,21 @@ p.btn {margin: 0;}
 	text-align: left;	/*左よせにする*/
 }
 
+.event-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-container img {
+    max-width: 150px; /* 画像の最大幅を調整 */
+    height: auto;
+    margin-left: 15px; /* テキストとの余白を調整 */
+}
+
+.event-container div {
+    flex: 1;
+}
 
 /*PAGE TOP（↑）設定
 ---------------------------------------------------------------------------*/
