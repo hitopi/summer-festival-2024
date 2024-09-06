@@ -46,5 +46,7 @@ $('.blur').on('inview', function() {
 
 //crackerスタイルが画面内にきたら、クラッカーアニメーションを実行する
 $('.cracker').on('inview', function() {
-	$('.cracker').append('<span class="crackerstyle"><img src="images/cracker.gif" alt=""><img src="images/cracker.gif" alt=""></span>');
+	$('.cracker').append('<span class="crackerstyle">
+	<img src="https://github.com/hitopi/summer-festival-2024/raw/main/cracker.gif" alt="">
+	<img src="https://github.com/hitopi/summer-festival-2024/raw/main/cracker.gif" alt=""></span>');
 });
