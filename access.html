@@ -1,66 +1,75 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>道の駅・物産館イメージ 無料ホームページテンプレート tp_bussan2</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="ここにサイト説明を入れます">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="アクセスページです">
+    <title>アクセス・ホームページ</title>
+
+    <!-- Vegasスライドショー用のCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+    <!-- サイト全体のスタイルシート -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css"> <!-- アニメーション用のスタイルシート -->
+    <link rel="stylesheet" href="inview.css"> <!-- 要素が表示された時のアニメーション用のスタイルシート -->
 </head>
 
-<body>
+<body class="access">
 
 <header>
-<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="道の駅"></a></h1>
+    <!-- ヘッダー部分 -->
+    <h1 id="logo">
+        <a href="index.html">
+            <img src="https://github.com/hitopi/summer-festival-2024/raw/main/%E7%B4%8D%E6%B6%BC%E7%A5%AD%E3%83%AD%E3%82%B4.png" alt="施設のロゴ">
+        </a>
+    </h1>
+
+    <!-- 言語選択メニュー -->
+    <ul id="lang-nav">
+        <li><a href="#">English</a></li> <!-- 英語版リンク -->
+    </ul>
 </header>
 
-<div id="container">
+<div id="container"> <!-- コンテンツ全体を囲むコンテナ -->
 
+<!-- メニューナビゲーション -->
 <nav id="header-menu">
-<ul>
-<li><a href="info.html">施設のご案内<i class="fas fa-info-circle"></i></a></li>
-<li><a href="shopping.html">お買い物<i class="fas fa-shopping-basket"></i></a></li>
-<li><a href="event.html">イベント<i class="far fa-calendar-alt"></i></a></li>
-<li><a href="access.html">アクセス<i class="fas fa-map-marker-alt"></i></a></li>
-</ul>
+    <ul>
+        <li><a href="info.html">施設のご案内<i class="fas fa-info-circle"></i></a></li>
+        <li><a href="shopping.html">お買い物<i class="fas fa-shopping-basket"></i></a></li>
+        <li><a href="event.html">イベント<i class="far fa-calendar-alt"></i></a></li>
+        <li><a href="access.html">アクセス<i class="fas fa-map-marker-alt"></i></a></li>
+    </ul>
 </nav>
 
 <main>
 
 <section>
 
-<h2>アクセス<span>Access</span></h2>
+    <h2>アクセス<span>Access</span></h2>
 
-<p>Google Mapで地図を埋め込みたい場合は<a href="https://template-party.com/file/pickup_googlemap.html">マニュアル</a>をご覧下さい。<br>
-<img src="images/dummy_map_main.jpg" alt=""></p>
+    <p>Google Mapで地図を埋め込みたい場合は<a href="https://template-party.com/file/pickup_googlemap.html">マニュアル</a>をご覧下さい。<br>
+        <img src="images/dummy_map_main.jpg" alt=""></p>
 
-<table class="ta1">
-<caption>大見出しが必要ならここを使います</caption>
-<tr>
-<th>見出し</th>
-<td>ここに説明など入れて下さい。サンプルテキスト。</td>
-</tr>
-<tr>
-<th>見出し</th>
-<td>ここに説明など入れて下さい。サンプルテキスト。</td>
-</tr>
-<tr>
-<th>見出し</th>
-<td>ここに説明など入れて下さい。サンプルテキスト。</td>
-</tr>
-<tr>
-<th>見出し</th>
-<td>ここに説明など入れて下さい。サンプルテキスト。</td>
-</tr>
-<tr>
-<th>見出し</th>
-<td>ここに説明など入れて下さい。サンプルテキスト。</td>
-</tr>
-<tr>
-<th>見出し</th>
-<td>ここに説明など入れて下さい。サンプルテキスト。</td>
-</tr>
-</table>
+    <table class="ta1">
+        <caption>アクセス情報</caption>
+        <tr>
+            <th>所在地</th>
+            <td>ここに説明など入れて下さい。サンプルテキスト。</td>
+        </tr>
+        <tr>
+            <th>交通手段</th>
+            <td>ここに説明など入れて下さい。サンプルテキスト。</td>
+        </tr>
+        <tr>
+            <th>最寄り駅</th>
+            <td>ここに説明など入れて下さい。サンプルテキスト。</td>
+        </tr>
+        <tr>
+            <th>駐車場</th>
+            <td>ここに説明など入れて下さい。サンプルテキスト。</td>
+        </tr>
+    </table>
 
 </section>
 
@@ -68,91 +77,44 @@
 
 <div id="footermenu">
 <ul>
-<li class="title">メニュー</li>
-<li><a href="index.html">ホーム</a></li>
-<li><a href="company.html">運営会社</a></li>
-<li><a href="info.html">施設のご案内</a></li>
-<li><a href="shopping.html">お買い物</a></li>
-<li><a href="event.html">イベント</a></li>
-<li><a href="access.html">アクセス</a></li>
-</ul>
-<ul>
-<li class="title">メニュー見出し</li>
-<li><a href="#">サンプルメニューサンプルメニュー</a></li>
-<li><a href="#">サンプルメニュー</a></li>
-<li><a href="#">サンプルメニュー</a></li>
-<li><a href="#">サンプルメニュー</a></li>
-</ul>
-<ul>
-<li class="title">メニュー見出し</li>
-<li><a href="#">サンプルメニューサンプルメニュー</a></li>
-<li><a href="#">サンプルメニュー</a></li>
-<li><a href="#">サンプルメニュー</a></li>
-<li><a href="#">サンプルメニュー</a></li>
-</ul>
-<ul>
-<li class="title">メニュー見出し</li>
-<li><a href="#">サンプルメニューサンプルメニュー</a></li>
-<li><a href="#">サンプルメニュー</a></li>
-<li><a href="#">サンプルメニュー</a></li>
-<li><a href="#">サンプルメニュー</a></li>
+    <li class="title">メニュー</li>
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="company.html">運営会社</a></li>
+    <li><a href="info.html">施設のご案内</a></li>
+    <li><a href="shopping.html">お買い物</a></li>
+    <li><a href="event.html">イベント</a></li>
+    <li><a href="access.html">アクセス</a></li>
 </ul>
 </div>
 <!--/#footermenu-->
 
 <footer>
-<small>Copyright&copy; <a href="index.html">道の駅</a> All Rights Reserved.</small>
-<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+    <small>Copyright&copy; <a href="index.html">道の駅</a> All Rights Reserved.</small>
+    <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
 </footer>
 
-<!--開閉ブロック-->
-<div id="menubar">
+<!-- jQueryとVegas.jsの読み込み -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
 
-<nav>
-<ul>
-<li><a href="index.html">ホーム</a></li>
-<li><a href="info.html">施設のご案内</a></li>
-<li><a href="shopping.html">お買い物</a></li>
-<li><a href="event.html">イベント</a></li>
-<li><a href="access.html">アクセス</a></li>
-</ul>
-</nav>
+<!-- Vegas.jsを使ってスライドショーを設定 -->
+<script>
+$(function() {
+    $('#mainimg').vegas({
+        slides: [
+            { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC1.jpg' },
+            { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC2.jpg' }
+        ],
+        transition: 'blur',
+        animation: 'kenburns',
+        delay: 6000,
+        animationDuration: 10000,
+        timer: false
+    });
+});
+</script>
 
-<p class="btn"><a href="contact.html">お問い合わせ</a></p>
-
-<div class="sh">
-<p>※900px未満のメニュー開閉時にのみ表示させたい情報があればここ（shボックスの中）に入れて下さい。<br>
-サンプルテキスト。サンプルテキスト。<br>
-サンプルテキスト。サンプルテキスト。<br>
-サンプルテキスト。サンプルテキスト。</p>
-</div>
-<!--/.sh-->
-
-</div>
-<!--/#menubar-->
-
-<!--開閉ボタン（ハンバーガーアイコン）-->
-<div id="menubar_hdr">
-<div>
-<span></span><span></span><span></span>
-</div>
-<p>MENU</p>
-</div>
-
-</div>
-<!--/#container-->
-
-<!--jQueryの読み込み-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<!--パララックス（inview）-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
-<script src="js/jquery.inview_set.js"></script>
-
-<!--このテンプレート専用のスクリプト-->
-<script src="js/main.js"></script>
-
-<!--ページの上部へ戻るボタン-->
+<!-- ページトップへ戻るボタン -->
 <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
 
 </body>
