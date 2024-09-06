@@ -5,8 +5,12 @@
     <title>納涼祭・ホームページ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- ビューポートの設定：モバイル対応 -->
     <meta name="description" content="ここにサイト説明を入れます"> <!-- サイトの説明を入れるメタタグ -->
-    <link rel="stylesheet" href="vegas.min.css"> <!-- Vegasスライドショー用のCSS -->
-    <link rel="stylesheet" href="style.css"> <!-- サイト全体のスタイルシート -->
+    
+    <!-- Vegasスライドショー用のCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+
+    <!-- サイト全体のスタイルシート -->
+    <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="animation.css"> <!-- アニメーション用のスタイルシート -->
     <link rel="stylesheet" href="inview.css"> <!-- 要素が表示された時のアニメーション用のスタイルシート -->
 </head>
@@ -20,7 +24,6 @@
             <img src="https://github.com/hitopi/summer-festival-2024/raw/main/%E7%B4%8D%E6%B6%BC%E7%A5%AD%E3%83%AD%E3%82%B4.png" alt="納涼祭ロゴ">
         </a>
     </h1>
-    <!-- ロゴ画像の設定（GitHub上の画像を使用） -->
 
     <!-- 言語選択メニュー -->
     <ul id="lang-nav">
@@ -28,9 +31,9 @@
     </ul>
 
     <!-- スライドショー部分 -->
-	<div id="mainimg">
-	    <img src="https://github.com/hitopi/summer-festival-2024/raw/main/mainimg_bg.png" alt="" id="kazari">
-	</div>
+    <div id="mainimg">
+        <!-- 背景にスライドショーを表示するため、img要素は不要 -->
+    </div>
 
 </header>
 
@@ -39,33 +42,21 @@
 <!-- メニューナビゲーション -->
 <nav id="header-menu">
     <ul>
-        <li><a href="info.html">施設のご案内<i class="fas fa-info-circle"></i></a></li> <!-- 施設案内リンク -->
-        <li><a href="shopping.html">お買い物<i class="fas fa-shopping-basket"></i></a></li> <!-- 買い物リンク -->
-        <li><a href="event.html">イベント<i class="far fa-calendar-alt"></i></a></li> <!-- イベントリンク -->
-        <li><a href="access.html">アクセス<i class="fas fa-map-marker-alt"></i></a></li> <!-- アクセスリンク -->
+        <li><a href="info.html">施設のご案内<i class="fas fa-info-circle"></i></a></li>
+        <li><a href="shopping.html">お買い物<i class="fas fa-shopping-basket"></i></a></li>
+        <li><a href="event.html">イベント<i class="far fa-calendar-alt"></i></a></li>
+        <li><a href="access.html">アクセス<i class="fas fa-map-marker-alt"></i></a></li>
     </ul>
 </nav>
 
-<main> <!-- メインコンテンツ部分－－－－－－－－－－－－－－ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー -->
+<main> <!-- メインコンテンツ部分 -->
 
 <section>
-    <h2 class="flag">イベント情報<span>Event</span></h2> <!-- イベント情報の見出し -->
+    <h2 class="flag">イベント情報<span>Event</span></h2>
 
     <!-- イベントのリスト表示 -->
     <div class="list-container">
 
-        <!-- 各イベントの情報 -->
-        <div class="list blur">
-            <figure><img src="images/sample1.jpg" alt=""></figure> <!-- イベント画像 -->
-            <div class="text">
-                <h4>Sample Title</h4> <!-- イベントのタイトル -->
-                <p>ここに説明を入れます。サンプルテキスト。</p> <!-- イベントの簡単な説明 -->
-            </div>
-            <p class="btn"><a href="event.html">詳しくみる</a></p> <!-- 詳細リンク -->
-            <span class="icon">12/15<br>〜<br>12/18</span> <!-- イベントの日付 -->
-        </div>
-
-        <!-- 以下同様に他のイベント情報 -->
         <div class="list blur">
             <figure><img src="images/sample1.jpg" alt=""></figure>
             <div class="text">
@@ -73,89 +64,58 @@
                 <p>ここに説明を入れます。サンプルテキスト。</p>
             </div>
             <p class="btn"><a href="event.html">詳しくみる</a></p>
-            <span class="icon">12/3</span>
+            <span class="icon">12/15<br>〜<br>12/18</span>
         </div>
 
-        <div class="list blur">
-            <figure><img src="images/sample1.jpg" alt=""></figure>
-            <div class="text">
-                <h4>Sample Title</h4>
-                <p>ここに説明を入れます。サンプルテキスト。</p>
-            </div>
-            <p class="btn"><a href="event.html">詳しくみる</a></p>
-            <span class="icon">3日〜<br>5日</span>
-        </div>
-
-        <div class="list blur">
-            <figure><img src="images/sample1.jpg" alt=""></figure>
-            <div class="text">
-                <h4>Sample Title</h4>
-                <p>ここに説明を入れます。サンプルテキスト。</p>
-            </div>
-            <p class="btn"><a href="event.html">詳しくみる</a></p>
-        </div>
-
+        <!-- 他のイベント情報は省略 -->
+        
     </div>
-    <!--/.list-container-->
-
 </section>
 
-<!-- 商品情報のセクション－－－－－－－－－－－－－－ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー -->
+<!-- 商品情報のセクション -->
 <section class="bg1">
-    <h2 class="cracker">今月のおすすめ商品<span>Shopping</span></h2> <!-- ショッピング情報の見出し -->
+    <h2 class="cracker">今月のおすすめ商品<span>Shopping</span></h2>
 
-    <!-- 商品リスト -->
     <div class="list-container">
-
-        <!-- 各商品情報 -->
         <div class="list-square blur">
-            <figure><img src="images/sample6.jpg" alt=""></figure> <!-- 商品画像 -->
-            <div class="text">
-                <h4>Sample Title</h4> <!-- 商品名 -->
-                <p>ここに説明を入れます。サンプルテキスト。</p> <!-- 商品説明 -->
-            </div>
-            <span class="icon">おすすめ</span> <!-- おすすめアイコン -->
-        </div>
-
-        <!-- 以下同様に他の商品情報 -->
-        <div class="list-square blur">
-            <figure><img src="images/sample7.jpg" alt=""></figure>
+            <figure><img src="images/sample6.jpg" alt=""></figure>
             <div class="text">
                 <h4>Sample Title</h4>
                 <p>ここに説明を入れます。サンプルテキスト。</p>
             </div>
+            <span class="icon">おすすめ</span>
         </div>
-
-        <div class="list-square blur">
-            <figure><img src="images/sample8.jpg" alt=""></figure>
-            <div class="text">
-                <h4>Sample Title</h4>
-                <p>ここに説明を入れます。サンプルテキスト。</p>
-            </div>
-        </div>
-
+        <!-- 他の商品情報は省略 -->
     </div>
-    <!--/.list-container-->
-
-    <p class="btn"><a href="shopping.html">もっとみる<i class="fas fa-angle-double-right"></i></a></p> <!-- 商品の詳細ページへのリンク -->
-
+    
+    <p class="btn"><a href="shopping.html">もっとみる<i class="fas fa-angle-double-right"></i></a></p>
 </section>
 
 </main>
 
-</div>
-<!--/#container-->
+</div> <!--/#container-->
 
-<script src="jquery.min.js"></script> <!-- jQueryの読み込み -->
-<script src="vegas.min.js"></script>  <!-- Vegasのスライドショー用スクリプト -->
-<script src="vegas.js"></script>      <!-- スライドショーの設定用スクリプト -->
+<!-- jQueryとVegas.jsの読み込み -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
 
-<!-- パララックス効果用のスクリプト（inview） -->
-<script src="jquery.inview.min.js"></script>
-<script src="jquery.inview_set.js"></script>
-
-<!-- このページ専用のカスタムスクリプト -->
-<script src="main.js"></script>
+<!-- Vegas.jsを使ってスライドショーを設定 -->
+<script>
+$(function() {
+    $('#mainimg').vegas({
+        slides: [
+            { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC1.jpg' },
+            { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC2.jpg' },
+            { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC3.jpg' }
+        ],
+        transition: 'blur',  // 切り替え時のエフェクト
+        animation: 'kenburns',  // スライド中のアニメーション
+        delay: 6000,  // 各スライドの表示時間
+        animationDuration: 10000,  // アニメーションの表示時間
+        timer: false  // タイマー非表示
+    });
+});
+</script>
 
 <!-- ページトップへ戻るボタン -->
 <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
