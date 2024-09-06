@@ -1,52 +1,48 @@
+$(function() {
+    // main h2が画面内にきたら、スタイルlinestyleを適用する
+    $('main h2').on('inview', function() {
+        $(this).addClass('linestyle');
+    });
 
-//main h2が画面内にきたら、スタイルlinestyleを適用する
-$('main h2').on('inview', function() {
-	$(this).addClass('linestyle');
-});
+    // 各スタイルのinviewアクション
+    $('.up').on('inview', function() {
+        $(this).addClass('upstyle');
+    });
 
-//upスタイルが画面内にきたら、スタイルupstyleを適用する
-$('.up').on('inview', function() {
-	$(this).addClass('upstyle');
-});
+    $('.down').on('inview', function() {
+        $(this).addClass('downstyle');
+    });
 
-//downスタイルが画面内にきたら、スタイルdownstyleを適用する
-$('.down').on('inview', function() {
-	$(this).addClass('downstyle');
-});
+    $('.left').on('inview', function() {
+        $(this).addClass('leftstyle');
+    });
 
-//leftスタイルが画面内にきたら、スタイルleftstyleを適用する
-$('.left').on('inview', function() {
-	$(this).addClass('leftstyle');
-});
+    $('.right').on('inview', function() {
+        $(this).addClass('rightstyle');
+    });
 
-//rightスタイルが画面内にきたら、スタイルrightstyleを適用する
-$('.right').on('inview', function() {
-	$(this).addClass('rightstyle');
-});
+    $('.transform1').on('inview', function() {
+        $(this).addClass('transform1style');
+    });
 
-//transform1スタイルが画面内にきたら、スタイルtransform1styleを適用する
-$('.transform1').on('inview', function() {
-	$(this).addClass('transform1style');
-});
+    $('.transform2').on('inview', function() {
+        $(this).addClass('transform2style');
+    });
 
-//transform2スタイルが画面内にきたら、スタイルtransform2styleを適用する
-$('.transform2').on('inview', function() {
-	$(this).addClass('transform2style');
-});
+    $('.transform3').on('inview', function() {
+        $(this).addClass('transform3style');
+    });
 
-//transform3スタイルが画面内にきたら、スタイルtransform3styleを適用する
-$('.transform3').on('inview', function() {
-	$(this).addClass('transform3style');
-});
+    // blurスタイルが画面内にきたら、スタイルblurstyleを適用する
+    $('.blur').on('inview', function() {
+        $(this).addClass('blurstyle');
+    });
 
-//blurスタイルが画面内にきたら、スタイルblurstyleを適用する
-$('.blur').on('inview', function() {
-	$(this).addClass('blurstyle');
-});
-
-//crackerスタイルが画面内にきたら、クラッカーアニメーションを実行する
-$('.cracker').on('inview', function() {
-	$('.cracker').append('<span class="crackerstyle">
-	<img src="https://github.com/hitopi/summer-festival-2024/raw/main/cracker.gif" alt="">
-	<img src="https://github.com/hitopi/summer-festival-2024/raw/main/cracker.gif" alt=""></span>');
+    // クラッカーアニメーション
+    $('.cracker').on('inview', function() {
+        if (!$(this).hasClass('added')) {
+            $(this).addClass('added');
+            $(this).append('<span class="crackerstyle"><img src="https://github.com/hitopi/summer-festival-2024/raw/main/cracker.gif" alt=""><img src="https://github.com/hitopi/summer-festival-2024/raw/main/cracker.gif" alt=""></span>');
+        }
+    });
 });
