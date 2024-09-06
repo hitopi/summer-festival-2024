@@ -30,9 +30,9 @@
 <!-- メニューナビゲーション -->
 <nav id="header-menu">
     <ul>
-        <li><a href="info.html">施設のご案内<i class="fas fa-info-circle"></i></a></li>
-        <li><a href="shopping.html">お買い物<i class="fas fa-shopping-basket"></i></a></li>
-        <li><a href="event.html">イベント<i class="far fa-calendar-alt"></i></a></li>
+        <li><a href="info.html">ご案内<i class="fas fa-info-circle"></i></a></li>
+        <li><a href="event.html">出し物<i class="fas fa-theater-masks"></i>
+        <li><a href="menu.html">食事<i class="fas fa-utensils"></i></a></li>
         <li><a href="access.html">アクセス<i class="fas fa-map-marker-alt"></i></a></li>
     </ul>
 </nav>
@@ -87,27 +87,6 @@
 </main>
 
 </div> <!-- /#container -->
-
-<!-- jQueryとVegas.jsの読み込み -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
-
-<!-- Vegas.jsを使ってスライドショーを設定 -->
-<script>
-$(function() {
-    $('#mainimg').vegas({
-        slides: [
-            { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC1.jpg' },
-            { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC2.jpg' }
-        ],
-        transition: 'blur',
-        animation: 'kenburns',
-        delay: 6000,
-        animationDuration: 10000,
-        timer: false
-    });
-});
-</script>
 
 <!-- ページトップへ戻るボタン -->
 <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
