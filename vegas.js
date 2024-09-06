@@ -1,11 +1,9 @@
 $(function() {
     $('#mainimg').vegas({
         slides: [
-            { src: './images/1.jpg' },  // 1枚目の写真指定
-            { src: './images/2.jpg' },  // 2枚目の写真指定
-            { src: './images/3.jpg' },  // 3枚目の写真指定
-            { src: './images/4.jpg' },  // 4枚目の写真追加
-            { src: './images/5.jpg' },  // 5枚目の写真追加
+            { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC1.jpg' },  // 1枚目の写真指定
+            { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC2.jpg' },  // 2枚目の写真指定
+            { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC3.jpg' },  // 3枚目の写真指定
         ],
         transition: 'blur',             // 切り替え時のトランジション
         animation: 'kenburns',           // スライド中のアニメーション
