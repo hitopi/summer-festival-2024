@@ -95,18 +95,21 @@ main > article,
 ---------------------------------------------------------------------------*/
 #mainimg {
     width: 100vw;
-    height: 60vh;	/*高さ。画面の60%。*/
+    height: 60vh;
+    margin: 0; /* 余分なマージンを削除 */
+    padding: 0; /* 余分なパディングを削除 */
+    position: relative;
+    overflow: hidden; /* コンテンツがはみ出さないようにする */
 }
 
-/*スライドショー下部にある曲線の飾り*/
 #mainimg #kazari {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: auto;
-    margin: 0; /* 余計なマージンを削除 */
-    padding: 0; /* 余計なパディングを削除 */
+    margin: 0; /* 余分なマージンを削除 */
+    padding: 0; /* 余分なパディングを削除 */
 }
 
 /*header（ロゴなどが入った最上段のブロック）
