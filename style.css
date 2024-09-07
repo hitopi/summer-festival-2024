@@ -550,6 +550,16 @@ ul.submenu li a:hover {
 	margin-right: 0;	/*右側の余白をなくす*/
 }
 
+/* 新しい5列表示の設定 */
+.list {
+    width: 19%;  /* 5つのアイテムを横並びにするための幅 */
+    margin-right: 1%;  /* アイテム間の間隔を調整 */
+}
+
+.list:nth-of-type(5n) {
+    margin-right: 0;  /* 5つ目のアイテムに右マージンを付けない */
+}
+
 /*ボックス内のfigure画像*/
 .list figure {
 	margin: -20px -20px 0;	/*上の.listで設定しているpadding分を相殺して画像をブロックいっぱいに出す*/
