@@ -545,8 +545,8 @@ ul.submenu li a:hover {
     padding: 20px;
     background: #fff;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
-    width: 19%;  /* 幅を強制的に適用 */
-    margin-right: 1%;  /* マージンを強制的に適用 */
+    width: 19% !important;  /* 幅を強制的に適用 */
+    margin-right: 1% !important;  /* マージンを強制的に適用 */
     box-sizing: border-box;
 }
 
@@ -557,12 +557,12 @@ ul.submenu li a:hover {
 /* 画面幅が900px以下になったときに2つずつ表示 */
 @media screen and (max-width: 900px) {
     .list {
-        width: 48%;
-        margin-right: 4%;
+        width: 48% !important;
+        margin-right: 4% !important;
     }
 
     .list:nth-of-type(2n) {
-        margin-right: 0;
+        margin-right: 0 !important;
     }
 }
 
