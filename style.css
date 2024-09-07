@@ -858,18 +858,24 @@ p.btn {margin: 0;}
 ---------------------------------------------------------------------------*/
 .bg1 {
     background: #fff5e1 url(https://raw.githubusercontent.com/hitopi/summer-festival-2024/main/%E3%83%89%E3%83%83%E3%83%88.png);
-    background-size: cover; /* 背景画像が画面全体にフィットするように */
-    background-position: center; /* 背景画像の位置を中央に調整 */
-    width: 100vw; /* 画面全体の横幅に合わせる */
-    margin-left: calc(50% - 50vw); /* 背景を画面の左端に合わせる */
-    padding: 50px 0; /* 上下の余白を追加 */
+    background-size: cover;
+    background-position: center;
+    width: 100vw; /* 背景を画面全体に広げる */
+    margin-left: calc(50% - 50vw); /* 背景を画面の左端に揃える */
+    padding: 50px 0;
 }
 
 .bg1 .content {
-    width: 100%; /* コンテンツ自体の幅は通常の設定 */
-    max-width: 1200px; /* 必要に応じて最大幅を設定 */
-    margin: 0 auto; /* 中央に配置 */
-    padding: 0 20px; /* コンテンツの左右余白 */
+    width: 100%;
+    max-width: 1200px; /* イベント情報セクションと同じ最大幅に設定 */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /*その他
