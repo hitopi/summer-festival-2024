@@ -111,5 +111,25 @@
 <!-- ページトップへ戻るボタン -->
 <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
 
+<!-- 要素が表示されたらblurstyleを適用するスクリプト -->
+<script>
+    $(document).ready(function() {
+        // スクロール時に要素が画面内に表示されたら blurstyle クラスを追加する
+        $('.blur').each(function() {
+            var $this = $(this);
+            $(window).on('scroll', function() {
+                var top_of_element = $this.offset().top;
+                var bottom_of_element = $this.offset().top + $this.outerHeight();
+                var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+                var top_of_screen = $(window).scrollTop();
+
+                if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
+                    $this.addClass('blurstyle');
+                }
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
