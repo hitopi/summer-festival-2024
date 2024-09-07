@@ -531,11 +531,10 @@ ul.submenu li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 100%;  /* コンテナの幅を100%に */
-    max-width: 100%;  /* コンテナの最大幅を100%に */
-    box-sizing: border-box;  /* パディングを幅に含める */
-    margin: 0;  /* リセット */
-    padding: 0;  /* リセット */
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .list {
@@ -546,24 +545,24 @@ ul.submenu li a:hover {
     padding: 20px;
     background: #fff;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
-    width: calc(100% / 5 - 2%);  /* 5つ並べるための幅を調整 */
-    margin-right: 1%;  /* アイテム間の間隔を調整 */
-    box-sizing: border-box;  /* パディングを幅に含める */
+    width: 19%;  /* 5つのアイテムを1行に収める */
+    margin-right: 1%;  /* アイテム間の余白 */
+    box-sizing: border-box;  /* パディングとボーダーを幅に含める */
 }
 
 .list:nth-of-type(5n) {
-    margin-right: 0;  /* 5番目のアイテムの右マージンをなくす */
+    margin-right: 0;  /* 5番目のアイテムの右マージンを削除 */
 }
 
-/* 画面幅が900px以下になった場合に2つずつ表示 */
+/* 画面幅が900px以下になったときに2つずつ表示 */
 @media screen and (max-width: 900px) {
     .list {
-        width: 48%;  /* 2つのアイテムが横並びになるように幅を調整 */
-        margin-right: 4%;  /* アイテム間の余白を調整 */
+        width: 48%;
+        margin-right: 4%;
     }
-    
+
     .list:nth-of-type(2n) {
-        margin-right: 0;  /* 偶数番目のアイテムの右マージンを0に */
+        margin-right: 0;
     }
 }
 
