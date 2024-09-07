@@ -570,7 +570,7 @@ ul.submenu li a:hover {
 .list-container-2 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;  /* 右側に余白が残らないように調整 */
+    justify-content: flex-start;  /* 要素を左詰めに配置 */
     width: 100%;
     box-sizing: border-box;
     margin: 0;
@@ -585,13 +585,13 @@ ul.submenu li a:hover {
     padding: 20px;
     background: #fff;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
-    width: 32% !important;  /* 3つで1列にするための幅 */
+    width: 32.3% !important;  /* 3つで1列にするための微調整 */
     margin-right: 1% !important;  /* 3つのアイテム間のマージン */
     box-sizing: border-box;
 }
 
 .list-container-2 .list:nth-of-type(3n) {
-    margin-right: 0;  /* 3番目のアイテムの右マージンを削除 */
+    margin-right: 0 !important;  /* 3番目のアイテムの右マージンを削除 */
 }
 
 /* 画面幅が900px以下になったときに2つずつ表示 */
