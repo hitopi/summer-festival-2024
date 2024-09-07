@@ -571,31 +571,46 @@ ul.submenu li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
     padding: 20px;
-    max-width: 1200px;  /* コンテナの最大幅 */
+    background: #fff;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
+    width: 30% !important;  /* 3つで1列にするための幅 */
+    margin-right: 1.5% !important;  /* 3つのアイテム間のマージン */
     box-sizing: border-box;
 }
 
-.list-container-2 .list {
-    background-color: #f0f0f0;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 48%;  /* 2カラムのための幅設定 */
-    box-sizing: border-box;
-    transition: transform 0.3s, box-shadow 0.3s;
+.list:nth-of-type(3n) {
+    margin-right: 0;  /* 3番目のアイテムの右マージンを削除 */
 }
 
-.list-container-2 .list:hover {
-    transform: scale(1.05);  /* ホバー時に少し拡大 */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* ホバー時の影の強調 */
+/* 画面幅が900px以下になったときに2つずつ表示 */
+@media screen and (max-width: 900px) {
+    .list {
+        width: 48% !important;
+        margin-right: 4% !important;
+    }
+
+    .list:nth-of-type(2n) {
+        margin-right: 0 !important;
+    }
 }
 
-/* 画面幅が600px未満のときのレスポンシブ対応 */
+/* 画面幅が600px以下になったときに1つずつ表示 */
 @media screen and (max-width: 600px) {
-    .list-container-2 .list {
-        width: 100%;  /* 小さな画面では1カラムに変更 */
+    .list {
+        width: 100% !important;
+        margin-right: 0 !important;
     }
 }
 
