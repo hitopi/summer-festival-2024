@@ -100,11 +100,14 @@ main > article,
 
 /*スライドショー下部にある曲線の飾り*/
 #mainimg #kazari {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin: 0; /* 余計なマージンを削除 */
+    padding: 0; /* 余計なパディングを削除 */
 }
-
 
 /*header（ロゴなどが入った最上段のブロック）
 ---------------------------------------------------------------------------*/
