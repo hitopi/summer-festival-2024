@@ -545,7 +545,7 @@ ul.submenu li a:hover {
     padding: 20px;
     background: #fff;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
-    width: 19%;  /* 5つのアイテムを1行に収める */
+    width: 15%;  /* 5つのアイテムを1行に収める */
     margin-right: 1%;  /* アイテム間の余白 */
     box-sizing: border-box;  /* パディングとボーダーを幅に含める */
 }
