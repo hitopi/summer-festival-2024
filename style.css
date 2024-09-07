@@ -529,9 +529,11 @@ ul.submenu li a:hover {
 /*listブロック全体を囲むブロック（※.list-squareでも使用しています）*/
 .list-container {
     display: flex;
-    flex-wrap: wrap;    /* 折り返しを有効 */
-    justify-content: space-between;  /* スペースを均等に配置 */
-    max-width: 100%;  /* コンテナの最大幅を100%に */
+    flex-wrap: wrap;  /* 折り返しを有効にする */
+    justify-content: space-between;  /* アイテム間のスペースを均等に */
+    width: 100%;  /* コンテナの幅を100%に */
+    max-width: 100%;  /* 最大幅を100%に */
+    box-sizing: border-box;  /* パディングとボーダーを幅に含める */
 }
 
 .list {
@@ -542,12 +544,13 @@ ul.submenu li a:hover {
     padding: 20px;
     background: #fff;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
-    width: 19%;  /* 5つのアイテムを横並びにするための幅 */
-    margin-right: 1%;  /* アイテム間の間隔を調整 */
+    width: 19%;  /* 5つの要素が1列に並ぶための幅 */
+    margin-right: 1%;  /* アイテム間の間隔を確保 */
+    box-sizing: border-box;  /* パディングとボーダーを幅に含める */
 }
 
 .list:nth-of-type(5n) {
-    margin-right: 0;  /* 5番目のアイテムの右マージンを0に */
+    margin-right: 0;  /* 5番目のアイテムの右マージンをなくす */
 }
 
 /* 画面幅が900px以下になった場合に2つずつ表示 */
