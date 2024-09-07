@@ -867,7 +867,7 @@ p.btn {margin: 0;}
 
 .bg1 .content {
     width: 100%;
-    max-width: 1800px; /* イベント情報セクションと同じ最大幅に設定 */
+    max-width: 1700px; /* イベント情報セクションと同じ最大幅に設定 */
     margin: 0 auto;
     padding: 0 20px;
 }
