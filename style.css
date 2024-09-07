@@ -671,7 +671,7 @@ ul.submenu li a:hover {
 	display: flex;				/*flexボックスを使う指定*/
 	justify-content: center;	/*並びかたの種類の指定*/
 	align-items: center;		/*垂直揃えの指定。上下中央に配置されるように。*/
-	font-size: 0.6em;		/*文字サイズ*/
+	font-size: 0.9em;		/*文字サイズ*/
 	background: #ff0000;	/*背景色*/
 	color: #fff;			/*文字色*/
 	width: 60px;			/*幅*/
