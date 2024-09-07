@@ -68,14 +68,16 @@
 
 /* blurスタイル。ぼかしで出現するスタイル */
 .blur {
-    opacity: 1;  /* 最初から要素が見えるように */
-    filter: blur(5px);  /* ぼかし効果を適用 */
-    transition: opacity 1s ease, filter 1s ease;
+    opacity: 1;  /* 透明度（要素が見える状態） */
+    filter: blur(0);  /* ぼかし効果はデフォルトでなし */
+    transform: scale(1);  /* 元の大きさ */
 }
 
 .blurstyle {
-    opacity: 1;  /* 要素を表示したまま */
-    filter: blur(0);  /* ぼかし効果を解除 */
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+    transition: 1s 0.5s;
 }
 
 /* transform3スタイル。小さなサイズから原寸大になるスタイル */
