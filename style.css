@@ -533,31 +533,35 @@ ul.submenu li a:hover {
 }
 
 /*１個あたりのボックス設定*/
+/* 通常時: 5つを一列に並べる設定 */
 .list {
-	display: flex;				/*flexボックスを使う指定*/
-	flex-direction: column;		/*子要素を縦並びにする*/
-	justify-content: space-between;	/*並びかたの種類の指定*/
-	margin-bottom: 30px;	/*ボックス同士の上下間に空けるスペース*/
-	padding: 20px;			/*ボックス内の余白*/
-	background: #fff;		/*背景色*/
-	box-shadow: 5px 5px 20px rgba(0,0,0,0.1);	/*ボックスの影。右へ、下へ、ぼかし幅、0,0,0は黒の事で0.1は色が10%出た状態。*/
-	width: 48%;				/*幅*/
-	margin-right: 4%;	/*右側に空けるスペース*/
-}
-
-/*２の倍数のlistブロックへの追加設定*/
-.list:nth-of-type(2n) {
-	margin-right: 0;	/*右側の余白をなくす*/
-}
-
-/* 新しい5列表示の設定 */
-.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
     width: 19%;  /* 5つのアイテムを横並びにするための幅 */
     margin-right: 1%;  /* アイテム間の間隔を調整 */
 }
 
+/* 5番目のアイテムの右側にマージンを付けない */
 .list:nth-of-type(5n) {
-    margin-right: 0;  /* 5つ目のアイテムに右マージンを付けない */
+    margin-right: 0;
+}
+
+/* 画面幅が900px以下になったら2つずつ並べる */
+@media screen and (max-width: 900px) {
+    .list {
+        width: 48%;  /* 2つのアイテムが並ぶための幅 */
+        margin-right: 4%;  /* アイテム間の余白を4%に調整 */
+    }
+
+    /* 偶数番目のアイテムの右側にマージンを付けない */
+    .list:nth-of-type(2n) {
+        margin-right: 0;
+    }
 }
 
 /*ボックス内のfigure画像*/
