@@ -566,6 +566,40 @@ ul.submenu li a:hover {
     }
 }
 
+/* list-container-2 のスタイル */
+.list-container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;  /* コンテナの最大幅 */
+    box-sizing: border-box;
+}
+
+.list-container-2 .list {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 48%;  /* 2カラムのための幅設定 */
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.list-container-2 .list:hover {
+    transform: scale(1.05);  /* ホバー時に少し拡大 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* ホバー時の影の強調 */
+}
+
+/* 画面幅が600px未満のときのレスポンシブ対応 */
+@media screen and (max-width: 600px) {
+    .list-container-2 .list {
+        width: 100%;  /* 小さな画面では1カラムに変更 */
+    }
+}
+
+
 /*ボックス内のfigure画像*/
 .list figure {
 	margin: -20px -20px 0;	/*上の.listで設定しているpadding分を相殺して画像をブロックいっぱいに出す*/
