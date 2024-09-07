@@ -534,6 +534,8 @@ ul.submenu li a:hover {
     width: 100%;  /* コンテナの幅を100%に */
     max-width: 100%;  /* コンテナの最大幅を100%に */
     box-sizing: border-box;  /* パディングを幅に含める */
+    margin: 0;  /* リセット */
+    padding: 0;  /* リセット */
 }
 
 .list {
