@@ -528,12 +528,12 @@ ul.submenu li a:hover {
 ---------------------------------------------------------------------------*/
 /*listブロック全体を囲むブロック（※.list-squareでも使用しています）*/
 .list-container {
-	display: flex;		/*flexボックスを使う指定*/
-	flex-wrap: wrap;	/*折り返す指定*/
+    display: flex;
+    flex-wrap: wrap;    /* 折り返しを有効 */
+    justify-content: space-between;  /* スペースを均等に配置 */
+    max-width: 100%;  /* コンテナの最大幅を100%に */
 }
 
-/*１個あたりのボックス設定*/
-/* 通常時: 5つを一列に並べる設定 */
 .list {
     display: flex;
     flex-direction: column;
@@ -546,21 +546,19 @@ ul.submenu li a:hover {
     margin-right: 1%;  /* アイテム間の間隔を調整 */
 }
 
-/* 5番目のアイテムの右側にマージンを付けない */
 .list:nth-of-type(5n) {
-    margin-right: 0;
+    margin-right: 0;  /* 5番目のアイテムの右マージンを0に */
 }
 
-/* 画面幅が900px以下になったら2つずつ並べる */
+/* 画面幅が900px以下になった場合に2つずつ表示 */
 @media screen and (max-width: 900px) {
     .list {
-        width: 48%;  /* 2つのアイテムが並ぶための幅 */
-        margin-right: 4%;  /* アイテム間の余白を4%に調整 */
+        width: 48%;  /* 2つのアイテムが横並びになるように幅を調整 */
+        margin-right: 4%;  /* アイテム間の余白を調整 */
     }
-
-    /* 偶数番目のアイテムの右側にマージンを付けない */
+    
     .list:nth-of-type(2n) {
-        margin-right: 0;
+        margin-right: 0;  /* 偶数番目のアイテムの右マージンを0に */
     }
 }
 
