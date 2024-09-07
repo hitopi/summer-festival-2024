@@ -114,7 +114,6 @@
 <!-- 要素が表示されたらblurstyleを適用するスクリプト -->
 <script>
     $(document).ready(function() {
-        // スクロール時に要素が画面内に表示されたら blurstyle クラスを追加する
         $('.blur').each(function() {
             var $this = $(this);
             $(window).on('scroll', function() {
@@ -122,8 +121,9 @@
                 var bottom_of_element = $this.offset().top + $this.outerHeight();
                 var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
                 var top_of_screen = $(window).scrollTop();
-
+    
                 if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
+                    console.log("blurstyle クラスを追加");
                     $this.addClass('blurstyle');
                 }
             });
