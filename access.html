@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="アクセスページです">
-    <title>アクセス・ホームページ</title>
+    <title>アクセス</title>
 
     <!-- Vegasスライドショー用のCSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
@@ -24,10 +24,6 @@
         </a>
     </h1>
 
-    <!-- 言語選択メニュー -->
-    <ul id="lang-nav">
-        <li><a href="#">English</a></li> <!-- 英語版リンク -->
-    </ul>
 </header>
 
 <div id="container"> <!-- コンテンツ全体を囲むコンテナ -->
@@ -55,19 +51,11 @@
         <caption>アクセス情報</caption>
         <tr>
             <th>所在地</th>
-            <td>ここに説明など入れて下さい。サンプルテキスト。</td>
-        </tr>
-        <tr>
-            <th>交通手段</th>
-            <td>ここに説明など入れて下さい。サンプルテキスト。</td>
+            <td>〒162-0056 東京都新宿区若松町２−２</td>
         </tr>
         <tr>
             <th>最寄り駅</th>
-            <td>ここに説明など入れて下さい。サンプルテキスト。</td>
-        </tr>
-        <tr>
-            <th>駐車場</th>
-            <td>ここに説明など入れて下さい。サンプルテキスト。</td>
+            <td>若松河田駅、曙橋駅</td>
         </tr>
     </table>
 
@@ -75,44 +63,9 @@
 
 </main>
 
-<div id="footermenu">
-<ul>
-    <li class="title">メニュー</li>
-    <li><a href="index.html">ホーム</a></li>
-    <li><a href="company.html">運営会社</a></li>
-    <li><a href="info.html">施設のご案内</a></li>
-    <li><a href="shopping.html">お買い物</a></li>
-    <li><a href="event.html">イベント</a></li>
-    <li><a href="access.html">アクセス</a></li>
-</ul>
-</div>
-<!--/#footermenu-->
-
-<footer>
-    <small>Copyright&copy; <a href="index.html">道の駅</a> All Rights Reserved.</small>
-    <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
-</footer>
-
 <!-- jQueryとVegas.jsの読み込み -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
-
-<!-- Vegas.jsを使ってスライドショーを設定 -->
-<script>
-$(function() {
-    $('#mainimg').vegas({
-        slides: [
-            { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC1.jpg' },
-            { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC2.jpg' }
-        ],
-        transition: 'blur',
-        animation: 'kenburns',
-        delay: 6000,
-        animationDuration: 10000,
-        timer: false
-    });
-});
-</script>
 
 <!-- ページトップへ戻るボタン -->
 <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
