@@ -228,111 +228,160 @@ body:not(.home) header #logo img {
 }
 
 
-/*menubarブロック初期設定
+/*メニューブロック設定
 ---------------------------------------------------------------------------*/
+#menubar a {display: block;text-decoration: none;}
 #menubar ul {list-style: none;margin: 0;padding: 0;}
-
-/*メニューを非表示にしておく*/
 #menubar {display: none;}
-
-/*開閉用のスタイル*/
-#menubar.db {display: block;}
-#menubar.dn {display: none;}
+#menubar.d-b, #menubar_hdr.d-b {display: block;}
+#menubar.d-n, #menubar_hdr.d-n {display: none;}
 
 
 /*メニューブロック設定
 ---------------------------------------------------------------------------*/
+/*メニューブロック*/
 #menubar {
 	position: fixed;overflow: auto;z-index: 100;
 	left: 0px;top: 0px;
-	width: 100%;		/*ブロックの幅。100%にすれば画面いっぱいに広がります。*/
-	height: 100%;	/*ブロックの高さ*/
-	padding: 120px 20px 20px;	/*上、左右、下へのブロック内の余白*/
-	background: #fff;			/*背景色*/
-	text-align: center;			/*テキストを中央に*/
-	animation: animation1 0.2s both;	/*animation.cssの、animation1を実行する。0.2sは0.2秒の事。*/
-	box-shadow: 0px 0px 20px rgba(0,0,0,0.2);	/*ボックスの影。右へ、下へ、ぼかし幅の順番。0,0,0は黒の事で0.2は色が20%出た状態。*/
+	width: 100%;
+	height: 100%;
+	padding: 50px var(--space-small) 20px var(--space-large);	/*ブロック内の余白*/
+	background: #faf8f7;			/*背景色*/
+	animation: animation1 0.2s both;	/*animation1を0.2秒かけて実行する*/
 }
 
-/*メニュー１個あたりの設定*/
-#menubar a {
-	display: block;text-decoration: none;
-	text-align: center;		/*テキストを中央に*/
-	padding: 20px;			/*メニュー内の余白*/
+/*メニュー一個あたり*/
+#menubar nav > ul > li a {
+	margin-bottom: 1rem;	/*下に空けるスペース*/
+}
+
+#menubar nav a {
+	position: relative;	/*下線を配置する為に必要な指定*/
+	bottom: -2px;		/*下線の高さ。下の「#menubar nav a::before」の「height」の数字と合わせる。（※こちらは先頭にマイナスをつける）*/
+}
+#menubar nav a::before {
+	content: "";position: absolute;bottom: 0px;left: 0px;width: 100%;
+	height: 2px;		/*下線の高さ。上の「#menubar nav a」の「bottom」の数字と合わせる。（※マイナスはつけないで）*/
+	background: var(--primary-color);	/*css冒頭で指定しているprimary-colorを読み込みます*/
+	transition: 0.3s;			/*アニメーションの実行時間(秒)*/
+	transform: scaleX(0);		/*幅。最初は0にして見えなくしておく。*/
+	transform-origin: left top;	/*線の出現起点が左からになるように。中央からの出現がよければこの１行削除。*/
+}
+#menubar nav a:hover::before {
+	transform: scaleX(1);	/*hover時に線幅を100%にする*/
+}
+
+	/*画面幅700px以上の追加指定*/
+	@media screen and (min-width:700px) {
+
+	/*メニューブロック*/
+	#menubar {
+		padding: 50px 150px 20px;	/*上、左右、下への余白*/
+	}
+
+	#menubar nav {
+		display: flex;	/*flexを使う指定*/
+		justify-content: space-around;	/*並びかたの種類の指定*/
+		gap: 2rem;		/*マージン的な設定*/
+	}
+	
+	#menubar nav > ul {
+		flex: 1;
+	}
+
+	}/*追加指定ここまで*/
+
+
+/*子メニューに該当するブロック*/
+#menubar nav ul ul {
+	text-indent: 1rem;	/*左側に少し余白をとる。*/
+}
+
+/*アイコン*/
+#menubar i {
+	color: var(--primary-color);	/*css冒頭で指定しているprimary-colorを読み込みます*/
+	margin-right: 0.5em;			/*アイコンと文字との間にとる余白*/
+}
+
+
+/*メニューブロック内の「お問い合わせはこちらまで」のブロック
+---------------------------------------------------------------------------*/
+#menubar #toiawase {
+	background: #fff;		/*背景色*/
+	border-radius: 10px;	/*角丸の指定*/
+	text-align: center;		/*中のテキストをセンタリング*/
+	padding: 1rem 2rem;		/*ボックス内の余白*/
+	border: 2px solid var(--primary-color);	/*枠線の幅、線種、色。*/
+}
+
+/*ブロック内のh3見出し（「お問い合わせはこちらまで」と書いてある所）*/
+#menubar #toiawase h3 {
+	margin-bottom: 0;
+	border-bottom: 3px dotted #ccc;	/*下線の幅、線種、色*/
+	display: inline-block;			/*下線を文字の下だけに表示する為の指示*/
+}
+
+/*「お問い合わせフォーム」のボタン左側のメールアイコン*/
+#menubar #toiawase .btn1 i {
+	color: #fff;	/*色*/
 }
 
 
 /*３本バー（ハンバーガー）アイコン設定
 ---------------------------------------------------------------------------*/
-/*開閉用のスタイル*/
-#menubar_hdr.db {display: flex;}
-#menubar_hdr.dn {display: none;}
-
-/*３本バーとMENUテキストを囲むブロック*/
+/*３本バーを囲むブロック*/
 #menubar_hdr {
 	position: fixed;z-index: 101;
 	cursor: pointer;
-	left: 0px;			/*左からの配置場所指定*/
+	left: 0px;			/*右からの配置場所指定*/
 	top: 0px;			/*上からの配置場所指定*/
-	background: #679ff2;	/*背景色*/
-	padding: 20px 0px;		/*上下、左右へのブロック内の余白*/
-	width: 80px;			/*幅*/
-	text-align: center;		/*中身をセンタリング*/
-	color: #fff;			/*文字色*/
-	transform: scale(0.6);	/*作ったサイズの60%のサイズにする*/
-	transform-origin: left top;	/*上のtransformの起点*/
-	transition: 0.3s;
-}
-
-/*マウスオン時*/
-#menubar_hdr:hover {
-	filter: brightness(1.1);	/*少し明るくする*/
-}
-
-/*３本バーを囲むブロック*/
-#menubar_hdr div {
-	display: flex;					/*flexボックスを使う指定*/
+	padding: 30px;		/*余白*/
+	width: 100px;		/*幅（３本バーが出ている場合の幅になります）*/
+	height: 100px;		/*高さ*/
+	display: flex;					/*flexを使う指定*/
 	flex-direction: column;			/*子要素（３本バー）を縦並びにする*/
-	justify-content: space-between;	/*並びかたの種類の指定*/
-	width: 30px;		/*幅（３本バーが出ている場合の幅になります）*/
-	height: 30px;		/*高さ*/
-	margin: 0 auto;
+	justify-content: space-around;	/*並びかたの種類の指定*/
+	background: var(--primary-color);	/*css冒頭で指定しているprimary-colorを読み込みます*/
 }
 
-/*「MENU」の文字*/
-#menubar_hdr p {
-	display: none;	/*場所をとるので小さい端末では非表示にしておく*/
-}
+	/*画面幅700px以下の追加指定*/
+	@media screen and (max-width:700px) {
+
+	#menubar_hdr {
+		transform: scale(0.6);	/*全体のスケールを60%に*/
+	}
+
+	}/*追加指定ここまで*/
+
 
 /*バー１本あたりの設定*/
 #menubar_hdr span {
 	display: block;
 	transition: 0.3s;	/*アニメーションにかける時間。0.3秒。*/
-	border-top: 3px solid #fff;	/*線の幅、線種、色*/
+	border-top: 1.5px solid #fff;	/*線の幅、線種、色*/
 }
 
 /*×印が出ている状態の設定。※１本目および２本目のバーの共通設定。*/
 #menubar_hdr.ham span:nth-of-type(1),
 #menubar_hdr.ham span:nth-of-type(3) {
 	transform-origin: center center;	/*変形の起点。センターに。*/
-	width: 40px;						/*バーの幅*/
+	width: 50px;						/*バーの幅*/
 }
 
 /*×印が出ている状態の設定。※１本目のバー。*/
 #menubar_hdr.ham span:nth-of-type(1){
-	transform: rotate(45deg) translate(6px, 13px);	/*回転45°と、X軸Y軸への移動距離の指定*/
+	transform: rotate(45deg) translate(4px, 10px);	/*回転45°と、X軸Y軸への移動距離の指定*/
 }
 
 /*×印が出ている状態の設定。※３本目のバー。*/
 #menubar_hdr.ham span:nth-of-type(3){
-	transform: rotate(-45deg) translate(6px, -13px);	/*回転-45°と、X軸Y軸への移動距離の指定*/
+	transform: rotate(-45deg) translate(4px, -10px);	/*回転-45°と、X軸Y軸への移動距離の指定*/
 }
 
 /*×印が出ている状態の設定。※２本目のバー。*/
 #menubar_hdr.ham span:nth-of-type(2){
 	display: none;	/*２本目は使わないので非表示にする*/
 }
-
 
 /*mainブロック設定
 ---------------------------------------------------------------------------*/
@@ -1060,34 +1109,6 @@ body:not(.home) header #logo img {
 #header-menu ul {
 	font-size: 1.2em;	/*文字サイズ。親要素の120%に。*/
 }
-
-
-/*メニューブロック設定
----------------------------------------------------------------------------*/
-#menubar {
-	width: 40%;		/*ブロックの幅。*/
-}
-
-
-/*３本バー（ハンバーガー）アイコン設定
----------------------------------------------------------------------------*/
-/*３本バーとMENUテキストを囲むブロック*/
-#menubar_hdr {
-	transform: scale(1);	/*小さな端末用で60%にしているのを原寸大に戻す*/
-}
-
-/*「MENU」の文字*/
-#menubar_hdr p {
-	display: block;		/*表示させる*/
-	margin: 10px 0 0;	/*上、左右、下へのマージン*/
-	font-size: 0.7em;	/*文字サイズ。親要素の70%に。*/
-}
-
-/*「MENU」の文字をトップページ以外は非表示にする*/
-body:not(.home) #menubar_hdr p {
-	display: none;
-}
-
 
 /*mainブロック設定
 ---------------------------------------------------------------------------*/
