@@ -780,6 +780,43 @@ p.btn {margin: 0;}
 	transform: scale(1.4);	/*サイズを1.4倍にする*/
 }
 
+/*「資料請求はこちら」ボタン
+---------------------------------------------------------------------------*/
+#side-btn p {padding:0;margin:0;}
+
+#side-btn a {
+	text-decoration: none;
+	writing-mode: vertical-rl;	/*縦書きの指定。*/
+	text-orientation: upright;	/*文字の向き*/
+	position: fixed;			/*画面スクロールしても移動しない*/
+	left: 0px;					/*左からの配置場所指定*/
+	top: 100px;					/*上からの配置場所指定*/
+	background-color: var(--secondary-color);	/*背景色。css冒頭で指定しているsecondary-colorを読み込みます*/
+	color: #fff;								/*文字色*/
+	display: flex;			/*flexボックスを使う指定*/
+	justify-content: center;	/*並びかたの種類の指定*/
+	align-items: center;	/*天地中央に配置されるようにする指定だが、縦書きなのでこの場合は左右中央になる。*/
+	letter-spacing: 0.4em;	/*文字間隔*/
+	text-indent: 0.4em;		/*上の行に合わせておけばOK*/
+	width: 100px;			/*幅*/
+	padding: 3rem 0;		/*ボタン内の余白。上下、左右への順番。*/
+}
+
+/*資料のアイコン*/
+#side-btn i {
+	transform: scale(2);	/*２倍の大きさに*/
+	padding-bottom: 0.5rem;	/*下のテキストとの間の余白*/
+}
+
+	/*画面幅700px以下の追加指定*/
+	@media screen and (max-width:700px) {
+
+	#side-btn {
+		display: none;	/*ボタンを非表示に*/
+	}
+
+	}/*追加指定ここまで*/
+
 
 /*テーブル
 ---------------------------------------------------------------------------*/
