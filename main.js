@@ -11,7 +11,8 @@ $(function() {
 });
 
 
-$(function() {
+$(document).ready(function() {
+    // ハンバーガーメニューのクリックイベントを設定
     $('#menubar_hdr').click(function() {
         alert("クリックされました");
         $(this).toggleClass('ham');
