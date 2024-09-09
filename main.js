@@ -10,19 +10,20 @@ $(function() {
 	});
 });
 
+//ハンバーガーメニューをクリックした際の処理
+$(function() {
+	$('#menubar_hdr').click(function() {
+		$(this).toggleClass('ham');
 
-$(document).ready(function() {
-    // ハンバーガーメニューのクリックイベントを設定
-    $('#menubar_hdr').click(function() {
-        alert("クリックされました");
-        $(this).toggleClass('ham');
-        if($(this).hasClass('ham')) {
-            $('#menubar').addClass('d-b');
-        } else {
-            $('#menubar').removeClass('d-b');
-        }
-    });
+			if($(this).hasClass('ham')) {
+				$('#menubar').addClass('d-b');
+			} else {
+				$('#menubar').removeClass('d-b');
+			}
+
+	});
 });
+
 
 // 同一ページへのリンクの場合に開閉メニューを閉じる処理
 $(function() {
