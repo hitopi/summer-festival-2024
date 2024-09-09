@@ -17,9 +17,9 @@ $(function() {
 		$(this).toggleClass('ham');
 
 			if($(this).hasClass('ham')) {
-				$('#menubar').addClass('db').removeClass('dn');
+				$('#menubar').addClass('d-b');
 			} else {
-				$('#menubar').addClass('dn').removeClass('db');
+				$('#menubar').removeClass('d-b');
 			}
 
 	});
@@ -29,7 +29,7 @@ $(function() {
 // 同一ページへのリンクの場合に開閉メニューを閉じる処理
 $(function() {
 	$('#menubar a[href^="#"]').click(function() {
-		$('#menubar').removeClass('db');
+		$('#menubar').removeClass('d-b');
 		$('#menubar_hdr').removeClass('ham');
 	});
 });
