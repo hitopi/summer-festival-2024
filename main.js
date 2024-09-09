@@ -13,7 +13,7 @@ $(function() {
 
 $(function() {
     $('#menubar_hdr').click(function() {
-        console.log("クリックされました");
+        alert("クリックされました");
         $(this).toggleClass('ham');
         if($(this).hasClass('ham')) {
             $('#menubar').addClass('d-b');
