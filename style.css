@@ -793,7 +793,7 @@ p.btn {margin: 0;}
 	text-orientation: upright;	/*文字の向き*/
 	position: fixed;			/*画面スクロールしても移動しない*/
 	left: 0px; /* 左端に配置 */
-	top: 0px; /* 上端に配置 */
+	top: 100px; /* 上端に配置 */
 	background-color: #c03c0e;	/*背景色*/
 	color: #fff;								/*文字色*/
 	display: flex;			/*flexボックスを使う指定*/
