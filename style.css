@@ -866,6 +866,12 @@ p.btn {margin: 0;}
 	text-align: left;	/*左よせにする*/
 }
 
+/* thのテキストを中央に揃える */
+.center-text {
+    text-align: center;
+    vertical-align: middle; /* 縦方向の中央揃え */
+}
+
 .event-container {
     display: flex;
     justify-content: space-between;
