@@ -722,6 +722,7 @@ p.btn {margin: 0;}
     left: 0px;
     width: 100px;
     background-color: #c03c0e;
+    z-index: 100; /* menubarの上に表示されないようにz-indexを調整 */
 }
 
 #side-btn a {
@@ -752,6 +753,27 @@ p.btn {margin: 0;}
     }
 }
 
+/* 表示サイズに応じた調整 */
+@media screen and (max-width: 600px) {
+    #menubar_hdr {
+        padding: 20px;
+        width: 80px; /* 画面幅が小さい場合、menubarの幅を縮小 */
+    }
+    #side-btn {
+        top: calc(80px + 20px); /* menubarの幅が変わるため、それに応じて位置を調整 */
+        width: 80px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #menubar_hdr {
+        width: 120px; /* 大きな画面でのmenubarの幅を調整 */
+    }
+    #side-btn {
+        top: calc(120px + 30px); /* 大きな画面での配置を調整 */
+        width: 120px;
+    }
+}
 
 /*テーブル
 ---------------------------------------------------------------------------*/
