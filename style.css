@@ -1080,14 +1080,13 @@ p.btn {margin: 0;}
     display: flex;
     justify-content: center; /* 水平方向で中央揃え */
     align-items: center; /* 垂直方向で中央揃え */
-    height: 100%; /* ステップと同じ高さに揃える */
+    height: 100%; /* steps-container の高さに一致させる */
     background: none; /* 背景を削除 */
     box-shadow: none; /* 影を削除 */
 }
 
 .photo {
     flex: 1;
-    margin-left: 20px;
     height: 100%; /* ステップと同じ高さに揃える */
     display: flex; /* コンテナ内で画像を中央揃え */
     justify-content: center; /* 水平中央揃え */
