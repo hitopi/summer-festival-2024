@@ -760,10 +760,10 @@ p.btn {margin: 0;}
     opacity: 0.7; /* 全体を半透明にする */
     transition: opacity 0.3s ease; /* 滑らかな変化 */
 }
-
-/* アイコンのマウスオン時の変形 */
 #side-btn:hover i {
     transform: translateY(-10px) scale(2); /* scale(2) を維持しつつ、上方向に動かす */
+    opacity: 0.7; /* 半透明にする */
+    animation: up1 0.8s both; /* up1 アニメーションを適用 */
 }
 
 /* 画面幅が900px以下の場合、side-btnを非表示に */
