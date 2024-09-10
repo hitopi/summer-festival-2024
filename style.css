@@ -1074,32 +1074,41 @@ p.btn {margin: 0;}
     margin: 5px 0; /* スペースを減らす */
 }
 
-/* 写真コンテナの高さをstepsと一致させる */
+/* 写真コンテナの高さをsteps-container全体の高さに一致させる */
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 縦方向の中央揃え */
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 写真コンテナのスタイル */
 .photos-container {
     flex: 1;
     display: flex;
     justify-content: center; /* 水平方向で中央揃え */
-    align-items: center; /* 垂直方向で中央揃え */
-    height: 100%; /* steps-container の高さに一致させる */
+    align-items: center; /* 縦方向で中央揃え */
+    height: auto; /* steps-container と同じ高さに揃える */
     background: none; /* 背景を削除 */
     box-shadow: none; /* 影を削除 */
 }
 
 .photo {
     flex: 1;
-    height: 100%; /* ステップと同じ高さに揃える */
     display: flex; /* コンテナ内で画像を中央揃え */
     justify-content: center; /* 水平中央揃え */
-    align-items: center; /* 垂直中央揃え */
+    align-items: center; /* 縦方向の中央揃え */
+    height: 100%; /* steps-container の高さに合わせる */
 }
 
 .photo img {
     max-width: 100%; /* 幅をコンテナに合わせる */
     max-height: 100%; /* 高さもコンテナに合わせる */
     object-fit: contain; /* 画像が中央に揃えられ、縦横比を維持 */
-    display: block; /* 画像をブロック要素に */
-    margin: auto; /* 画像をコンテナの中央に配置 */
 }
+
 
 
 
