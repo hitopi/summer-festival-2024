@@ -1076,7 +1076,7 @@ p.btn {margin: 0;}
 .step-item:hover {
     background-color: #2c53a1; /* 背景色を変える */
     color: #fff; /* 全体の文字を白に */
-    animation: upAndDown 1s ease; /* 上に移動して戻るアニメーション */
+    animation: upAndDown 0.5s ease; /* 上に移動して戻るアニメーション */
 }
 
 /* 上に移動してから元に戻るアニメーション */
@@ -1085,7 +1085,7 @@ p.btn {margin: 0;}
         transform: translateY(0); /* 元の位置 */
     }
     50% {
-        transform: translateY(-5px); /* 少し上に移動 */
+        transform: translateY(-7px); /* 少し上に移動 */
     }
     100% {
         transform: translateY(0); /* 元の位置に戻る */
