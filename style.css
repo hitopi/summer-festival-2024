@@ -1003,6 +1003,95 @@ p.btn {margin: 0;}
 
 
 
+/* セクション全体のスタイル */
+.participation-flow {
+    margin: 50px 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+/* タイトルとサブタイトルのスタイル */
+.cracker {
+    font-size: 2em;
+    margin-bottom: 30px;
+    position: relative;
+    color: #333;
+}
+
+.cracker span {
+    display: block;
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* ステップと写真を横に並べるためのコンテナ */
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ステップのスタイル */
+.steps {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.step-item {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.step-number {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2c53a1;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.steps p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.steps a {
+    color: #2c53a1;
+    text-decoration: none;
+}
+
+.steps a:hover {
+    text-decoration: underline;
+}
+
+/* 写真コンテナ */
+.photos-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.photo {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.photo img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
 
 
 /*---------------------------------------------------------------------------
