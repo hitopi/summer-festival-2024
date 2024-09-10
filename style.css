@@ -236,7 +236,7 @@ body:not(.home) header #logo img {
 }
 
 
-/*メニューブロック設定
+/* メニューブロック設定（デフォルト：#2c53a1）
 ---------------------------------------------------------------------------*/
 #menubar_hdr {
     position: fixed;
@@ -260,21 +260,21 @@ body:not(.home) header #logo img {
     color: #fff;
     transition: 0.3s;
     text-decoration: none;
-    order: 1; /* アイコンを最初に表示 */
+    order: 1;
 }
 
 /* アイコンのマウスオン時 */
 #menubar_hdr:hover i {
-    animation: up1 0.8s both; /* up1 アニメーションを適用 */
+    animation: up1 0.8s both;
 }
 
 /* アイコンの下に「参加」という文字を表示 */
 #menubar_hdr span {
     font-size: 1em;
     color: #fff;
-    margin-top: 10px; /* アイコンとの間に余白を追加 */
+    margin-top: 10px;
     text-decoration: none;
-    order: 2; /* spanをアイコンの下に表示 */
+    order: 2;
 }
 
 /* 画面幅が899px以下の場合、非表示に */
@@ -282,6 +282,23 @@ body:not(.home) header #logo img {
     #menubar_hdr {
         display: none;
     }
+}
+
+/* 色が異なるメニューバーの設定 */
+#menubar_hdr_1 {
+    background-color: #679ff2; /* 青 */
+}
+
+#menubar_hdr_2 {
+    background-color: #e68593; /* ピンク */
+}
+
+#menubar_hdr_3 {
+    background-color: #f0a85a; /* オレンジ */
+}
+
+#menubar_hdr_4 {
+    background-color: #72b275; /* 緑 */
 }
 
 /*mainブロック設定
