@@ -601,6 +601,7 @@ ul.submenu li a:hover {
 
 /*ボックス内のfigure画像*/
 .list2 figure {
+	width: 30%;	/*幅*/
 	margin: -10px 10px -10px -10px;	/*上の.list2で設定しているpadding分を相殺して画像をブロックいっぱいに出す*/
 }
 
