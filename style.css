@@ -121,7 +121,7 @@ main > article,
 ---------------------------------------------------------------------------*/
 /*ヘッダーブロック*/
 header {
-	background: #679ff2;	/*背景色*/
+	background: #2c53a1;	/*背景色*/
 	position: relative;
 }
 
@@ -138,7 +138,7 @@ body:not(.home) header #logo img {
 /*トップページのロゴ*/
 .home header #logo {
 	width: 40%;				/*ロゴの幅*/
-	background: #679ff2;	/*ロゴの背景色*/
+	background: #2c53a1;	/*ロゴの背景色*/
 	border-radius: 50%;		/*円形にする指定。30pxなどにすれば角が丸くなった四角形になります。*/
 	position: absolute;z-index: 1;
 	bottom: 25%;	/*ヘッダーに対して、下からの配置場所の指定*/
@@ -176,8 +176,8 @@ body:not(.home) header #logo img {
 
 /*１つ目メニュー*/
 #header-menu ul li:nth-of-type(1) a {
-	border-bottom: 5px solid #679ff2;	/*下線の幅、線種、色*/
-	color: #679ff2;						/*文字色*/
+	border-bottom: 5px solid #2c53a1;	/*下線の幅、線種、色*/
+	color: #2c53a1;						/*文字色*/
 }
 
 /*２つ目メニュー*/
@@ -302,7 +302,7 @@ main h2 {
 main h2 span {
 	display: block;
 	font-size: 0.5em;	/*文字サイズ。親要素の50%に。*/
-	color: #679ff2;		/*文字色*/
+	color: #2c53a1;		/*文字色*/
 }
 
 /*mainブロック内のh3タグ*/
@@ -413,7 +413,7 @@ footer .pr {display: block;}
 	font-weight: normal;
 	font-size: 1em;
 	margin: 0;
-	background: #679ff2;	/*背景色*/
+	background: #2c53a1;	/*背景色*/
 	color: #fff;			/*文字色*/
 	text-align: center;		/*テキストをセンタリング*/
 }
@@ -703,7 +703,7 @@ p.btn {margin: 0;}
 	display: block;
 	font-size: 1em;
 	box-shadow: 2px 2px 5px rgba(0,0,0,0.2);	/*ボックスの影。右へ、下へ、ぼかし幅の順。0,0,0は黒の事で0.2は色が20%出た状態。*/
-	background: #679ff2;	/*背景色*/
+	background: #2c53a1;	/*背景色*/
 	letter-spacing: 0.1em;	/*文字間隔を少し広くする指定*/
 	color: #fff;			/*文字色*/
 	transition: 0.3s;		/*hoverまでにかける時間。0.3秒。*/
@@ -786,8 +786,8 @@ p.btn {margin: 0;}
 .ta1 caption {
 	font-weight: bold;		/*太字に*/
 	padding: 10px 5px;		/*上下、左右へのボックス内の余白。基本的に数行下の「.ta1 th, .ta1 td」のpaddingと揃えておけばOKです。*/
-	border: 3px solid #679ff2;	/*枠線の幅、線種、色*/
-	color: #679ff2;			/*文字色*/
+	border: 3px solid #2c53a1;	/*枠線の幅、線種、色*/
+	color: #2c53a1;			/*文字色*/
 	background: #fff8d5;	/*背景色*/
 	font-size: 1.2em;		/*文字サイズ。親要素の1.2倍。*/
 	margin-bottom: 15px;	/*下に空けるスペース*/
@@ -880,7 +880,7 @@ p.btn {margin: 0;}
 /*その他
 ---------------------------------------------------------------------------*/
 .clearfix::after {content: "";display: block;clear: both;}
-.color-theme, .color-theme a {color: #679ff2 !important;}
+.color-theme, .color-theme a {color: #2c53a1 !important;}
 .color-check, .color-check a {color: #f00 !important;}
 .c {text-align: center !important;}
 .ws {width: 95%;display: block;}
@@ -1079,7 +1079,7 @@ main h2.flag::after {
 
 /*icon-bg1設定。サンプルテンプレートでは「イベント」と書いてあるマーク*/
 #new dt span.icon-bg1 {
-	background: #679ff2;	/*背景色*/
+	background: #2c53a1;	/*背景色*/
 }
 
 /*icon-bg2設定。サンプルテンプレートでは「お買い物」と書いてあるマーク*/
