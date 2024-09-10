@@ -1009,6 +1009,7 @@ p.btn {margin: 0;}
     padding: 20px;
     text-align: center;
     background-color: #f7f7f7;
+    border-radius: 15px; /* 背景の角を丸くする */
 }
 
 /* タイトルとサブタイトルのスタイル */
@@ -1046,22 +1047,24 @@ p.btn {margin: 0;}
     background-color: #fff;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 10px; /* 各ステップの角を丸くする */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    position: relative; /* 矢印を配置するため */
 }
 
 .step-number {
     font-size: 1.5em;
     font-weight: bold;
     color: #2c53a1;
-    margin-bottom: 10px;
-    display: block;
+    margin-bottom: 0; /* 改行を防止 */
+    display: inline; /* 改行しない */
 }
 
 .steps p {
     font-size: 1.2em;
     color: #333;
+    margin: 10px 0;
 }
 
 .steps a {
@@ -1071,6 +1074,14 @@ p.btn {margin: 0;}
 
 .steps a:hover {
     text-decoration: underline;
+}
+
+/* 矢印のスタイル */
+.arrow {
+    display: block;
+    font-size: 1.5em;
+    color: #2c53a1;
+    margin-top: 10px;
 }
 
 /* 写真コンテナ */
@@ -1090,6 +1101,7 @@ p.btn {margin: 0;}
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 
 
