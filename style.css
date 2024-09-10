@@ -645,10 +645,10 @@ ul.submenu li a:hover {
 }
 
 .list-square img {
-    width: 100%; /* 画像の横幅を枠いっぱいに設定 */
-    height: auto; /* 画像の縦横比を保ちながら高さを自動調整 */
-    display: block; /* 余白を排除 */
-    max-height: 100%; /* 画像が枠を超えないように高さを制限 */
+    width: 100%; /* figureも枠全体を使うように設定 */
+    height: 100%; /* .list-square と同じ高さに揃える */
+    margin: 0; /* figureの余白をなくす */
+    padding: 0; /* figureのパディングをなくす */
 }
 
 /*ボックス内のtextブロック*/
