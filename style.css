@@ -873,12 +873,21 @@ p.btn {margin: 0;}
     vertical-align: middle;  /* 縦方向の中央揃え */
 }
 
-.event-container img {
-    max-width: 150px; /* 画像の最大幅を調整 */
-    height: auto;
-    margin-left: 15px; /* テキストとの余白を調整 */
+/* イベントコンテナの設定 */
+.event-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+/* イベントコンテナ内の画像設定 */
+.event-container img {
+    max-width: 150px;  /* 画像の最大幅を調整 */
+    height: auto;
+    margin-left: 15px;  /* テキストとの余白を調整 */
+}
+
+/* イベントコンテナ内のテキスト部分 */
 .event-container div {
     flex: 1;
 }
