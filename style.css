@@ -498,13 +498,13 @@ ul.submenu li a:hover {
     padding: 20px;
     background: #fff;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
-    width: 19% !important;  /* 幅を強制的に適用 */
+    width: 32.3% !important;  /* 幅を32.3%に変更して3つの要素が並ぶように */
     margin-right: 1% !important;  /* マージンを強制的に適用 */
     box-sizing: border-box;
 }
 
-.list-container .list:nth-of-type(5n) {
-    margin-right: 0;  /* 5番目のアイテムの右マージンを削除 */
+.list-container .list:nth-of-type(3n) {
+    margin-right: 0;  /* 3番目のアイテムの右マージンを削除 */
 }
 
 /* 画面幅が900px以下になったときに2つずつ表示 */
@@ -519,49 +519,9 @@ ul.submenu li a:hover {
     }
 }
 
-/* list-container-2 のスタイル */
-.list-container-2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;  /* 要素を左詰めに配置 */
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-.list-container-2 .list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 30px;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
-    width: 32.3% !important;  /* 3つで1列にするための微調整 */
-    margin-right: 1% !important;  /* 3つのアイテム間のマージン */
-    box-sizing: border-box;
-}
-
-.list-container-2 .list:nth-of-type(3n) {
-    margin-right: 0;  /* 3番目のアイテムの右マージンを削除 */
-}
-
-/* 画面幅が900px以下になったときに2つずつ表示 */
-@media screen and (max-width: 900px) {
-    .list-container-2 .list {
-        width: 48% !important;
-        margin-right: 4% !important;  /* 余白調整 */
-    }
-
-    .list-container-2 .list:nth-of-type(2n) {
-        margin-right: 0 !important;  /* 2つ目のアイテムの右余白を削除 */
-    }
-}
-
 /* 画面幅が600px以下になったときに1つずつ表示 */
 @media screen and (max-width: 600px) {
-    .list-container-2 .list {
+    .list-container .list {
         width: 100% !important;
         margin-right: 0 !important;
     }
@@ -569,121 +529,134 @@ ul.submenu li a:hover {
 
 /*ボックス内のfigure画像*/
 .list figure {
-	margin: -20px -20px 0;	/*上の.listで設定しているpadding分を相殺して画像をブロックいっぱいに出す*/
+    margin: 0;  /* 余分なマージンを削除 */
+    padding: 0;
+    width: 100%;  /* 幅を100%に設定 */
+    height: 200px;  /* 高さを固定 */
+    overflow: hidden;  /* 画像がはみ出さないようにする */
+    display: block;
+}
+
+.list figure img {
+    width: 100%;  /* 横幅を100%に設定 */
+    height: 100%;  /* 高さも100%に設定 */
+    object-fit: cover;  /* 画像を枠にフィットさせる */
+    object-position: center;  /* 中央揃え */
+    display: block;
 }
 
 /*ボックス内のh4タグ*/
 .list h4 {
-	margin: 1em 0 0.5em;	/*上、左右、下への余白*/
+    margin: 1em 0 0.5em;  /* 上、左右、下への余白 */
 }
 
 /*ボックス内のtextブロック*/
 .list .text {
-	flex: 1;
+    flex: 1;
 }
 
 /*ボックス内のpタグ*/
 .list p {
-	margin: 0;
-	font-size: 0.8em;	/*文字サイズを80%に*/
+    margin: 0;
+    font-size: 0.8em;  /* 文字サイズを80%に */
 }
 
 
 /*list2ブロック
 ---------------------------------------------------------------------------*/
 .list2 {
-	display: flex;			/*flexボックスを使う指定*/
-	margin-bottom: 30px;	/*ボックス同士の上下間に空けるスペース*/
-	padding: 10px;			/*ボックス内の余白*/
-	background: #fff;		/*背景色*/
-	box-shadow: 5px 5px 20px rgba(0,0,0,0.1);	/*ボックスの影。右へ、下へ、ぼかし幅、0,0,0は黒の事で0.1は色が10%出た状態。*/
+    display: flex;  /* flexボックスを使用 */
+    margin-bottom: 30px;  /* ボックス同士の上下間に空けるスペース */
+    padding: 10px;  /* ボックス内の余白 */
+    background: #fff;  /* 背景色 */
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.1);  /* ボックスの影 */
 }
 
 /*ボックス内のfigure画像*/
 .list2 figure {
-	width: 30%;	/*幅*/
-	margin: -10px 10px -10px -10px;	/*上の.list2で設定しているpadding分を相殺して画像をブロックいっぱいに出す*/
+    width: 30%;  /* 幅を指定 */
+    margin: -10px 10px -10px -10px;  /* 上の.list2で設定しているpadding分を相殺して画像をブロックいっぱいに出す */
 }
 
 /*ボックス内のtextブロック*/
 .list2 .text {
-	flex: 1;
-	display: flex;			/*flexボックスを使う指定*/
-	flex-direction: column;	/*子要素を縦並びにする*/
-	justify-content: space-between;	/*並びかたの種類の指定*/
+    flex: 1;
+    display: flex;  /* flexボックスを使用 */
+    flex-direction: column;  /* 子要素を縦並びにする */
+    justify-content: space-between;  /* 並びかたの種類の指定 */
 }
 
 /*ボックス内のh4タグ*/
 .list2 h4 {
-	margin: 0 0 0.5em;	/*上、左右、下への余白*/
+    margin: 0 0 0.5em;  /* 上、左右、下への余白 */
 }
 
 /*ボックス内のpタグ*/
 .list2 p {
-	margin: 0;
-	font-size: 0.8em;	/*文字サイズを80%に*/
+    margin: 0;
+    font-size: 0.8em;  /* 文字サイズを80%に */
 }
 
 /*list2内でのbtn*/
-.list2 p:not(.btn) {flex: 1;}
+.list2 p:not(.btn) { flex: 1; }
 
 
 /*list-squareブロック
 ---------------------------------------------------------------------------*/
-/*１個あたりのボックス設定*/
+/* 1個あたりのボックス設定 */
 .list-square {
-	width: 33.3%;	/*幅*/
+    width: 33.3%;  /* 幅 */
 }
 
 /*ボックス内のtextブロック*/
 .list-square .text {
-	position: absolute;
-	left: 0px;
-	bottom: 0px;
-	width: 100%;
-	background: rgba(0,0,0,0.5);	/*背景色。0,0,0は黒の事で0.5は色が50%出た状態*/
-	color: #fff;					/*文字色*/
-	padding: 10px 20px;				/*上下、左右へのボックス内の余白*/
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    background: rgba(0,0,0,0.5);  /* 背景色 */
+    color: #fff;  /* 文字色 */
+    padding: 10px 20px;  /* 上下、左右へのボックス内の余白 */
 }
 
 /*ボックス内のh4タグとpタグ*/
 .list-square h4,
 .list-square p {
-	margin: 0;
-	font-size: 0.8em;	/*文字サイズを親要素の80%に*/
+    margin: 0;
+    font-size: 0.8em;  /* 文字サイズを80%に */
 }
 
-/*小さな端末では説明文は非表示に。表示させてしまうと画像がかなり隠れてしまう可能性があります。*/
+/*小さな端末では説明文は非表示に*/
 .list-square p {
-	display: none;
+    display: none;
 }
 
 
 /*list,list2,list-squareの共通設定
 ---------------------------------------------------------------------------*/
 .list, .list2, .list-square {
-	position: relative;		/*子要素でabsolute(絶対配置)を使うための指定*/
+    position: relative;  /* 子要素でabsolute(絶対配置)を使うための指定 */
 }
 
 /*左上の丸いアイコン*/
 .list .icon,
 .list2 .icon,
 .list-square .icon {
-	display: flex;				/*flexボックスを使う指定*/
-	justify-content: center;	/*並びかたの種類の指定*/
-	align-items: center;		/*垂直揃えの指定。上下中央に配置されるように。*/
-	font-size: 0.9em;		/*文字サイズ*/
-	background: #ff0000;	/*背景色*/
-	color: #fff;			/*文字色*/
-	width: 60px;			/*幅*/
-	height: 60px;			/*高さ*/
-	line-height: 1.5;		/*行間*/
-	border-radius: 50%;		/*角丸のサイズ。円形になります。*/
-	text-align: center;		/*テキストをセンタリング*/
-	position: absolute;		/*親のrelativeに対して絶対配置させる指示*/
-	left: -10px;			/*listブロックに対して左からの配置場所の指定*/
-	top: -10px;				/*listブロックに対して上からの配置場所の指定*/
-	box-shadow: 2px 2px 5px rgba(0,0,0,0.3);	/*ボックスの影。右へ、下へ、ぼかし幅。0,0,0は黒の事で0.3は色が30%出た状態。*/
+    display: flex;  /* flexボックスを使う */
+    justify-content: center;  /* 中央に揃える */
+    align-items: center;  /* 垂直揃え */
+    font-size: 0.9em;  /* 文字サイズ */
+    background: #ff0000;  /* 背景色 */
+    color: #fff;  /* 文字色 */
+    width: 60px;  /* 幅 */
+    height: 60px;  /* 高さ */
+    line-height: 1.5;  /* 行間 */
+    border-radius: 50%;  /* 円形にする */
+    text-align: center;  /* テキストをセンタリング */
+    position: absolute;  /* 親のrelativeに対して絶対配置させる */
+    left: -10px;  /* 左からの配置 */
+    top: -10px;  /* 上からの配置 */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);  /* ボックスの影 */
 }
 
 
