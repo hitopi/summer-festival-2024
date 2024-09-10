@@ -751,7 +751,7 @@ p.btn {margin: 0;}
 /* 資料のアイコン */
 #side-btn i {
     font-size: 2em; /* アイコンのサイズを指定 */
-    transform: scale(1); /* 通常時はアイコンの拡大なし */
+    transform: scale(2); /* 通常時からアイコンを2倍に拡大 */
     padding-bottom: 0.5rem;
     transition: transform 0.3s ease, opacity 0.3s ease; /* トランスフォームと透明度の滑らかな変化 */
 }
