@@ -1028,6 +1028,7 @@ p.btn {margin: 0;}
     margin-right: 20px;
 }
 
+/* ステップアイテムのスタイル */
 .step-item {
     background-color: #fff;
     padding: 20px;
@@ -1039,8 +1040,16 @@ p.btn {margin: 0;}
     display: flex; /* インライン要素の配置を調整 */
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* アニメーションの準備 */
 }
 
+/* 最初のstep-itemだけアニメーションを追加 */
+.step-item:first-child:hover {
+    transform: translateY(-10px); /* ホバー時に上に移動 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 影を大きくして強調 */
+}
+
+/* ステップ番号のスタイル */
 .step-number {
     font-size: 1.5em;
     font-weight: bold;
@@ -1069,26 +1078,11 @@ p.btn {margin: 0;}
     position: relative;
 }
 
-/* ホバー時のアニメーション */
+/* リンクのホバー時アニメーション */
 .steps a:hover {
     background-color: #2c53a1; /* ホバー時に背景色を青に */
     color: #fff; /* テキストを白にする */
     text-decoration: none; /* 下線はつけない */
-    animation: upAndDown 0.5s ease; /* 上に移動し戻るアニメーション */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影をつけて強調 */
-}
-
-/* 上に移動してから元に戻るアニメーション */
-@keyframes upAndDown {
-    0% {
-        transform: translateY(0); /* 最初は元の位置 */
-    }
-    50% {
-        transform: translateY(-10px); /* 中間で少し上に移動 */
-    }
-    100% {
-        transform: translateY(0); /* 最終的に元の位置に戻る */
-    }
 }
 
 /* ステップ間の大きめの矢印 */
