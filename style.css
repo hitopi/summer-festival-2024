@@ -1076,36 +1076,31 @@ p.btn {margin: 0;}
 .step-item:hover {
     background-color: #2c53a1; /* 背景色を変える */
     color: #fff; /* 全体の文字を白に */
-    transform: translateY(-10px); /* 上に少し移動 */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 影も強調 */
-    animation: upAndDown 0.5s ease; /* アニメーションを適用 */
+    animation: upAndDown 0.3s ease; /* 上に移動して戻るアニメーション */
 }
 
 /* 上に移動してから元に戻るアニメーション */
 @keyframes upAndDown {
     0% {
-        transform: translateY(0); /* 最初は元の位置 */
+        transform: translateY(0); /* 元の位置 */
     }
     50% {
-        transform: translateY(-10px); /* 中間で少し上に移動 */
+        transform: translateY(-5px); /* 少し上に移動 */
     }
     100% {
-        transform: translateY(0); /* 最終的に元の位置に戻る */
+        transform: translateY(0); /* 元の位置に戻る */
     }
 }
 
 /* ホバー時にステップ番号とテキストの色を白に */
 .step-item:hover .step-number, 
-.step-item:hover p,
-.step-item:hover a {
-    color: #fff; /* ホバー時にテキストを白に */
+.step-item:hover p {
+    color: #fff; /* ホバー時に全体のテキストを白に */
 }
 
-/* ホバー時に「Google Form」の部分を黄色に */
+/* ホバー時に "Google Form" の文字だけ黄色に */
 .step-item:hover a {
-    background-color: #ffeb3b; /* ホバー時にリンク部分を黄色に */
-    color: #000; /* テキストは黒に */
-    border-radius: 5px;
+    color: #ffeb3b; /* リンク部分の文字色を黄色に */
 }
 
 /* ステップ間の大きめの矢印 */
