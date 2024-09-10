@@ -95,7 +95,7 @@ main > article,
 ---------------------------------------------------------------------------*/
 #mainimg {
     width: 100vw;
-    height: 60vh; /* 高さを調整 */
+    height: 100vh; /* 高さを調整 */
     margin: 0; /* マージンを削除 */
     padding: 0; /* パディングを削除 */
     position: relative;
