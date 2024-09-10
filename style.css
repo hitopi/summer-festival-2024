@@ -94,15 +94,14 @@ main > article,
 /* トップページのスライドショー（vegasを使用）
 ---------------------------------------------------------------------------*/
 #mainimg {
-    width: 100vw;
-    height: 100vh; /* 高さを調整 */
-    margin: 0; /* マージンを削除 */
-    padding: 0; /* パディングを削除 */
+    width: 100vw; /* 幅を100% */
+    height: 100vh; /* 高さを画面全体にフィット */
+    margin: 0;
+    padding: 0;
     position: relative;
     overflow: hidden; /* コンテンツがはみ出さないようにする */
-    display: flex; /* 縦横方向の余白を削除するためのフレックスボックス */
-    justify-content: center; /* 横方向の中央揃え */
-    align-items: center; /* 縦方向の中央揃え */
+    background-size: cover; /* 背景画像を画面全体にフィット */
+    background-position: center; /* 背景画像を中央揃え */
 }
 
 #mainimg #kazari {
