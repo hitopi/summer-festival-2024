@@ -95,7 +95,7 @@ main > article,
 ---------------------------------------------------------------------------*/
 #mainimg {
     width: 100vw; /* 幅を100% */
-    height: 100vh; /* 高さを画面全体にフィット */
+    height: 60vh; /* 高さを画面全体にフィット */
     margin: 0;
     padding: 0;
     position: relative;
