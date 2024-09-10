@@ -237,11 +237,13 @@ body:not(.home) header #logo img {
     z-index: 101;
     padding: 30px;
     width: 100px;  /* side-btnの幅に合わせる */
+    height: auto;  /* 高さはコンテンツに合わせて自動調整 */
     background-color: #2c53a1; /* 背景色を#2c53a1に設定 */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-decoration: none; /* 下線を削除 */
 }
 
 /* アイコンの設定 */
@@ -249,6 +251,7 @@ body:not(.home) header #logo img {
     font-size: 2em; /* header-menuのアイコンサイズに合わせる */
     color: #fff; /* アイコンを白色に設定 */
     transition: 0.3s;
+    text-decoration: none; /* 下線を削除 */
 }
 
 /* アイコンの上に「参加」という文字を追加 */
@@ -256,6 +259,7 @@ body:not(.home) header #logo img {
     font-size: 1em;
     color: #fff; /* 文字色も白に設定 */
     margin-bottom: 10px; /* アイコンとの間に余白を追加 */
+    text-decoration: none; /* 下線を削除 */
 }
 
 /* アイコンのホバー時の効果 */
@@ -711,43 +715,42 @@ p.btn {margin: 0;}
 
 /*「資料請求はこちら」ボタン
 ---------------------------------------------------------------------------*/
-#side-btn p {
-    padding: 0;
-    margin: 0;
+/* side-btnをmenubarの下に配置する */
+#side-btn {
+    position: fixed;
+    top: calc(100px + 30px); /* menubarの下に位置させる */
+    left: 0px;
+    width: 100px;
+    background-color: #c03c0e;
 }
 
 #side-btn a {
-	text-decoration: none;
-	writing-mode: vertical-rl;	/*縦書きの指定。*/
-	text-orientation: upright;	/*文字の向き*/
-	position: fixed;			/*画面スクロールしても移動しない*/
-	left: 0px; /* 左端に配置 */
-	top: 100px; /* 上端に配置 */
-	background-color: #c03c0e;	/*背景色*/
-	color: #fff;								/*文字色*/
-	display: flex;			/*flexボックスを使う指定*/
-	justify-content: center;	/*並びかたの種類の指定*/
-	align-items: center;	/*天地中央に配置されるようにする指定だが、縦書きなのでこの場合は左右中央になる。*/
-	letter-spacing: 0.4em;	/*文字間隔*/
-	text-indent: 0.4em;		/*上の行に合わせておけばOK*/
-	width: 100px;			/*幅*/
-	padding: 3rem 0;		/*ボタン内の余白。上下、左右への順番。*/
+    text-decoration: none;
+    writing-mode: vertical-rl; /* 縦書きの指定 */
+    text-orientation: upright;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.4em;
+    text-indent: 0.4em;
+    padding: 3rem 0;
+    width: 100px;
+    height: 300px;  /* 必要な高さに合わせる */
 }
 
-/*資料のアイコン*/
+/* 資料のアイコン */
 #side-btn i {
-	transform: scale(2);	/*２倍の大きさに*/
-	padding-bottom: 0.5rem;	/*下のテキストとの間の余白*/
+    transform: scale(2); /* ２倍の大きさに */
+    padding-bottom: 0.5rem; /* 下のテキストとの間の余白 */
 }
 
-/*画面幅700px以下の追加指定*/
-@media screen and (max-width:700px) {
-
-#side-btn {
-	display: none;	/*ボタンを非表示に*/
+/* 画面幅が700px以下の場合、side-btnを非表示に */
+@media screen and (max-width: 700px) {
+    #side-btn {
+        display: none;
+    }
 }
-
-}/*追加指定ここまで*/
 
 
 /*テーブル
