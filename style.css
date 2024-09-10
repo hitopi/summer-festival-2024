@@ -637,6 +637,13 @@ ul.submenu li a:hover {
     overflow: hidden;
 }
 
+.list-square figure {
+    width: 100%; /* figureも枠全体を使うように設定 */
+    height: 100%; /* .list-square と同じ高さに揃える */
+    margin: 0; /* figureの余白をなくす */
+    padding: 0; /* figureのパディングをなくす */
+}
+
 .list-square img {
     width: 100%; /* 画像の横幅を枠いっぱいに設定 */
     height: auto; /* 画像の縦横比を保ちながら高さを自動調整 */
