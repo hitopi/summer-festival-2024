@@ -745,7 +745,7 @@ p.btn {margin: 0;}
     text-indent: 0.4em;
     padding: 3rem 0;
     width: 100px;
-    height: 300px;  /* 必要な高さに合わせる */
+    height: 320px;  /* 必要な高さに合わせる */
 }
 
 /* 資料のアイコン */
@@ -769,7 +769,7 @@ p.btn {margin: 0;}
 }
 
 /* 画面幅が900px以下の場合、side-btnを非表示に */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1199px) {
     #side-btn {
         display: none;
     }
