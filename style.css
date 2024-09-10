@@ -1064,7 +1064,6 @@ p.btn {margin: 0;}
     font-weight: bold; /* 太字にして強調 */
     padding: 10px 15px; /* 内側に余白を追加 */
     background-color: transparent; /* デフォルトは透明にしておく */
-    border: 2px solid #2c53a1; /* 枠線をつけて目立たせる */
     border-radius: 5px; /* 角を少し丸くする */
     transition: background-color 0.3s ease, transform 0.3s ease; /* 背景色とアニメーションの変化を滑らかに */
     position: relative;
