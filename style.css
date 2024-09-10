@@ -892,7 +892,7 @@ p.btn {margin: 0;}
 	text-decoration: none;
 	text-align: center;
 	z-index: 99;
-	background: rgba(30, 60, 120, 0.5); /* 背景色を#2c53a1より少し黒く */
+	background: rgba(30, 60, 120, 0.8); /* 背景色を#2c53a1より少し黒く */
 	position: fixed;	/* スクロールに追従する設定 */
 	right: 20px;		/* 右からの配置 */
 	bottom: 20px;		/* 下からの配置 */
