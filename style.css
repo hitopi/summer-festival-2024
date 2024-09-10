@@ -1166,7 +1166,12 @@ p.btn {margin: 0;}
     object-fit: contain; /* 画像が中央に揃えられ、縦横比を維持 */
 }
 
-
+@media screen and (max-width: 768px) {
+    /* 768px以下の画面幅では画像を非表示にする */
+    .photos-container, .photo {
+        display: none;
+    }
+}
 
 
 
