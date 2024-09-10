@@ -368,20 +368,27 @@ main p + p {margin-top: -10px;}
 ---------------------------------------------------------------------------*/
 footer small {font-size: 100%;}
 
+/* フッターブロック */
 footer {
-	font-size: 0.6em;		/*文字サイズ*/
-	background: #222;	/*背景色*/
-	color: #999;			/*文字色*/
-	text-align: center;		/*内容をセンタリング*/
-	padding: 20px;			/*ボックス内の余白*/
+    background: #679ff2; /* headerと同じ背景色 */
+    position: relative;  /* 同様に相対位置 */
+    padding: 20px;       /* 余白は残しますが、サイズをheaderに合わせています */
+    text-align: center;  /* 内容をセンタリング */
+    color: #999;         /* 文字色はそのまま */
+    font-size: 0.6em;    /* 文字サイズも保持 */
 }
 
-/*リンクテキスト*/
-footer a {color: #999;text-decoration: none;}
+/* ロゴ画像 */
+footer #logo {
+    margin: 0 auto;      /* 中央に配置 */
+}
 
-/*著作部分*/
-footer .pr {display: block;}
-
+/* フッターロゴ画像の高さをheaderと統一 */
+footer #logo img {
+    display: block;
+    height: 45px;        /* headerと同じ画像の高さ */
+    margin: 0 auto;      /* 中央配置 */
+}
 
 /*2カラムの場合
 ---------------------------------------------------------------------------*/
