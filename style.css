@@ -1032,41 +1032,46 @@ p.btn {margin: 0;}
     background-color: #fff;
     padding: 20px;
     margin-bottom: 10px; /* 矢印とのスペースを少なくする */
-    border-radius: 10px; /* 各ステップの角を丸くする */
+    border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
-}
-
-/* ステップ間の矢印 */
-.arrow-large {
-    font-size: 2em; /* 大きめの矢印 */
-    color: #2c53a1;
-    text-align: center;
-    margin: 5px 0; /* スペースを減らす */
+    display: flex; /* インライン要素の配置を調整 */
+    justify-content: center;
+    align-items: center;
 }
 
 .step-number {
     font-size: 1.5em;
     font-weight: bold;
     color: #2c53a1;
-    margin-bottom: 0;
-    display: inline;
+    margin-right: 10px; /* ステップ番号とテキストの間にスペースを追加 */
+    display: inline-block; /* 改行を防止 */
 }
 
 .steps p {
     font-size: 1.2em;
     color: #333;
-    margin: 10px 0;
+    margin: 0; /* 不要な余白を削除 */
+    display: inline-block; /* 改行を防止 */
 }
 
 .steps a {
     color: #2c53a1;
     text-decoration: none;
+    display: inline-block; /* 改行を防止 */
 }
 
 .steps a:hover {
     text-decoration: underline;
+}
+
+/* ステップ間の大きめの矢印 */
+.arrow-large {
+    font-size: 2em; /* 大きめの矢印 */
+    color: #2c53a1;
+    text-align: center;
+    margin: 5px 0; /* スペースを減らす */
 }
 
 /* 写真コンテナの高さをstepsと一致させる */
