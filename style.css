@@ -252,6 +252,7 @@ body:not(.home) header #logo img {
     color: #fff;
     transition: 0.3s;
     text-decoration: none;
+    order: 1; /* アイコンを最初に表示 */
 }
 
 /* アイコンのマウスオン時 */
@@ -259,12 +260,13 @@ body:not(.home) header #logo img {
     animation: up1 0.8s both; /* up1 アニメーションを適用 */
 }
 
-/* アイコンの上に「参加」という文字を追加 */
+/* アイコンの下に「参加」という文字を表示 */
 #menubar_hdr span {
     font-size: 1em;
     color: #fff;
-    margin-bottom: 10px;
+    margin-top: 10px; /* アイコンとの間に余白を追加 */
     text-decoration: none;
+    order: 2; /* spanをアイコンの下に表示 */
 }
 
 /*mainブロック設定
