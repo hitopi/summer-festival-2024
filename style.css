@@ -341,7 +341,7 @@ body:not(.home) header #logo img {
 	display: flex;					/*flexを使う指定*/
 	flex-direction: column;			/*子要素（３本バー）を縦並びにする*/
 	justify-content: space-around;	/*並びかたの種類の指定*/
-	background: var(--primary-color);	/*css冒頭で指定しているprimary-colorを読み込みます*/
+	background: #2c53a1;	/*css冒頭で指定しているprimary-colorを読み込みます*/
 }
 
 	/*画面幅700px以下の追加指定*/
