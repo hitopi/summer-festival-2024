@@ -236,40 +236,35 @@ body:not(.home) header #logo img {
     left: 0px;
     z-index: 101;
     padding: 30px;
-    width: 100px;  /* side-btnの幅に合わせる */
-    height: 110px;  /* 高さはコンテンツに合わせて自動調整 */
-    background-color: #2c53a1; /* 背景色を#2c53a1に設定 */
+    width: 100px;
+    height: 110px;
+    background-color: #2c53a1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-decoration: none; /* 下線を削除 */
+    text-decoration: none;
 }
 
 /* アイコンの設定 */
 #menubar_hdr i {
-    font-size: 2em; /* header-menuのアイコンサイズに合わせる */
-    color: #fff; /* アイコンを白色に設定 */
+    font-size: 2em;
+    color: #fff;
     transition: 0.3s;
-    text-decoration: none; /* 下線を削除 */
+    text-decoration: none;
 }
 
-/*アイコンのマウスオン時*/
-#menubar_hdr a:hover i {
-	animation: up1 0.8s both;	/*animation.cssの、up1を実行する。0.8sは0.8秒の事。*/
+/* アイコンのマウスオン時 */
+#menubar_hdr:hover i {
+    animation: up1 0.8s both; /* up1 アニメーションを適用 */
 }
 
 /* アイコンの上に「参加」という文字を追加 */
 #menubar_hdr span {
     font-size: 1em;
-    color: #fff; /* 文字色も白に設定 */
-    margin-bottom: 10px; /* アイコンとの間に余白を追加 */
-    text-decoration: none; /* 下線を削除 */
-}
-
-/* アイコンのホバー時の効果 */
-#menubar_hdr:hover i {
-    opacity: 0.7; /* header-menuと同様のホバー効果を追加 */
+    color: #fff;
+    margin-bottom: 10px;
+    text-decoration: none;
 }
 
 /*mainブロック設定
@@ -723,7 +718,7 @@ p.btn {margin: 0;}
 /* side-btnをmenubarの下に配置する */
 #side-btn {
     position: fixed;
-    top: 110px; /* menubarの下に位置させる */
+    top: 110px;
     left: 0px;
     width: 100px;
     background-color: #c03c0e;
@@ -731,7 +726,7 @@ p.btn {margin: 0;}
 
 #side-btn a {
     text-decoration: none;
-    writing-mode: vertical-rl; /* 縦書きの指定 */
+    writing-mode: vertical-rl;
     text-orientation: upright;
     color: #fff;
     display: flex;
@@ -741,18 +736,18 @@ p.btn {margin: 0;}
     text-indent: 0.4em;
     padding: 3rem 0;
     width: 100px;
-    height: 250px;  /* 必要な高さに合わせる */
+    height: 250px;
 }
 
 /* 資料のアイコン */
 #side-btn i {
-    transform: scale(2); /* ２倍の大きさに */
-    padding-bottom: 0.5rem; /* 下のテキストとの間の余白 */
+    transform: scale(2);
+    padding-bottom: 0.5rem;
 }
 
-/*アイコンのマウスオン時*/
-#side-btn b:hover i {
-	animation: up1 0.8s both;	/*animation.cssの、up1を実行する。0.8sは0.8秒の事。*/
+/* アイコンのマウスオン時 */
+#side-btn:hover i {
+    animation: up1 0.8s both; /* up1 アニメーションを適用 */
 }
 
 /* 画面幅が700px以下の場合、side-btnを非表示に */
@@ -761,7 +756,6 @@ p.btn {margin: 0;}
         display: none;
     }
 }
-
 
 /*テーブル
 ---------------------------------------------------------------------------*/
