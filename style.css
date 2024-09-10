@@ -137,15 +137,17 @@ body:not(.home) header #logo img {
 
 /*トップページのロゴ*/
 .home header #logo {
-	width: 40%;				/*ロゴの幅*/
-	height: 40%;
-	background: #2c53a1;	/*ロゴの背景色*/
-	border-radius: 50%;		/*円形にする指定。30pxなどにすれば角が丸くなった四角形になります。*/
-	position: absolute;z-index: 1;
-	bottom: 25%;	/*ヘッダーに対して、下からの配置場所の指定*/
-	left: 30%;		/*ヘッダーに対して、左からの配置場所の指定*/
-	border: 10px solid #fff;	/*枠線の幅、線種、色*/
+    width: 40%;				/* ロゴの幅 */
+    background: #2c53a1;	/* ロゴの背景色 */
+    border-radius: 50%;		/* 円形にする指定 */
+    position: absolute;
+    z-index: 1;
+    bottom: 25%;	/* ヘッダーに対して、下からの配置 */
+    left: 30%;		/* ヘッダーに対して、左からの配置 */
+    border: 10px solid #fff;	/* 枠線の幅、線種、色 */
+    overflow: hidden;  /* 背景を超えた部分を非表示にする */
 }
+
 
 
 /*ヘッダー下のメニュー
