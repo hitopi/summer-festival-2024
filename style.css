@@ -943,6 +943,59 @@ p.btn {margin: 0;}
 .large {font-size: 2.5em; letter-spacing: 0.1em;}
 .pt50 {padding-top: 50px;}
 
+/* セクション全体のスタイル */
+.event-info {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #fff8e1; /* 背景色を柔らかいクリーム色に */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 軽いシャドウで浮き上がらせる */
+    text-align: center;
+}
+
+/* テーブルのスタイル */
+.custom-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.custom-table thead th {
+    background-color: #2c53a1; /* ヘッダーの背景色 */
+    color: #fff; /* 文字色 */
+    padding: 15px;
+    font-weight: bold;
+    border-top-left-radius: 10px; /* 左上の角を丸く */
+    border-top-right-radius: 10px; /* 右上の角を丸く */
+}
+
+.custom-table tbody td {
+    background-color: #fff;
+    color: #333;
+    padding: 15px;
+    border-bottom: 1px solid #ddd; /* 下に薄い境界線 */
+}
+
+.custom-table tbody tr:last-child td {
+    border-bottom: none; /* 最後の行の下にボーダーを表示しない */
+}
+
+/* 強調表示 */
+.highlight {
+    font-size: 1.5em;
+    color: #e53935; /* 赤で強調 */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* 強調する "無料" の部分 */
+.highlight strong {
+    background-color: #ffeb3b; /* 黄色で背景を強調 */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 
 
 
