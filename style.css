@@ -718,7 +718,7 @@ p.btn {margin: 0;}
 /* side-btnをmenubarの下に配置する */
 #side-btn {
     position: fixed;
-    top: 110px;
+    top: 110px; /* menubarの下に位置させる */
     left: 0px;
     width: 100px;
     background-color: #c03c0e;
@@ -726,7 +726,7 @@ p.btn {margin: 0;}
 
 #side-btn a {
     text-decoration: none;
-    writing-mode: vertical-rl;
+    writing-mode: vertical-rl; /* 縦書きの指定 */
     text-orientation: upright;
     color: #fff;
     display: flex;
@@ -736,18 +736,19 @@ p.btn {margin: 0;}
     text-indent: 0.4em;
     padding: 3rem 0;
     width: 100px;
-    height: 300px;
+    height: 300px;  /* 必要な高さに合わせる */
 }
 
 /* 資料のアイコン */
 #side-btn i {
-    transform: scale(2);
+    transform: scale(2); /* ２倍の大きさに */
     padding-bottom: 0.5rem;
+    transition: transform 0.3s ease; /* マウスオン時のトランスフォームも滑らかにする */
 }
 
 /* アイコンのマウスオン時 */
 #side-btn:hover i {
-    animation: up1 0.8s both; /* up1 アニメーションを適用 */
+    transform: translateY(-10px) scale(2); /* scale(2) を維持しつつ、上方向に動かす */
 }
 
 /* 画面幅が700px以下の場合、side-btnを非表示に */
