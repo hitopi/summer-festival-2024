@@ -41,3 +41,22 @@ $(function() {
         $('.openclose').not(this).next().slideUp();
     });
 });
+
+// menubarの高さに基づいてside-btnを調整
+$(window).on('load', function() {
+    const menubar = document.getElementById('menubar_hdr');
+    const sideBtn = document.getElementById('side-btn');
+
+    function updateSideBtnPosition() {
+        const menubarHeight = menubar.offsetHeight;
+        sideBtn.style.top = `${menubarHeight}px`;
+    }
+
+    // ページ読み込み時に初回の位置調整
+    updateSideBtnPosition();
+
+    // ウィンドウのリサイズ時に再計算
+    $(window).resize(function() {
+        updateSideBtnPosition();
+    });
+});
