@@ -176,8 +176,8 @@ body:not(.home) header #logo img {
 
 /*１つ目メニュー*/
 #header-menu ul li:nth-of-type(1) a {
-	border-bottom: 5px solid #2c53a1;	/*下線の幅、線種、色*/
-	color: #2c53a1;						/*文字色*/
+	border-bottom: 5px solid #679ff2;	/*下線の幅、線種、色*/
+	color: #679ff2;						/*文字色*/
 }
 
 /*２つ目メニュー*/
