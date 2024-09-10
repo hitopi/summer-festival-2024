@@ -254,6 +254,11 @@ body:not(.home) header #logo img {
     text-decoration: none; /* 下線を削除 */
 }
 
+/*アイコンのマウスオン時*/
+#menubar_hdr a:hover i {
+	animation: up1 0.8s both;	/*animation.cssの、up1を実行する。0.8sは0.8秒の事。*/
+}
+
 /* アイコンの上に「参加」という文字を追加 */
 #menubar_hdr span {
     font-size: 1em;
@@ -743,6 +748,11 @@ p.btn {margin: 0;}
 #side-btn i {
     transform: scale(2); /* ２倍の大きさに */
     padding-bottom: 0.5rem; /* 下のテキストとの間の余白 */
+}
+
+/*アイコンのマウスオン時*/
+#side-btn b:hover i {
+	animation: up1 0.8s both;	/*animation.cssの、up1を実行する。0.8sは0.8秒の事。*/
 }
 
 /* 画面幅が700px以下の場合、side-btnを非表示に */
