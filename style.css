@@ -135,29 +135,19 @@ body:not(.home) header #logo img {
 	margin: 0 auto;	/*左右中央に配置*/
 }
 
-/* トップページのロゴ */
+/*トップページのロゴ*/
 .home header #logo {
-    width: 200px; /* 固定幅に変更 */
-    height: 200px; /* 固定高さを指定して円形を維持 */
-    background: #2c53a1;
-    border-radius: 50%; /* 正確な円形にするために、幅と高さを同じに設定 */
+    width: 40%;				/* ロゴの幅 */
+    background: #2c53a1;	/* ロゴの背景色 */
+    border-radius: 50%;		/* 円形にする指定 */
     position: absolute;
     z-index: 1;
-    bottom: 25%;
-    left: 50%; /* 中央配置に近づけるために50%に */
-    transform: translateX(-50%); /* 完全に中央に配置 */
-    border: 10px solid #fff;
-    overflow: hidden;
+    bottom: 25%;	/* ヘッダーに対して、下からの配置 */
+    left: 30%;		/* ヘッダーに対して、左からの配置 */
+    border: 10px solid #fff;	/* 枠線の幅、線種、色 */
+    overflow: hidden;  /* 背景を超えた部分を非表示にする */
 }
 
-/* トップページのロゴが画面幅に応じて適切に縮小するためのメディアクエリ */
-@media (max-width: 768px) {
-    .home header #logo {
-        width: 150px; /* 小さい画面ではロゴのサイズを縮小 */
-        height: 150px;
-        bottom: 20%; /* 画面サイズが小さい時の位置調整 */
-    }
-}
 
 
 /*ヘッダー下のメニュー
