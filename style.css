@@ -386,7 +386,7 @@ footer #logo {
 /* フッターロゴ画像の高さをheaderと統一 */
 footer #logo img {
     display: block;
-    height: 60px;        /* headerと同じ画像の高さ */
+    height: 80px;        /* headerと同じ画像の高さ */
     margin: 0 auto;      /* 中央配置 */
 }
 
