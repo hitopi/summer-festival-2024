@@ -1088,11 +1088,12 @@ p.btn {margin: 0;}
 .photos-container {
     flex: 1;
     display: flex;
-    justify-content: center; /* 水平方向で中央揃え */
+    justify-content: flex-start; /* 左寄せに変更 */
     align-items: center; /* 縦方向で中央揃え */
     height: auto; /* steps-container と同じ高さに揃える */
     background: none; /* 背景を削除 */
     box-shadow: none; /* 影を削除 */
+    padding-right: 20px; /* 画像を右にずらすための余白 */
 }
 
 .photo {
@@ -1101,6 +1102,7 @@ p.btn {margin: 0;}
     justify-content: center; /* 水平中央揃え */
     align-items: center; /* 縦方向の中央揃え */
     height: 100%; /* steps-container の高さに合わせる */
+    margin-left: 20px; /* さらに画像を右にずらす */
 }
 
 .photo img {
@@ -1108,6 +1110,7 @@ p.btn {margin: 0;}
     max-height: 100%; /* 高さもコンテナに合わせる */
     object-fit: contain; /* 画像が中央に揃えられ、縦横比を維持 */
 }
+
 
 
 
