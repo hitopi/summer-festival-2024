@@ -892,6 +892,14 @@ p.btn {margin: 0;}
     flex: 1;
 }
 
+/* 画面幅が600px以下のとき、ulを非表示にする */
+@media screen and (max-width: 600px) {
+    .event-container ul {
+        display: none;
+    }
+}
+
+
 /*PAGE TOP（↑）設定
 ---------------------------------------------------------------------------*/
 .pagetop-show {display: block;}
