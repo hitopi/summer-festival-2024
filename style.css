@@ -91,15 +91,18 @@ main > article,
 }
 
 
-/*トップページのスライドショー（vegasを使用）
+/* トップページのスライドショー（vegasを使用）
 ---------------------------------------------------------------------------*/
 #mainimg {
     width: 100vw;
-    height: 60vh;
-    margin: 0; /* 余分なマージンを削除 */
-    padding: 0; /* 余分なパディングを削除 */
+    height: 60vh; /* 高さを調整 */
+    margin: 0; /* マージンを削除 */
+    padding: 0; /* パディングを削除 */
     position: relative;
     overflow: hidden; /* コンテンツがはみ出さないようにする */
+    display: flex; /* 縦横方向の余白を削除するためのフレックスボックス */
+    justify-content: center; /* 横方向の中央揃え */
+    align-items: center; /* 縦方向の中央揃え */
 }
 
 #mainimg #kazari {
@@ -110,6 +113,9 @@ main > article,
     height: auto;
     margin: 0; /* 余分なマージンを削除 */
     padding: 0; /* 余分なパディングを削除 */
+    display: block; /* インライン要素による余分なスペースを回避 */
+    object-fit: cover; /* コンテンツのはみ出し防止のために画像のアスペクト比を維持しつつ、要素のサイズにフィットさせる */
+    line-height: 0; /* 余分な行間を削除 */
 }
 
 /*header（ロゴなどが入った最上段のブロック）
@@ -269,8 +275,8 @@ body:not(.home) header #logo img {
     order: 2; /* spanをアイコンの下に表示 */
 }
 
-/* 画面幅が900px以下の場合、非表示に */
-@media screen and (max-width: 900px) {
+/* 画面幅が1199px以下の場合、非表示に */
+@media screen and (max-width: 1199px) {
     #menubar_hdr {
         display: none;
     }
