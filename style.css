@@ -599,11 +599,15 @@ ul.submenu li a:hover {
 	box-shadow: 5px 5px 20px rgba(0,0,0,0.1);	/*ボックスの影。右へ、下へ、ぼかし幅、0,0,0は黒の事で0.1は色が10%出た状態。*/
 }
 
-/*ボックス内のfigure画像*/
-.list2 figure {
-	width: 30%;	/*幅*/
-	margin: -10px 10px -10px -10px;	/*上の.list2で設定しているpadding分を相殺して画像をブロックいっぱいに出す*/
+.list-container-2 figure {
+    margin: 0; /* マージンを削除 */
+    height: 100%; /* figureが枠全体を使うように高さを設定 */
+    width: 100%; /* figureが枠全体を使うように幅を設定 */
+    overflow: hidden; /* 枠から画像がはみ出さないようにする */
 }
+
+.list-container-2 figure img {
+    width: 100%; /*
 
 /*ボックス内のtextブロック*/
 .list2 .text {
