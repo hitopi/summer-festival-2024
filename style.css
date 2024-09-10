@@ -635,6 +635,12 @@ ul.submenu li a:hover {
 	width: 33.3%;	/*幅*/
 }
 
+.list-square img {
+    width: 100%; /* 画像が枠の横幅いっぱいになるように設定 */
+    height: 100%; /* 画像が枠の高さいっぱいになるように設定 */
+    object-fit: cover; /* 画像のアスペクト比を保ちながら、枠いっぱいに表示されるように調整 */
+}
+
 /*ボックス内のtextブロック*/
 .list-square .text {
 	position: absolute;
