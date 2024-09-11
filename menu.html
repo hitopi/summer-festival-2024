@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animation.css"> <!-- アニメーション用のスタイルシート -->
     <link rel="stylesheet" href="inview.css"> <!-- 要素が表示された時のアニメーション用のスタイルシート -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body class="shopping">
@@ -38,77 +39,168 @@
 </nav>
 
 <main>
-
-<section>
-
-    <h2 class="flag">食事内容<span>Food Menu</span></h2>
-
-    <table class="ta1">
-        <caption>以下はケータリング内容ですっ</caption>
-    </table>
-    
-    <p class="c"><br></p>
-
-    <div class="list-container">
-
-        <div class="list-square blur">
-            <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/in_food_1.png" alt=""></figure>
-            <div class="text">
-                <h4>お寿司</h4>
-                <p>ここに説明</p>
-            </div>
-            <span class="icon">オススメ</span>
-        </div>
-
-        <div class="list-square blur">
-            <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/in_food_2.png" alt=""></figure>
-            <div class="text">
-                <h4>ピザ</h4>
-                <p>ここに説明</p>
-            </div>
-            <span class="icon">オススメ</span>
-        </div>
-
-        <div class="list-square blur">
-            <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/in_food_3.png" alt=""></figure>
-            <div class="text">
-                <h4>サラダ</h4>
-                <p>ここに説明</p>
-            </div>
-        </div>
-
-        <div class="list-square blur">
-            <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/in_food_4.png" alt=""></figure>
-            <div class="text">
-                <h4>中華</h4>
-                <p>ここに説明</p>
-            </div>
-        </div>
-
-        <div class="list-square blur">
-            <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/in_food_5.png" alt=""></figure>
-            <div class="text">
-                <h4>カオマンガイ</h4>
-                <p>ここに説明</p>
-            </div>
-        </div>
-
-        <div class="list-square blur">
-            <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/in_food_6.png" alt=""></figure>
-            <div class="text">
-                <h4>唐揚げ</h4>
-                <p>ここに説明</p>
-            </div>
-        </div>
-
+    <!-- 矢印アイコンを追加 -->
+    <div id="side-btn-arrow">
+        <i class="fas fa-angle-left"></i> <!-- 左矢印アイコン -->
     </div>
-    <!--/.list-container-->
 
-</section>
+    <section>
+    
+        <h2 class="flag">食事内容<span>Food Menu</span></h2>
+    
+        <table class="ta1">
+            <caption>以下はケータリング内容ですっ</caption>
+        </table>
+        
+        <p class="c"><br></p>
+    
+        <div class="list-container">
+    
+            <div class="list-square blur">
+                <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/in_food_1.png" alt=""></figure>
+                <div class="text">
+                    <h4>お寿司</h4>
+                    <p>ここに説明</p>
+                </div>
+                <span class="icon">オススメ</span>
+            </div>
+    
+            <div class="list-square blur">
+                <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/in_food_2.png" alt=""></figure>
+                <div class="text">
+                    <h4>ピザ</h4>
+                    <p>ここに説明</p>
+                </div>
+                <span class="icon">オススメ</span>
+            </div>
+    
+            <div class="list-square blur">
+                <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/in_food_3.png" alt=""></figure>
+                <div class="text">
+                    <h4>サラダ</h4>
+                    <p>ここに説明</p>
+                </div>
+            </div>
+    
+            <div class="list-square blur">
+                <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/in_food_4.png" alt=""></figure>
+                <div class="text">
+                    <h4>中華</h4>
+                    <p>ここに説明</p>
+                </div>
+            </div>
+    
+            <div class="list-square blur">
+                <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/in_food_5.png" alt=""></figure>
+                <div class="text">
+                    <h4>カオマンガイ</h4>
+                    <p>ここに説明</p>
+                </div>
+            </div>
+    
+            <div class="list-square blur">
+                <figure><img src="https://github.com/hitopi/summer-festival-2024/raw/main/in_food_6.png" alt=""></figure>
+                <div class="text">
+                    <h4>唐揚げ</h4>
+                    <p>ここに説明</p>
+                </div>
+            </div>
+    
+        </div>
+        <!--/.list-container-->
+    
+    </section>
 
 </main>
 
 </div> <!-- /#container -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    let isDragging = false;
+    let startX;
+    const menubars = document.querySelectorAll('[id^="menubar_hdr"]'); // IDがmenubar_hdrで始まるすべての要素を取得
+    const sideBtn = document.getElementById('side-btn');
+    const arrowBtn = document.getElementById('side-btn-arrow');
+    const threshold = 50; // ドラッグ操作のしきい値
+    let isHidden = false;  // メニューが隠れているかどうかを管理するフラグ
+
+    // menubarとside-btnを隠す関数
+    function hideElements() {
+        menubars.forEach(menubar => menubar.classList.add('hidden'));
+        sideBtn.classList.add('hidden');
+        arrowBtn.querySelector('i').style.transform = 'rotate(180deg)'; // 矢印の向きを変更
+        isHidden = true;  // フラグを更新
+    }
+
+    // menubarとside-btnを表示する関数
+    function showElements() {
+        menubars.forEach(menubar => menubar.classList.remove('hidden'));
+        sideBtn.classList.remove('hidden');
+        arrowBtn.querySelector('i').style.transform = 'rotate(0deg)'; // 矢印の向きを元に戻す
+        isHidden = false;  // フラグを更新
+    }
+
+    // ドラッグ開始時の処理
+    function startDrag(event) {
+        isDragging = true;
+        startX = event.pageX;
+        menubars.forEach(menubar => menubar.style.cursor = "grabbing");
+        sideBtn.style.cursor = "grabbing";
+    }
+
+    // ドラッグ終了時の処理
+    function endDrag() {
+        isDragging = false;
+        menubars.forEach(menubar => menubar.style.cursor = "grab");
+        sideBtn.style.cursor = "grab";
+    }
+
+    // ドラッグ中の処理
+    function onDrag(event) {
+        if (isDragging) {
+            const currentX = event.pageX;
+            const deltaX = currentX - startX;
+
+            if (deltaX < -threshold) { // 左にしきい値を超えてドラッグした場合
+                hideElements();
+            } else if (deltaX > threshold) { // 右にしきい値を超えてドラッグした場合
+                showElements();
+            }
+        }
+    }
+
+    // 矢印アイコンをクリックしたときにside-btnの表示・非表示を切り替える
+    arrowBtn.addEventListener('click', function() {
+        if (isHidden) {
+            showElements(); // 隠れている場合は表示
+        } else {
+            hideElements(); // 表示されている場合は非表示
+        }
+    });
+
+    // menubarのドラッグ操作のイベントリスナー
+    menubars.forEach(menubar => menubar.addEventListener('mousedown', startDrag));
+
+    // side-btnのドラッグ操作のイベントリスナー
+    sideBtn.addEventListener('mousedown', startDrag);
+
+    // ドラッグ終了時の処理
+    document.addEventListener('mouseup', endDrag);
+
+    // ドラッグ中の動作を監視する
+    document.addEventListener('mousemove', onDrag);
+
+    // リンクがドラッグ中に反応しないように preventDefault を追加
+    menubars.forEach(menubar => menubar.addEventListener('click', function(event) {
+        if (isDragging) event.preventDefault(); // ドラッグ中はリンク動作を無効化
+    }));
+    sideBtn.addEventListener('click', function(event) {
+        if (isDragging) event.preventDefault(); // ドラッグ中はリンク動作を無効化
+    });
+});
+
+</script>
 
 <!--左上ボタン（参加アイコン）-->
 <a id="menubar_hdr_3" href="https://www.youtube.com/user/SEIKINTV">
