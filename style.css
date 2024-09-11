@@ -854,6 +854,41 @@ p.btn {margin: 0;}
     }
 }
 
+/* 矢印アイコンを追加 */
+#side-btn-arrow {
+    position: absolute;
+    bottom: -50px; /* side-btnの下側に配置 */
+    left: 50%; /* 左右中央に配置 */
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #c03c0e; /* 背景色をside-btnに合わせる */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* 矢印にもカーソルを表示 */
+    z-index: 21; /* 他の要素より前面に表示 */
+    border-radius: 50%; /* 丸くする */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 影を付ける */
+    transition: transform 0.3s ease; /* 移動時のスムーズなアニメーション */
+}
+
+#side-btn-arrow:hover {
+    transform: translateX(-50%) scale(1.1); /* ホバー時に拡大 */
+}
+
+#side-btn-arrow i {
+    color: #fff; /* アイコンの色 */
+    font-size: 1.5em; /* アイコンの大きさ */
+}
+
+/* ドラッグ時の矢印の回転 */
+.hidden #side-btn-arrow i {
+    transform: rotate(180deg); /* 矢印の方向を反転させる */
+    transition: transform 0.3s ease;
+}
+
+
 /* テーブル
 ---------------------------------------------------------------------------*/
 /* テーブル１行目に入った見出し部分（※caption） */
