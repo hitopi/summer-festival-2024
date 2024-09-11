@@ -845,52 +845,55 @@ p.btn {margin: 0;}
     animation: up1 0.8s both; /* up1 アニメーションを適用 */
 }
 
-/* 画面幅が899px以下の場合、side-btnとside-btn-arrowを非表示に */
-@media screen and (max-width: 899px) {
-    #side-btn {
-        display: none !important;
-    }
-    #side-btn-arrow {
-        display: none !important; /* 確実に非表示にするために !important を追加 */
-    }
-}
-
-/* 矢印アイコンの配置 */
-#side-btn-arrow {
-    position: relative; /* 親要素(main)に対して相対的に配置 */
+/* 矢印アイコンの共通設定 */
+#side-btn-arrow, #side-btn-arrow-2 {
+    position: relative;
     margin: 0 auto; /* 左右中央に配置 */
-    top: 0; /* Mainの一番上 */
+    top: 0; /* 親要素(main)の一番上に配置 */
     width: 40px;
     height: 40px;
     background-color: #c03c0e; /* 背景色 */
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer; /* 矢印にカーソルを表示 */
-    z-index: 21; /* 他の要素より前に表示 */
-    border-radius: 50%; /* 丸くする */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 影を付ける */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* アニメーション */
+    cursor: pointer;
+    z-index: 21;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-#side-btn-arrow:hover {
-    transform: scale(1.1); /* ホバー時に拡大 */
-    background-color: #ff5733; /* ホバー時に色を変える */
+/* 2つ目の矢印の位置調整 */
+#side-btn-arrow-2 {
+    margin-top: 20px; /* 他のセクションと適切な間隔をあける */
 }
 
-#side-btn-arrow i {
-    color: #fff; /* アイコンの色 */
-    font-size: 1.5em; /* アイコンの大きさ */
-    transition: transform 0.3s ease, color 0.3s ease; /* 矢印の回転をスムーズに */
+/* ホバー時の効果 */
+#side-btn-arrow:hover, #side-btn-arrow-2:hover {
+    transform: scale(1.1);
+    background-color: #ff5733;
+}
+
+/* アイコンのスタイル */
+#side-btn-arrow i, #side-btn-arrow-2 i {
+    color: #fff;
+    font-size: 1.5em;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 /* ドラッグ時の矢印の回転 */
-.hidden #side-btn-arrow i {
-    transform: rotate(180deg) scale(1.2); /* 矢印の方向を反転させ、少し拡大 */
-    color: #fff5e6; /* 回転時に矢印の色を少し明るく */
-    transition: transform 0.3s ease, color 0.3s ease; /* 回転と色のアニメーション */
+.hidden #side-btn-arrow i, .hidden #side-btn-arrow-2 i {
+    transform: rotate(180deg) scale(1.2);
+    color: #fff5e6;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
+/* 画面幅が899px以下の場合、side-btnと矢印を非表示に */
+@media screen and (max-width: 899px) {
+    #side-btn, #side-btn-arrow, #side-btn-arrow-2 {
+        display: none !important;
+    }
+}
 
 
 /* テーブル
