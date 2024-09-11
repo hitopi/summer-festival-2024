@@ -271,6 +271,13 @@ $(function() {
             sideBtn.classList.remove('hidden');
         }
 
+        // ドラッグ開始時にリンクのデフォルト動作を無効化
+        function preventLinkDefault(event) {
+            if (isDragging) {
+                event.preventDefault(); // リンクや選択が引っ張られるのを防ぐ
+            }
+        }
+
         // menubarのドラッグ開始
         menubar.addEventListener('mousedown', (e) => {
             isDragging = true;
@@ -318,6 +325,10 @@ $(function() {
             isDragging = false;
             sideBtn.style.cursor = "grab";
         });
+
+        // リンクがドラッグ中に反応しないように preventDefault を追加
+        menubar.addEventListener('click', preventLinkDefault);
+        sideBtn.addEventListener('click', preventLinkDefault);
     });
 </script>
 
