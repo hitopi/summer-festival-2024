@@ -256,24 +256,10 @@ $(function() {
     document.addEventListener('DOMContentLoaded', function() {
         let isDragging = false;
         let startX;
-        const threshold = 50;  // ドラッグ距離のしきい値
         const menubar = document.getElementById('menubar_hdr');
         const sideBtn = document.getElementById('side-btn');
-
-        // ドラッグ操作の最初のポイント
-        function startDrag(event) {
-            isDragging = true;
-            startX = event.pageX;
-            menubar.style.cursor = "grabbing";
-            sideBtn.style.cursor = "grabbing";
-        }
-
-        // ドラッグ操作が終わる時の処理
-        function endDrag() {
-            isDragging = false;
-            menubar.style.cursor = "grab";
-            sideBtn.style.cursor = "grab";
-        }
+        const arrowBtn = document.getElementById('side-btn-arrow');
+        const threshold = 50; // ドラッグ操作のしきい値
 
         // menubarとside-btnを隠す関数
         function hideElements() {
@@ -287,39 +273,67 @@ $(function() {
             sideBtn.classList.remove('hidden');
         }
 
-        // ドラッグ中の動作
+        // ドラッグ開始時の処理
+        function startDrag(event) {
+            isDragging = true;
+            startX = event.pageX;
+            menubar.style.cursor = "grabbing";
+            sideBtn.style.cursor = "grabbing";
+        }
+
+        // ドラッグ終了時の処理
+        function endDrag() {
+            isDragging = false;
+            menubar.style.cursor = "grab";
+            sideBtn.style.cursor = "grab";
+        }
+
+        // ドラッグ中の処理
         function onDrag(event) {
             if (isDragging) {
                 const currentX = event.pageX;
                 const deltaX = currentX - startX;
 
-                if (deltaX < -threshold) { // しきい値を超えて左にドラッグ
-                    hideElements(); // menubarとside-btnを隠す
-                } else if (deltaX > threshold) { // しきい値を超えて右にドラッグ
-                    showElements(); // menubarとside-btnを表示する
+                if (deltaX < -threshold) { // 左にしきい値を超えてドラッグした場合
+                    hideElements();
+                } else if (deltaX > threshold) { // 右にしきい値を超えてドラッグした場合
+                    showElements();
                 }
             }
         }
 
-        // ドラッグ開始イベントを設定
+        // 矢印アイコンをクリックしたときにside-btnの表示・非表示を切り替える
+        arrowBtn.addEventListener('click', function() {
+            if (sideBtn.classList.contains('hidden')) {
+                showElements(); // 隠れている場合は表示
+            } else {
+                hideElements(); // 表示されている場合は非表示
+            }
+        });
+
+        // menubarのドラッグ操作のイベントリスナー
         menubar.addEventListener('mousedown', startDrag);
+
+        // side-btnのドラッグ操作のイベントリスナー
         sideBtn.addEventListener('mousedown', startDrag);
 
-        // ドラッグ終了イベントを設定
+        // ドラッグ終了時の処理
         document.addEventListener('mouseup', endDrag);
 
-        // ドラッグ中の動きを検出
+        // ドラッグ中の動作を監視する
         document.addEventListener('mousemove', onDrag);
 
         // リンクがドラッグ中に反応しないように preventDefault を追加
         menubar.addEventListener('click', function(event) {
-            if (isDragging) event.preventDefault();
+            if (isDragging) event.preventDefault(); // ドラッグ中はリンク動作を無効化
         });
         sideBtn.addEventListener('click', function(event) {
-            if (isDragging) event.preventDefault();
+            if (isDragging) event.preventDefault(); // ドラッグ中はリンク動作を無効化
         });
     });
 </script>
+
+
 
 
 
@@ -332,6 +346,11 @@ $(function() {
 
 <div id="side-btn">
     <p><a href="https://github.com/ユーザー名/リポジトリ名/raw/main/sample.pdf" target="_blank"><i class="fas fa-file-alt"></i>チラシはこちら</a></p>
+</div>
+
+<!-- 左矢印アイコンを追加 -->
+<div id="side-btn-arrow">
+    <i class="fas fa-angle-left"></i> <!-- 左矢印アイコン -->
 </div>
     
 <!-- ページトップへ戻るボタン -->
