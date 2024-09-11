@@ -305,13 +305,25 @@ body:not(.home) header #logo img {
     background-color: #72b275; /* 緑 */
 }
 
-.hidden {
-    transform: translateX(-100%); /* 左に隠す */
+
+
+/* ドラッグ操作およびトランジションの設定 */
+#side-btn,
+#menubar_hdr {
+    transition: transform 0.4s ease; /* 移動時のアニメーション効果 */
+    cursor: grab; /* ドラッグできることを示すカーソル */
 }
 
-.visible {
-    transform: translateX(0); /* 画面に戻す */
+/* 画面外に移動したときの設定 */
+.hidden {
+    transform: translateX(-90%); /* 左に移動して画面外へ隠す */
 }
+
+/* 画面内に戻すときの設定 */
+.visible {
+    transform: translateX(0); /* 元の位置に戻す */
+}
+
 
 
 /*mainブロック設定
