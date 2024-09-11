@@ -256,8 +256,24 @@ $(function() {
     document.addEventListener('DOMContentLoaded', function() {
         let isDragging = false;
         let startX;
+        const threshold = 50;  // ドラッグ距離のしきい値
         const menubar = document.getElementById('menubar_hdr');
         const sideBtn = document.getElementById('side-btn');
+
+        // ドラッグ操作の最初のポイント
+        function startDrag(event) {
+            isDragging = true;
+            startX = event.pageX;
+            menubar.style.cursor = "grabbing";
+            sideBtn.style.cursor = "grabbing";
+        }
+
+        // ドラッグ操作が終わる時の処理
+        function endDrag() {
+            isDragging = false;
+            menubar.style.cursor = "grab";
+            sideBtn.style.cursor = "grab";
+        }
 
         // menubarとside-btnを隠す関数
         function hideElements() {
@@ -271,66 +287,40 @@ $(function() {
             sideBtn.classList.remove('hidden');
         }
 
-        // ドラッグ開始時にリンクのデフォルト動作を無効化
-        function preventLinkDefault(event) {
-            if (isDragging) {
-                event.preventDefault(); // リンクや選択が引っ張られるのを防ぐ
-            }
-        }
-
-        // menubarのドラッグ開始
-        menubar.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            startX = e.pageX;
-            menubar.style.cursor = "grabbing";
-        });
-
         // ドラッグ中の動作
-        document.addEventListener('mousemove', (e) => {
+        function onDrag(event) {
             if (isDragging) {
-                const currentX = e.pageX;
-                if (currentX < startX - 50) { // 左に50px以上ドラッグした場合
+                const currentX = event.pageX;
+                const deltaX = currentX - startX;
+
+                if (deltaX < -threshold) { // しきい値を超えて左にドラッグ
                     hideElements(); // menubarとside-btnを隠す
-                } else if (currentX > startX + 50) { // 右に50px以上ドラッグした場合
+                } else if (deltaX > threshold) { // しきい値を超えて右にドラッグ
                     showElements(); // menubarとside-btnを表示する
                 }
             }
-        });
+        }
 
-        // ドラッグ終了時
-        document.addEventListener('mouseup', () => {
-            isDragging = false;
-            menubar.style.cursor = "grab";
-        });
+        // ドラッグ開始イベントを設定
+        menubar.addEventListener('mousedown', startDrag);
+        sideBtn.addEventListener('mousedown', startDrag);
 
-        // side-btnのドラッグ開始
-        sideBtn.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            startX = e.pageX;
-            sideBtn.style.cursor = "grabbing";
-        });
+        // ドラッグ終了イベントを設定
+        document.addEventListener('mouseup', endDrag);
 
-        document.addEventListener('mousemove', (e) => {
-            if (isDragging) {
-                const currentX = e.pageX;
-                if (currentX < startX - 50) {
-                    hideElements(); // side-btnも同様に隠す
-                } else if (currentX > startX + 50) {
-                    showElements(); // side-btnも同様に表示する
-                }
-            }
-        });
-
-        document.addEventListener('mouseup', () => {
-            isDragging = false;
-            sideBtn.style.cursor = "grab";
-        });
+        // ドラッグ中の動きを検出
+        document.addEventListener('mousemove', onDrag);
 
         // リンクがドラッグ中に反応しないように preventDefault を追加
-        menubar.addEventListener('click', preventLinkDefault);
-        sideBtn.addEventListener('click', preventLinkDefault);
+        menubar.addEventListener('click', function(event) {
+            if (isDragging) event.preventDefault();
+        });
+        sideBtn.addEventListener('click', function(event) {
+            if (isDragging) event.preventDefault();
+        });
     });
 </script>
+
 
 
 
