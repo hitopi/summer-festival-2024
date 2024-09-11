@@ -870,24 +870,28 @@ p.btn {margin: 0;}
     z-index: 21; /* 他の要素より前面に表示 */
     border-radius: 50%; /* 丸くする */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 影を付ける */
-    transition: transform 0.3s ease; /* 移動時のスムーズなアニメーション */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* 背景色やズームをスムーズに変更 */
 }
 
 
 #side-btn-arrow:hover {
     transform: translateX(-50%) scale(1.1); /* ホバー時に拡大 */
+    background-color: #ff5733; /* ホバー時に色を変える */
 }
 
 #side-btn-arrow i {
     color: #fff; /* アイコンの色 */
     font-size: 1.5em; /* アイコンの大きさ */
+    transition: transform 0.3s ease, color 0.3s ease; /* 矢印の回転をスムーズに */
 }
 
 /* ドラッグ時の矢印の回転 */
 .hidden #side-btn-arrow i {
-    transform: rotate(180deg); /* 矢印の方向を反転させる */
-    transition: transform 0.3s ease;
+    transform: rotate(180deg) scale(1.2); /* 矢印の方向を反転させ、少し拡大 */
+    color: #fff5e6; /* 回転時に矢印の色を少し明るく */
+    transition: transform 0.3s ease, color 0.3s ease; /* 回転と色のアニメーション */
 }
+
 
 
 /* テーブル
