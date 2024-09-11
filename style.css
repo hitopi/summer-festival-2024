@@ -250,6 +250,8 @@ body:not(.home) header #logo img {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    transition: transform 0.4s ease; /* 移動のトランジション */
+    cursor: grab; /* ドラッグできることを示すカーソル */
 }
 
 /* アイコンの共通設定 */
@@ -302,6 +304,15 @@ body:not(.home) header #logo img {
 #menubar_hdr_4 {
     background-color: #72b275; /* 緑 */
 }
+
+.hidden {
+    transform: translateX(-100%); /* 左に隠す */
+}
+
+.visible {
+    transform: translateX(0); /* 画面に戻す */
+}
+
 
 /*mainブロック設定
 ---------------------------------------------------------------------------*/
@@ -785,6 +796,8 @@ p.btn {margin: 0;}
     width: 100px;
     background-color: #c03c0e;
     z-index: 20; /* アイコンより手前に表示させる */
+    transition: transform 0.4s ease; /* 移動のトランジション */
+    cursor: grab; /* ドラッグできることを示すカーソル */
 }
 
 #side-btn a {
