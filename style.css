@@ -855,12 +855,11 @@ p.btn {margin: 0;}
     }
 }
 
-/* 矢印アイコンを追加 */
+/* 矢印アイコンの配置 */
 #side-btn-arrow {
-    position: absolute; /* 画面上で絶対位置に配置 */
-    top: 50%; /* header-menu と main の間で縦方向に中央配置 */
-    left: 50%; /* 画面横方向の中央に配置 */
-    transform: translate(-50%, -50%); /* 完全に中央に配置するための調整 */
+    position: relative; /* 親要素(main)に対して相対的に配置 */
+    margin: 0 auto; /* 左右中央に配置 */
+    top: 0; /* Mainの一番上 */
     width: 40px;
     height: 40px;
     background-color: #c03c0e; /* 背景色 */
@@ -868,8 +867,8 @@ p.btn {margin: 0;}
     justify-content: center;
     align-items: center;
     cursor: pointer; /* 矢印にカーソルを表示 */
-    z-index: 21; /* 他の要素より前面に表示 */
-    border-radius: 50%; /* 丸い形状 */
+    z-index: 21; /* 他の要素より前に表示 */
+    border-radius: 50%; /* 丸くする */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 影を付ける */
     transition: transform 0.3s ease, background-color 0.3s ease; /* アニメーション */
 }
