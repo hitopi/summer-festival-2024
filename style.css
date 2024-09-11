@@ -992,7 +992,7 @@ p.btn {margin: 0;}
 /*bg1（背景に色がついたタイプ）
 ---------------------------------------------------------------------------*/
 .bg1 {
-    background: #fff5e1 url(https://github.com/hitopi/summer-festival-2024/raw/main/in_dot.png);
+    background: #f7f7f7 url(https://github.com/hitopi/summer-festival-2024/raw/main/in_dot_2.png);
     background-size: cover;
     background-position: center;
     width: 100vw; /* 背景を画面全体に広げる */
@@ -1094,7 +1094,7 @@ p.btn {margin: 0;}
     margin: 50px 0;
     padding: 20px;
     text-align: center;
-    background-color: #fff5e1;
+    background-color: #f7f7f7;
     border-radius: 40px; /* 背景の角を丸くする */
 }
 
