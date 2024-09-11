@@ -845,10 +845,13 @@ p.btn {margin: 0;}
     animation: up1 0.8s both; /* up1 アニメーションを適用 */
 }
 
-/* 画面幅が899px以下の場合、side-btnを非表示に */
+/* 画面幅が899px以下の場合、side-btnとside-btn-arrowを非表示に */
 @media screen and (max-width: 899px) {
     #side-btn {
         display: none;
+    }
+    #side-btn-arrow {
+        display: none; /* 矢印アイコンも非表示に */
     }
 }
 
