@@ -253,71 +253,74 @@ $(function() {
 </script>
 
 <script>
-    let isDragging = false;
-    let startX;
-    const menubar = document.getElementById('menubar_hdr');
-    const sideBtn = document.getElementById('side-btn');
-    
-    // menubarとside-btnを隠す関数
-    function hideElements() {
-        menubar.classList.add('hidden');
-        sideBtn.classList.add('hidden');
-    }
+    document.addEventListener('DOMContentLoaded', function() {
+        let isDragging = false;
+        let startX;
+        const menubar = document.getElementById('menubar_hdr');
+        const sideBtn = document.getElementById('side-btn');
 
-    // menubarとside-btnを表示する関数
-    function showElements() {
-        menubar.classList.remove('hidden');
-        sideBtn.classList.remove('hidden');
-    }
-
-    // menubarのドラッグ開始
-    menubar.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startX = e.pageX;
-        menubar.style.cursor = "grabbing";
-    });
-
-    // ドラッグ中の動作
-    document.addEventListener('mousemove', (e) => {
-        if (isDragging) {
-            const currentX = e.pageX;
-            if (currentX < startX - 50) { // 左に50px以上ドラッグした場合
-                hideElements(); // menubarとside-btnを隠す
-            } else if (currentX > startX + 50) { // 右に50px以上ドラッグした場合
-                showElements(); // menubarとside-btnを表示する
-            }
+        // menubarとside-btnを隠す関数
+        function hideElements() {
+            menubar.classList.add('hidden');
+            sideBtn.classList.add('hidden');
         }
-    });
 
-    // ドラッグ終了時
-    document.addEventListener('mouseup', () => {
-        isDragging = false;
-        menubar.style.cursor = "grab";
-    });
-
-    // side-btnのドラッグ開始
-    sideBtn.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startX = e.pageX;
-        sideBtn.style.cursor = "grabbing";
-    });
-
-    document.addEventListener('mousemove', (e) => {
-        if (isDragging) {
-            const currentX = e.pageX;
-            if (currentX < startX - 50) {
-                hideElements(); // side-btnも同様に隠す
-            } else if (currentX > startX + 50) {
-                showElements(); // side-btnも同様に表示する
-            }
+        // menubarとside-btnを表示する関数
+        function showElements() {
+            menubar.classList.remove('hidden');
+            sideBtn.classList.remove('hidden');
         }
-    });
 
-    document.addEventListener('mouseup', () => {
-        isDragging = false;
-        sideBtn.style.cursor = "grab";
+        // menubarのドラッグ開始
+        menubar.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.pageX;
+            menubar.style.cursor = "grabbing";
+        });
+
+        // ドラッグ中の動作
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                const currentX = e.pageX;
+                if (currentX < startX - 50) { // 左に50px以上ドラッグした場合
+                    hideElements(); // menubarとside-btnを隠す
+                } else if (currentX > startX + 50) { // 右に50px以上ドラッグした場合
+                    showElements(); // menubarとside-btnを表示する
+                }
+            }
+        });
+
+        // ドラッグ終了時
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            menubar.style.cursor = "grab";
+        });
+
+        // side-btnのドラッグ開始
+        sideBtn.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.pageX;
+            sideBtn.style.cursor = "grabbing";
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                const currentX = e.pageX;
+                if (currentX < startX - 50) {
+                    hideElements(); // side-btnも同様に隠す
+                } else if (currentX > startX + 50) {
+                    showElements(); // side-btnも同様に表示する
+                }
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            sideBtn.style.cursor = "grab";
+        });
     });
 </script>
+
 
 
 <!--左上ボタン（参加アイコン）-->
