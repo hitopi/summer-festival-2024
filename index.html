@@ -145,6 +145,13 @@
             <a href="menu.html" target="_self">もっと詳しく<i class="fas fa-angle-double-right"></i></a>
         </p>
 
+        </section>
+
+        <!-- 矢印アイコンを追加 -->
+        <div id="side-btn-arrow">
+            <i class="fas fa-angle-left"></i> <!-- 左矢印アイコン -->
+        </div>
+
         <!-- 料金セクション -->
        <section class="event-info" style="margin-top: 100px;">
         <h2 class="flag">参加費について<span>Fee Information</span></h2>
@@ -282,6 +289,15 @@ $(function() {
         isHidden = false;  // フラグを更新
     }
 
+    // 矢印アイコンをクリックしたときにside-btnの表示・非表示を切り替える
+    arrowBtn.addEventListener('click', function() {
+        if (isHidden) {
+            showElements(); // 隠れている場合は表示
+        } else {
+            hideElements(); // 表示されている場合は非表示
+        }
+    });
+
     // ドラッグ開始時の処理
     function startDrag(event) {
         isDragging = true;
@@ -311,15 +327,6 @@ $(function() {
         }
     }
 
-    // 矢印アイコンをクリックしたときにside-btnの表示・非表示を切り替える
-    arrowBtn.addEventListener('click', function() {
-        if (isHidden) {
-            showElements(); // 隠れている場合は表示
-        } else {
-            hideElements(); // 表示されている場合は非表示
-        }
-    });
-
     // menubarのドラッグ操作のイベントリスナー
     menubars.forEach(menubar => menubar.addEventListener('mousedown', startDrag));
 
@@ -342,6 +349,7 @@ $(function() {
 });
 
 </script>
+
 
 <!--左上ボタン（参加アイコン）-->
 <a id="menubar_hdr" href="https://www.youtube.com/user/SEIKINTV">
