@@ -1051,26 +1051,36 @@ p.btn {margin: 0;}
     border-collapse: collapse; /* 境界線を一体化させる */
     text-align: center;
     font-size: 1.2em;
+    table-layout: fixed; /* カラムの幅を固定 */
 }
 
 .custom-table thead th {
-    background-color: #4a73c6; /* ヘッダーの背景色をさらに白っぽい青に変更 */
+    background-color: #4a73c6; /* ヘッダーの背景色 */
     color: #fff; /* 文字色 */
     padding: 15px;
     font-weight: bold;
-    border: 2px solid #bbb; /* 枠線を少し太くする */
+    border: 2px solid #bbb; /* 枠線を太く */
 }
 
 .custom-table tbody td {
     background-color: #fff;
     color: #333;
     padding: 15px;
-    border: 2px solid #bbb; /* 枠線を2pxに変更 */
+    border: 2px solid #bbb; /* 枠線を2pxに */
 }
 
 .custom-table tbody tr:last-child td {
-    border-bottom: 2px solid #bbb; /* 最後の行のボーダーも太くする */
+    border-bottom: 2px solid #bbb; /* 最後の行のボーダーも太く */
 }
+
+.custom-table th:nth-child(1) {
+    width: 30%; /* 券の種類のカラム幅を30%に設定 */
+}
+
+.custom-table th:nth-child(2), .custom-table th:nth-child(3) {
+    width: 20%; /* 学生と一般のカラムの幅を20%に設定 */
+}
+
 
 /* 強調表示 */
 .highlight {
