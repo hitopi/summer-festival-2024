@@ -1074,11 +1074,11 @@ p.btn {margin: 0;}
 }
 
 .custom-table th:nth-child(1) {
-    width: 30%; /* 券の種類のカラム幅を30%に設定 */
+    width: 40%; /* 券の種類のカラム幅を30%に設定 */
 }
 
 .custom-table th:nth-child(2), .custom-table th:nth-child(3) {
-    width: 20%; /* 学生と一般のカラムの幅を20%に設定 */
+    width: 15%; /* 学生と一般のカラムの幅を20%に設定 */
 }
 
 
