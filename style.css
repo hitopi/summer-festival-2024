@@ -1562,19 +1562,19 @@ main h2.flag::after {
 }
 
 .loader span:nth-child(1) {
-  border-radius: 50% 50% 30% 70% / 40% 60% 40% 60%;
+  border-radius: 55% 45% 50% 50% / 50% 60% 50% 40%;
   animation-delay: -0.5s; /* アニメーションの開始を0.5秒遅らせる */
 }
 
 .loader span:nth-child(2) {
   animation-direction: reverse;
-  border-radius: 35% 65% 35% 65% / 55% 45% 55% 45%;
+  border-radius: 60% 40% 45% 55% / 50% 50% 40% 60%;
   animation-delay: -1s; /* アニメーションの開始を1秒遅らせる */
 }
 
 .loader span:nth-child(3) {
   animation-duration: 3s;
-  border-radius: 40% 60% 40% 60% / 70% 30% 70% 30%;
+  border-radius: 50% 50% 40% 60% / 55% 45% 60% 40%;
   animation-delay: -1.5s; /* アニメーションの開始を1.5秒遅らせる */
 }
 
@@ -1611,6 +1611,7 @@ main h2.flag::after {
     visibility: visible; /* ローダー終了後にコンテンツを表示 */
     opacity: 1; /* フェードイン効果でコンテンツを表示 */
 }
+
 
 
 
