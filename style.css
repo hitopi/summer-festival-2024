@@ -1547,7 +1547,7 @@ main h2.flag::after {
     z-index: 9999; /* 最前面に表示 */
     flex-direction: column;
     opacity: 1;
-    transition: opacity 0.5s ease-out, visibility 0.5s ease-out; /* フェードアウトと共にvisibilityも切り替える */
+    transition: opacity 0.5s ease-out; /* フェードアウト用 */
     visibility: visible; /* 初期状態では見える */
 }
 
@@ -1595,7 +1595,8 @@ main h2.flag::after {
 .loaded {
     opacity: 0;
     visibility: hidden; /* ロード完了後にローダーを非表示に */
-    transition: opacity 0.5s ease-out, visibility 0.5s ease-out; /* visibilityもフェードアウトと同期 */
+    transition: opacity 0.5s ease-out, visibility 0s 0.5s; /* visibilityもフェードアウトと同期 */
+    pointer-events: none; /* ロード中はクリックなどのイベントを無効にする */
 }
 
 /* スマホなど小さい画面用の設定 */
@@ -1633,6 +1634,7 @@ main h2.flag::after {
     opacity: 1; /* フェードイン効果でコンテンツを表示 */
     transform: translateY(0); /* 元の位置に戻す */
 }
+
 
 
 
