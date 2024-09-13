@@ -250,9 +250,9 @@
     <script>
         window.onload = function () {
             setTimeout(() => {
-                document.querySelector(".loader").classList.add("loaded");
-                document.querySelector(".content").style.visibility = "visible";
-            }, 1300);
+                document.querySelector(".loader").classList.add("loaded"); /* ローダーを非表示に */
+                document.querySelector(".content").classList.add("visible"); /* コンテンツを表示 */
+            }, 1300); /* 1.3秒後にコンテンツ表示 */
         };
     </script>
 
