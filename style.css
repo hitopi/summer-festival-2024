@@ -1546,40 +1546,21 @@ main h2.flag::after {
     justify-content: center;
     align-items: center;
     z-index: 9999; /* 最前面に表示 */
+    flex-direction: column; /* 縦方向に揃える */
 }
 
 .loader span {
-    position: absolute; /* 要素を絶対位置で配置 */
-    top: 50%; /* 画面の垂直中央 */
-    left: 50%; /* 画面の水平中央 */
-    width: 40vw; /* 幅を画面幅の40%に */
-    height: 40vw; /* 高さも画面幅の40%に */
+    width: 60vw; /* 幅を画面幅の60%に */
+    height: 60vw; /* 高さを画面幅の60%に */
     max-width: 300px; /* 最大幅の設定（レスポンシブ対応） */
     max-height: 300px; /* 最大高さの設定（レスポンシブ対応） */
     border: 3px solid #2c53a1; /* サイトのメインカラー（青）に合わせたボーダー */
     animation: animate 4s ease-in-out infinite; /* 柔らかいアニメーション */
-    transform: translate(-50%, -50%); /* 完全に中央揃え */
-}
-
-.loader span:nth-child(1) {
-  border-radius: 86% 14% 55% 45% / 25% 68% 32% 75%;
-}
-
-.loader span:nth-child(2) {
-  animation-direction: reverse;
-  border-radius: 32% 68% 11% 89% / 63% 32% 68% 37%;
-}
-
-.loader span:nth-child(3) {
-  animation-duration: 3s;
-  border-radius: 43% 57% 55% 45% / 82% 60% 40% 18%;
+    border-radius: 86% 14% 55% 45% / 25% 68% 32% 75%; /* カスタム形状 */
 }
 
 .loader h2 {
-    position: absolute;
-    top: 60%; /* 画面中央やや下に配置 */
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 20px; /* ローダーの下に余白を追加 */
     color: #2c53a1; /* サイトのテーマカラーに合わせた文字色 */
     font-size: 2rem;
     font-family: "Hiragino Maru Gothic Pro", sans-serif; /* サイトと同じフォント */
@@ -1612,6 +1593,7 @@ main h2.flag::after {
     visibility: visible; /* ローダー終了後にコンテンツを表示 */
     opacity: 1; /* フェードイン効果でコンテンツを表示 */
 }
+
 
 
 
