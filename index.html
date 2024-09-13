@@ -247,34 +247,30 @@
 <script src="https://raw.githubusercontent.com/hitopi/summer-festival-2024/main/main.js"></script>
 
 <!-- ロード画面のスクリプト -->
-    <script>
-        window.onload = function () {
+<script>
+    window.onload = function () {
+        const loader = document.querySelector(".loader");
+        const content = document.querySelector(".content");
+
+        // 600px以下の画面幅の場合、ローダーを非表示にする
+        if (window.innerWidth <= 600) {
+            if (loader) {
+                loader.style.display = 'none';
+            }
+        } else {
+            // 600px以上の場合は1.3秒後にローダーを非表示にし、コンテンツを表示
             setTimeout(() => {
-                const loader = document.querySelector(".loader");
-                const content = document.querySelector(".content");
-        
                 if (loader) {
                     loader.classList.add("loaded");
                 }
-        
                 if (content) {
                     content.classList.add("visible");
                 }
             }, 1300);
-        };
-    </script>
-    
-    <script>
-        window.addEventListener('load', function() {
-            // 600px以下の画面幅の場合、ローダーを強制的に非表示にする
-            if (window.innerWidth <= 600) {
-                const loader = document.querySelector('.loader');
-                if (loader) {
-                    loader.style.display = 'none';
-                }
-            }
-        });
-    </script>
+        }
+    };
+</script>
+
 
     <!-- Vegas.jsスライドショー設定 -->
     <script>
