@@ -1579,7 +1579,7 @@ main h2.flag::after {
     border-radius: 59% 41% 63% 37% / 52% 73% 27% 48%;
     animation-delay: -1.5s; /* アニメーションの開始を1.5秒遅らせる */
 }
-
+	
 .loader h2 {
     color: #2c53a1; /* サイトのテーマカラーに合わせた文字色 */
     font-size: 2rem;
@@ -1600,10 +1600,17 @@ main h2.flag::after {
     .loader span {
         width: 50vw; /* スマホの画面幅に合わせて調整 */
         height: 50vw; /* スマホの画面幅に合わせて調整 */
+        animation: animate 4s ease-in-out infinite; /* アニメーションはサイズに応じて適用 */
     }
 
     .loader h2 {
         font-size: 1.5rem; /* スマホ用にフォントサイズを調整 */
+    }
+
+    /* ローダーが消える際に、display: noneで完全に非表示に */
+    .loaded {
+        opacity: 0;
+        display: none; /* ロード完了後にローダーを非表示に */
     }
 }
 
@@ -1630,5 +1637,6 @@ main h2.flag::after {
     opacity: 1; /* フェードイン効果でコンテンツを表示 */
     transform: translateY(0); /* 元の位置に戻す */
 }
+
 
 
