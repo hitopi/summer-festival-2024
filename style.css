@@ -1572,9 +1572,9 @@ main h2.flag::after {
 }
 
 .loader.loaded h2 {
-    opacity: 0; /* 強制的に透明にする */
-    visibility: hidden; /* 強制的に非表示にする */
-    display: none; /* 完全に非表示 */
+    opacity: 0 !important; /* 強制的に透明にする */
+    visibility: hidden !important; /* 強制的に非表示にする */
+    display: none !important; /* 完全に非表示 */
 }
 
 .loader span {
@@ -1614,6 +1614,10 @@ main h2.flag::after {
         visibility: hidden !important;
         opacity: 0 !important;
         pointer-events: none !important;
+    }
+
+    .loader h2 {
+        display: none !important; /* 600px以下でもh2を強制的に非表示に */
     }
 }
 
