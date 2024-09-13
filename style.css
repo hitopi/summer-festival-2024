@@ -1553,12 +1553,12 @@ main h2.flag::after {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 70%; 
-    height: 70%; 
-    border: 3px solid #2c53a1; /* サイトのメインカラー（青）に合わせたボーダー */
-    transform: translate(-50%, -50%) rotate(0deg); /* 中心を揃える */
-    transform-origin: center; /* 回転の軸をspanの中心に設定 */
-    animation: animate 4s ease-in-out infinite; /* 柔らかいアニメーション */
+    width: 200px; /* 固定値に設定 */
+    height: 200px; /* 固定値に設定 */
+    border: 3px solid #2c53a1;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform-origin: center;
+    animation: animate 4s ease-in-out infinite;
 }
 
 .loader span:nth-child(1) {
