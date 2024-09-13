@@ -1560,6 +1560,10 @@ main h2.flag::after {
     display: none; /* 完全に非表示 */
 }
 
+.loader.loaded h2 {
+    display: none; /* ローダー終了後にh2を確実に非表示 */
+}
+
 .loader span {
     position: absolute;
     top: 50%;
@@ -1610,8 +1614,8 @@ main h2.flag::after {
 
     .loader h2 {
         font-size: 1.5rem;
-        opacity: 1;
-        transition: opacity 0.5s ease-out;
+        opacity: 0; /* 小さい画面ではテキストを非表示 */
+        display: none; /* 小さい画面でもh2を非表示 */
     }
 }
 
@@ -1638,3 +1642,4 @@ main h2.flag::after {
     opacity: 1;
     transform: translateY(0);
 }
+
