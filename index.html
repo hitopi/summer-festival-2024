@@ -250,9 +250,17 @@
     <script>
         window.onload = function () {
             setTimeout(() => {
-                document.querySelector(".loader").classList.add("loaded"); /* ローダーを非表示に */
-                document.querySelector(".content").classList.add("visible"); /* コンテンツを表示 */
-            }, 1300); /* 1.3秒後にコンテンツ表示 */
+                const loader = document.querySelector(".loader");
+                const content = document.querySelector(".content");
+        
+                if (loader) {
+                    loader.classList.add("loaded");
+                }
+        
+                if (content) {
+                    content.classList.add("visible");
+                }
+            }, 1300);
         };
     </script>
 
