@@ -1611,6 +1611,7 @@ main h2.flag::after {
 @media screen and (max-width: 600px) {
     .loader {
         display: none !important; /* 600px以下ではローダーを完全に非表示にする */
+	bottom: -20%;	/*ヘッダーに対して、下からの配置場所の指定*/
         visibility: hidden !important;
         opacity: 0 !important;
         pointer-events: none !important;
