@@ -1549,14 +1549,14 @@ main h2.flag::after {
 }
 
 .loader span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50%; /* サイズを50%に縮小 */
-    height: 50%; /* サイズを50%に縮小 */
+    position: fixed; /* 要素を固定 */
+    top: 50%; /* 画面の垂直中央 */
+    left: 50%; /* 画面の水平中央 */
+    width: 60%; /* サイズを50%に縮小 */
+    height: 60%; /* サイズを50%に縮小 */
     border: 3px solid #2c53a1; /* サイトのメインカラー（青）に合わせたボーダー */
     animation: animate 4s ease-in-out infinite; /* 柔らかいアニメーション */
-    transform: translate(-50%, -50%); /* 要素を中央に揃える */
+    transform: translate(-50%, -50%); /* 完全な中央揃え */
 }
 
 .loader span:nth-child(1) {
@@ -1605,6 +1605,7 @@ main h2.flag::after {
     visibility: visible; /* ローダー終了後にコンテンツを表示 */
     opacity: 1; /* フェードイン効果でコンテンツを表示 */
 }
+
 
 
 
