@@ -541,15 +541,17 @@ ul.submenu li a:hover {
 /*listブロック
 ---------------------------------------------------------------------------*/
 /*listブロック全体を囲むブロック（※.list-squareでも使用しています）*/
+/* list-container に最大幅を設定して中央に配置する */
 .list-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    max-width: 1200px;  /* 最大幅を設定 */
+    margin: 0 auto;  /* 中央揃えにする */
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
-    overflow: visible; /* 要素のはみ出しを許容する */
+    overflow: visible;
 }
 
 .list-container .list {
