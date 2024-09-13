@@ -1546,40 +1546,58 @@ main h2.flag::after {
     justify-content: center;
     align-items: center;
     z-index: 9999; /* 最前面に表示 */
-    flex-direction: column; /* 縦方向に揃える */
-}
-
-.loader span {
-    width: 60vw; /* 幅を画面幅の60%に */
-    height: 60vw; /* 高さを画面幅の60%に */
-    max-width: 300px; /* 最大幅の設定（レスポンシブ対応） */
-    max-height: 300px; /* 最大高さの設定（レスポンシブ対応） */
-    border: 3px solid #2c53a1; /* サイトのメインカラー（青）に合わせたボーダー */
-    animation: animate 4s ease-in-out infinite; /* 柔らかいアニメーション */
-    border-radius: 86% 14% 55% 45% / 25% 68% 32% 75%; /* カスタム形状 */
 }
 
 .loader h2 {
-    margin-top: 20px; /* ローダーの下に余白を追加 */
+    position: absolute;
     color: #2c53a1; /* サイトのテーマカラーに合わせた文字色 */
     font-size: 2rem;
     font-family: "Hiragino Maru Gothic Pro", sans-serif; /* サイトと同じフォント */
     font-weight: 600; /* 少し軽めの太さで柔らかい印象に */
     text-align: center;
+    z-index: 10000; /* 図形の上に表示するための優先順位を設定 */
+}
+
+.loader span {
+    position: absolute; /* 絶対配置にして回転を実現 */
+    width: 150px; /* 固定の幅 */
+    height: 150px; /* 固定の高さ */
+    border: 3px solid #2c53a1; /* サイトのメインカラー（青）に合わせたボーダー */
+    border-radius: 50%; /* 図形を丸くする */
+    animation: orbit 4s linear infinite; /* 円周運動のアニメーション */
+}
+
+/* 各図形を異なる位置からスタートさせる */
+.loader span:nth-child(1) {
+    animation-delay: 0s;
+    top: -100px;
+    left: -200px;
+}
+
+.loader span:nth-child(2) {
+    animation-delay: 1s;
+    top: -200px;
+    left: 100px;
+}
+
+.loader span:nth-child(3) {
+    animation-delay: 2s;
+    top: 100px;
+    left: -300px;
+}
+
+/* 図形がテキストの周りを回るためのアニメーション */
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg) translateX(200px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(200px) rotate(-360deg);
+    }
 }
 
 .loaded {
     display: none; /* ロード完了後にローダーを非表示に */
-}
-
-/* アニメーションの調整 */
-@keyframes animate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 /* コンテンツの表示とフェードイン */
@@ -1593,6 +1611,7 @@ main h2.flag::after {
     visibility: visible; /* ローダー終了後にコンテンツを表示 */
     opacity: 1; /* フェードイン効果でコンテンツを表示 */
 }
+
 
 
 
