@@ -1591,6 +1591,22 @@ main h2.flag::after {
     display: none; /* ロード完了後にローダーを非表示に */
 }
 
+/* スマホなど小さい画面用の設定 */
+@media screen and (max-width: 600px) {
+    .loader span {
+        width: 50vw; /* スマホの画面幅に合わせて調整 */
+        height: 50vw; /* スマホの画面幅に合わせて調整 */
+    }
+
+    .loader h2 {
+        font-size: 1.5rem; /* スマホ用にフォントサイズを調整 */
+    }
+}
+
+.loaded {
+    display: none; /* ロード完了後にローダーを非表示に */
+}
+
 /* アニメーションの調整 */
 @keyframes animate {
     0% {
