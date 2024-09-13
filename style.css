@@ -1562,6 +1562,7 @@ main h2.flag::after {
 }
 
 .loader span:nth-child(1) {
+  animation-duration: 2s;
   border-radius: 54% 46% 82% 18% / 30% 52% 48% 70%;
   animation-delay: -0.5s; /* アニメーションの開始を0.5秒遅らせる */
 }
@@ -1573,7 +1574,7 @@ main h2.flag::after {
 }
 
 .loader span:nth-child(3) {
-  animation-duration: 3s;
+  animation-duration: 5s;
   border-radius: 59% 41% 63% 37% / 52% 73% 27% 48%;
   animation-delay: -1.5s; /* アニメーションの開始を1.5秒遅らせる */
 }
