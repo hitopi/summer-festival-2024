@@ -1553,11 +1553,11 @@ main h2.flag::after {
 }
 
 .loader.loaded {
-    opacity: 0 !important; /* 完全に透明にする */
-    visibility: hidden !important; /* 完全に非表示 */
+    opacity: 0; /* 完全に透明にする */
+    visibility: hidden; /* 完全に非表示 */
     pointer-events: none;
     transition: opacity 0.5s ease-out, visibility 0s 0.5s;
-    display: none !important; /* 表示を無効にする */
+    display: none; /* 表示を無効にする */
 }
 
 /* h2が表示されないようにする */
@@ -1572,9 +1572,9 @@ main h2.flag::after {
 }
 
 .loader.loaded h2 {
-    opacity: 0 !important; /* 強制的に透明にする */
-    visibility: hidden !important; /* 強制的に非表示にする */
-    display: none !important; /* 完全に非表示 */
+    opacity: 0; /* 強制的に透明にする */
+    visibility: hidden; /* 強制的に非表示にする */
+    display: none; /* 完全に非表示 */
 }
 
 .loader span {
@@ -1622,14 +1622,15 @@ main h2.flag::after {
     .loader span {
         width: 50vw;
         height: 50vw;
-        animation: animate 4s ease-in-out infinite;
+        animation: animate 4s ease-in-out infinite !important; /* 強制的にアニメーションを適用 */
     }
 
     .loader h2 {
-        font-size: 1.5rem;
-        display: none; /* 小さい画面ではh2を表示させない */
+        font-size: 1.5rem !important; /* 強制的にフォントサイズを適用 */
+        display: none !important; /* 小さい画面ではh2を表示させないことを強制 */
     }
 }
+
 
 /* アニメーションのスタイル */
 @keyframes animate {
@@ -1654,5 +1655,7 @@ main h2.flag::after {
     opacity: 1;
     transform: translateY(0);
 }
+
+
 
 
