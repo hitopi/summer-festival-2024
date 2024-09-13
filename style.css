@@ -696,10 +696,10 @@ ul.submenu li a:hover {
 ---------------------------------------------------------------------------*/
 /*１個あたりのボックス設定*/
 .list-square {
-    width: 30%; /* 幅を固定 */
-    margin: 10px; /* 上下左右に10pxの余白を追加 */
+    width: 30%;                /* 幅を調整 */
     position: relative;
     overflow: hidden;
+    margin: 0;                   /* 要素間の余白を完全になくす */
 }
 
 .list-square figure {
