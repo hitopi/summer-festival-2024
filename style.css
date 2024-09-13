@@ -1547,7 +1547,8 @@ main h2.flag::after {
     z-index: 9999; /* 最前面に表示 */
     flex-direction: column;
     opacity: 1;
-    transition: opacity 0.5s ease-out; /* フェードアウト用 */
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out; /* フェードアウトと共にvisibilityも切り替える */
+    visibility: visible; /* 初期状態では見える */
 }
 
 .loader span {
@@ -1579,20 +1580,22 @@ main h2.flag::after {
     border-radius: 59% 41% 63% 37% / 52% 73% 27% 48%;
     animation-delay: -1.5s; /* アニメーションの開始を1.5秒遅らせる */
 }
-	
+
 .loader h2 {
     color: #2c53a1; /* サイトのテーマカラーに合わせた文字色 */
     font-size: 2rem;
     font-family: "Hiragino Maru Gothic Pro", sans-serif; /* サイトと同じフォント */
     font-weight: 600; /* 少し軽めの太さで柔らかい印象に */
     z-index: 10000; /* テキストが図形の上に表示されるように */
+    opacity: 1; /* 初期表示時には見える状態 */
+    transition: opacity 0.5s ease-out;
 }
 
 /* ローダーが非表示になるスタイル */
 .loaded {
     opacity: 0;
-    display: none; /* ロード完了後にローダーを非表示に */
-    transition: opacity 0.5s ease-out;
+    visibility: hidden; /* ロード完了後にローダーを非表示に */
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out; /* visibilityもフェードアウトと同期 */
 }
 
 /* スマホなど小さい画面用の設定 */
@@ -1600,17 +1603,10 @@ main h2.flag::after {
     .loader span {
         width: 50vw; /* スマホの画面幅に合わせて調整 */
         height: 50vw; /* スマホの画面幅に合わせて調整 */
-        animation: animate 4s ease-in-out infinite; /* アニメーションはサイズに応じて適用 */
     }
 
     .loader h2 {
         font-size: 1.5rem; /* スマホ用にフォントサイズを調整 */
-    }
-
-    /* ローダーが消える際に、display: noneで完全に非表示に */
-    .loaded {
-        opacity: 0;
-        display: none; /* ロード完了後にローダーを非表示に */
     }
 }
 
