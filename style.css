@@ -1549,14 +1549,16 @@ main h2.flag::after {
 }
 
 .loader span {
-    position: fixed; /* 要素を固定 */
+    position: absolute; /* 要素を絶対位置で配置 */
     top: 50%; /* 画面の垂直中央 */
     left: 50%; /* 画面の水平中央 */
-    width: 60%; /* サイズを50%に縮小 */
-    height: 60%; /* サイズを50%に縮小 */
+    width: 40vw; /* 幅を画面幅の40%に */
+    height: 40vw; /* 高さも画面幅の40%に */
+    max-width: 300px; /* 最大幅の設定（レスポンシブ対応） */
+    max-height: 300px; /* 最大高さの設定（レスポンシブ対応） */
     border: 3px solid #2c53a1; /* サイトのメインカラー（青）に合わせたボーダー */
     animation: animate 4s ease-in-out infinite; /* 柔らかいアニメーション */
-    transform: translate(-50%, -50%); /* 完全な中央揃え */
+    transform: translate(-50%, -50%); /* 完全に中央揃え */
 }
 
 .loader span:nth-child(1) {
@@ -1574,10 +1576,15 @@ main h2.flag::after {
 }
 
 .loader h2 {
+    position: absolute;
+    top: 60%; /* 画面中央やや下に配置 */
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: #2c53a1; /* サイトのテーマカラーに合わせた文字色 */
     font-size: 2rem;
     font-family: "Hiragino Maru Gothic Pro", sans-serif; /* サイトと同じフォント */
     font-weight: 600; /* 少し軽めの太さで柔らかい印象に */
+    text-align: center;
 }
 
 .loaded {
@@ -1605,6 +1612,7 @@ main h2.flag::after {
     visibility: visible; /* ローダー終了後にコンテンツを表示 */
     opacity: 1; /* フェードイン効果でコンテンツを表示 */
 }
+
 
 
 
