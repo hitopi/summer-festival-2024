@@ -1558,6 +1558,18 @@ main h2.flag::after {
     pointer-events: none;
     transition: opacity 0.5s ease-out, visibility 0s 0.5s;
     display: none; /* 表示を無効にする */
+    animation: fadeOut 0.5s ease-out; /* フェードアウトアニメーションを追加 */
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px); /* 上にスライドしながらフェードアウト */
+    }
 }
 
 /* h2が表示されないようにする */
