@@ -1546,6 +1546,8 @@ main h2.flag::after {
     align-items: center;
     z-index: 9999; /* 最前面に表示 */
     flex-direction: column;
+    opacity: 1;
+    transition: opacity 0.5s ease-out; /* フェードアウト用 */
 }
 
 .loader span {
@@ -1561,21 +1563,21 @@ main h2.flag::after {
 }
 
 .loader span:nth-child(1) {
-  animation-duration: 2s;
-  border-radius: 54% 46% 82% 18% / 30% 52% 48% 70%;
-  animation-delay: -0.5s; /* アニメーションの開始を0.5秒遅らせる */
+    animation-duration: 2s;
+    border-radius: 54% 46% 82% 18% / 30% 52% 48% 70%;
+    animation-delay: -0.5s; /* アニメーションの開始を0.5秒遅らせる */
 }
 
 .loader span:nth-child(2) {
-  animation-direction: reverse;
-  border-radius: 28% 72% 29% 71% / 52% 73% 27% 48%;
-  animation-delay: -1s; /* アニメーションの開始を1秒遅らせる */
+    animation-direction: reverse;
+    border-radius: 28% 72% 29% 71% / 52% 73% 27% 48%;
+    animation-delay: -1s; /* アニメーションの開始を1秒遅らせる */
 }
 
 .loader span:nth-child(3) {
-  animation-duration: 5s;
-  border-radius: 59% 41% 63% 37% / 52% 73% 27% 48%;
-  animation-delay: -1.5s; /* アニメーションの開始を1.5秒遅らせる */
+    animation-duration: 5s;
+    border-radius: 59% 41% 63% 37% / 52% 73% 27% 48%;
+    animation-delay: -1.5s; /* アニメーションの開始を1.5秒遅らせる */
 }
 
 .loader h2 {
@@ -1586,8 +1588,11 @@ main h2.flag::after {
     z-index: 10000; /* テキストが図形の上に表示されるように */
 }
 
+/* ローダーが非表示になるスタイル */
 .loaded {
+    opacity: 0;
     display: none; /* ロード完了後にローダーを非表示に */
+    transition: opacity 0.5s ease-out;
 }
 
 /* スマホなど小さい画面用の設定 */
@@ -1600,10 +1605,6 @@ main h2.flag::after {
     .loader h2 {
         font-size: 1.5rem; /* スマホ用にフォントサイズを調整 */
     }
-}
-
-.loaded {
-    display: none; /* ロード完了後にローダーを非表示に */
 }
 
 /* アニメーションの調整 */
@@ -1629,4 +1630,5 @@ main h2.flag::after {
     opacity: 1; /* フェードイン効果でコンテンツを表示 */
     transform: translateY(0); /* 元の位置に戻す */
 }
+
 
