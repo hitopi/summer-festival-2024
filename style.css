@@ -1541,7 +1541,7 @@ main h2.flag::after {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #e3e3e3; /* 背景色 */
+    background: #f7f7f7; /* 背景色 */
     display: flex;
     justify-content: center;
     align-items: center;
