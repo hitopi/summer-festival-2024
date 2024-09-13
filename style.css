@@ -1553,11 +1553,11 @@ main h2.flag::after {
 }
 
 .loader.loaded {
-    opacity: 0;
-    visibility: hidden;
+    opacity: 0 !important; /* 完全に透明にする */
+    visibility: hidden !important; /* 完全に非表示 */
     pointer-events: none;
     transition: opacity 0.5s ease-out, visibility 0s 0.5s;
-    display: none; /* 完全に非表示 */
+    display: none !important; /* 表示を無効にする */
 }
 
 /* h2が表示されないようにする */
@@ -1572,7 +1572,8 @@ main h2.flag::after {
 }
 
 .loader.loaded h2 {
-    display: none; /* ローダーが消えた後、h2も確実に非表示にする */
+    opacity: 0 !important; /* 強制的に透明化 */
+    display: none !important; /* 強制的に非表示 */
 }
 
 .loader span {
