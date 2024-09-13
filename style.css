@@ -1619,6 +1619,14 @@ main h2.flag::after {
     }
 }
 
+/* 他の@mediaの影響を排除する */
+@media screen and (max-width: 900px) {
+    /* 他の画面幅に対する影響を確認し、600px以下の指定が上書きされないようにする */
+    .loader h2 {
+        opacity: 1;
+        display: block;
+    }
+}
 
 /* アニメーションの調整 */
 @keyframes animate {
@@ -1629,6 +1637,7 @@ main h2.flag::after {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
+
 
 /* コンテンツの表示とフェードイン */
 .content {
