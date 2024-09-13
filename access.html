@@ -17,6 +17,14 @@
 
 <body class="access">
 
+<!-- ロード画面 -->
+<div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+    <h2>ようこそ、納涼祭のホームページへ！</h2>
+</div>
+
 <header>
     <!-- ヘッダー部分 -->
     <h1 id="logo">
@@ -79,6 +87,16 @@
 </main>
 
 </div> <!-- /#container -->
+
+<!-- ロード画面のスクリプト -->
+    <script>
+        window.onload = function () {
+            setTimeout(() => {
+                document.querySelector(".loader").classList.add("loaded"); /* ローダーを非表示に */
+                document.querySelector(".content").classList.add("visible"); /* コンテンツを表示 */
+            }, 1300); /* 1.3秒後にコンテンツ表示 */
+        };
+    </script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
