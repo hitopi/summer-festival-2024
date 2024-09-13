@@ -1559,17 +1559,17 @@ main h2.flag::after {
 }
 
 .loader span:nth-child(1) {
-    border-radius: 50% 50% 50% 50%; /* 丸い形でサイトに調和 */
+  border-radius: 86% 14% 55% 45% / 25% 68% 32% 75%;
 }
 
 .loader span:nth-child(2) {
-    animation-direction: reverse;
-    border-radius: 50% 50% 50% 50%; /* 一貫性のある丸い形 */
+  animation-direction: reverse;
+  border-radius: 32% 68% 11% 89% / 63% 32% 68% 37%;
 }
 
 .loader span:nth-child(3) {
-    animation-duration: 2.5s;
-    border-radius: 50% 50% 50% 50%; /* 一貫性を保つ */
+  animation-duration: 3s;
+  border-radius: 43% 57% 55% 45% / 82% 60% 40% 18%;
 }
 
 .loader h2 {
