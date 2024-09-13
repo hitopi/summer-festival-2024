@@ -696,7 +696,8 @@ ul.submenu li a:hover {
 ---------------------------------------------------------------------------*/
 /*１個あたりのボックス設定*/
 .list-square {
-    width: 33.3%; /* 幅を固定 */
+    width: 30%; /* 幅を固定 */
+    margin: 10px; /* 上下左右に10pxの余白を追加 */
     position: relative;
     overflow: hidden;
 }
