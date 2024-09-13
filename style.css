@@ -1616,20 +1616,6 @@ main h2.flag::after {
     transition: opacity 0.5s ease-out;
 }
 
-/* 小さい画面用のスタイル */
-@media screen and (max-width: 600px) {
-    .loader span {
-        width: 50vw;
-        height: 50vw;
-        animation: animate 4s ease-in-out infinite;
-    }
-
-    .loader h2 {
-        font-size: 1.5rem;
-        display: none; /* 小さい画面ではh2を表示させない */
-    }
-}
-
 /* アニメーションのスタイル */
 @keyframes animate {
     0% {
