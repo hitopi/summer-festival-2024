@@ -1572,8 +1572,9 @@ main h2.flag::after {
 }
 
 .loader.loaded h2 {
-    opacity: 0 !important; /* 強制的に透明化 */
-    display: none !important; /* 強制的に非表示 */
+    opacity: 0 !important; /* 強制的に透明にする */
+    visibility: hidden !important; /* 強制的に非表示にする */
+    display: none !important; /* 完全に非表示 */
 }
 
 .loader span {
@@ -1614,6 +1615,20 @@ main h2.flag::after {
     z-index: 10000;
     opacity: 1;
     transition: opacity 0.5s ease-out;
+}
+
+/* 小さい画面用のスタイル */
+@media screen and (max-width: 600px) {
+    .loader span {
+        width: 50vw;
+        height: 50vw;
+        animation: animate 4s ease-in-out infinite;
+    }
+
+    .loader h2 {
+        font-size: 1.5rem;
+        display: none; /* 小さい画面ではh2を表示させない */
+    }
 }
 
 /* アニメーションのスタイル */
