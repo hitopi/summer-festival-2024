@@ -1548,7 +1548,7 @@ main h2.flag::after {
     flex-direction: column;
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.5s ease-out, visibility 0s 0.5s;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
     pointer-events: all; /* 初期状態でローダーはクリック可能 */
 }
 
@@ -1556,12 +1556,8 @@ main h2.flag::after {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.5s ease-out, visibility 0s 0.5s;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
     display: none; /* 完全に非表示 */
-}
-
-.loader.loaded h2 {
-    display: none; /* ローダー終了後にh2を確実に非表示 */
 }
 
 .loader span {
@@ -1617,11 +1613,16 @@ main h2.flag::after {
         opacity: 0 !important; /* 小さい画面ではテキストを確実に非表示 */
         display: none !important; /* 小さい画面でもh2を確実に非表示 */
     }
+
+    /* 600px以下でもローダー全体を非表示にしないように調整 */
+    .loader.loaded {
+        display: none; /* ロードが終わった後に完全に非表示に */
+    }
 }
 
 /* 他の@mediaの影響を排除する */
-@media screen and (max-width: 900px) {
-    /* 他の画面幅に対する影響を確認し、600px以下の指定が上書きされないようにする */
+@media screen and (min-width: 601px) {
+    /* 600px以上の画面では通常通り表示 */
     .loader h2 {
         opacity: 1;
         display: block;
@@ -1637,7 +1638,6 @@ main h2.flag::after {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
-
 
 /* コンテンツの表示とフェードイン */
 .content {
