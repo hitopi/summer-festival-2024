@@ -247,152 +247,134 @@
 <script src="https://raw.githubusercontent.com/hitopi/summer-festival-2024/main/main.js"></script>
 
 <!-- ロード画面のスクリプト -->
-<script>
-    window.onload = function () {
-    setTimeout(() => {
-        document.querySelector(".loader").classList.add("loaded");
-        document.querySelector(".content").style.visibility = "visible";
-   　 }, 1300);
-    };
-</script>
+    <script>
+        window.onload = function () {
+            setTimeout(() => {
+                document.querySelector(".loader").classList.add("loaded");
+                document.querySelector(".content").style.visibility = "visible";
+            }, 1300);
+        };
+    </script>
 
-<!-- Vegas.jsを使ってスライドショーを設定 -->
-<script>
-$(function() {
-    $('#mainimg').vegas({
-        slides: [
-            { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/in_slide_show_1.png' },
-            { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/in_slide_show_2.png' },
-            { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/in_slide_show_3.png' }
-        ],
-        cover: true,  // スライドショーの背景画像をコンテナ全体にカバー
-        transition: 'blur',  // 切り替え時のエフェクト
-        animation: 'kenburns',  // スライド中のアニメーション
-        delay: 6000,  // 各スライドの表示時間
-        animationDuration: 10000,  // アニメーションの表示時間
-        timer: false  // タイマー非表示
-    });
-});
-</script>
+    <!-- Vegas.jsスライドショー設定 -->
+    <script>
+        $(function() {
+            $('#mainimg').vegas({
+                slides: [
+                    { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/in_slide_show_1.png' },
+                    { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/in_slide_show_2.png' },
+                    { src: 'https://github.com/hitopi/summer-festival-2024/raw/main/in_slide_show_3.png' }
+                ],
+                cover: true,
+                transition: 'blur',
+                animation: 'kenburns',
+                delay: 6000,
+                animationDuration: 10000,
+                timer: false
+            });
+        });
+    </script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        let isDragging = false;
-        let startX;
-        const menubars = document.querySelectorAll('[id^="menubar_hdr"]'); // IDがmenubar_hdrで始まるすべての要素を取得
-        const sideBtn = document.getElementById('side-btn');
-        const arrowBtn1 = document.getElementById('side-btn-arrow'); // 1つ目の矢印
-        const arrowBtn2 = document.getElementById('side-btn-arrow-2'); // 2つ目の矢印
-        const threshold = 50; // ドラッグ操作のしきい値
-        let isHidden = false;  // メニューが隠れているかどうかを管理するフラグ
+    <!-- メニュー関連のスクリプト -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let isDragging = false;
+            let startX;
+            const menubars = document.querySelectorAll('[id^="menubar_hdr"]');
+            const sideBtn = document.getElementById('side-btn');
+            const arrowBtn1 = document.getElementById('side-btn-arrow');
+            const arrowBtn2 = document.getElementById('side-btn-arrow-2');
+            const threshold = 50;
+            let isHidden = false;
 
-        // menubarとside-btnを隠す関数
-        function hideElements() {
-            menubars.forEach(menubar => menubar.classList.add('hidden'));
-            sideBtn.classList.add('hidden');
-            arrowBtn1.querySelector('i').style.transform = 'rotate(180deg)'; // 矢印の向きを変更
-            arrowBtn2.querySelector('i').style.transform = 'rotate(180deg)'; // 2つ目の矢印も変更
-            isHidden = true;  // フラグを更新
-        }
-
-        // menubarとside-btnを表示する関数
-        function showElements() {
-            menubars.forEach(menubar => menubar.classList.remove('hidden'));
-            sideBtn.classList.remove('hidden');
-            arrowBtn1.querySelector('i').style.transform = 'rotate(0deg)'; // 矢印の向きを元に戻す
-            arrowBtn2.querySelector('i').style.transform = 'rotate(0deg)'; // 2つ目の矢印も元に戻す
-            isHidden = false;  // フラグを更新
-        }
-
-        // 矢印アイコンをクリックしたときにside-btnの表示・非表示を切り替える
-        function toggleVisibility() {
-            if (isHidden) {
-                showElements(); // 隠れている場合は表示
-            } else {
-                hideElements(); // 表示されている場合は非表示
+            function hideElements() {
+                menubars.forEach(menubar => menubar.classList.add('hidden'));
+                sideBtn.classList.add('hidden');
+                arrowBtn1.querySelector('i').style.transform = 'rotate(180deg)';
+                arrowBtn2.querySelector('i').style.transform = 'rotate(180deg)';
+                isHidden = true;
             }
-        }
 
-        // 1つ目の矢印にイベントリスナーを追加
-        arrowBtn1.addEventListener('click', toggleVisibility);
+            function showElements() {
+                menubars.forEach(menubar => menubar.classList.remove('hidden'));
+                sideBtn.classList.remove('hidden');
+                arrowBtn1.querySelector('i').style.transform = 'rotate(0deg)';
+                arrowBtn2.querySelector('i').style.transform = 'rotate(0deg)';
+                isHidden = false;
+            }
 
-        // 2つ目の矢印にイベントリスナーを追加
-        arrowBtn2.addEventListener('click', toggleVisibility);
-
-        // ドラッグ開始時の処理
-        function startDrag(event) {
-            isDragging = true;
-            startX = event.pageX;
-            menubars.forEach(menubar => menubar.style.cursor = "grabbing");
-            sideBtn.style.cursor = "grabbing";
-        }
-
-        // ドラッグ終了時の処理
-        function endDrag() {
-            isDragging = false;
-            menubars.forEach(menubar => menubar.style.cursor = "grab");
-            sideBtn.style.cursor = "grab";
-        }
-
-        // ドラッグ中の処理
-        function onDrag(event) {
-            if (isDragging) {
-                const currentX = event.pageX;
-                const deltaX = currentX - startX;
-
-                if (deltaX < -threshold) { // 左にしきい値を超えてドラッグした場合
-                    hideElements();
-                } else if (deltaX > threshold) { // 右にしきい値を超えてドラッグした場合
+            function toggleVisibility() {
+                if (isHidden) {
                     showElements();
+                } else {
+                    hideElements();
                 }
             }
-        }
 
-        // menubarのドラッグ操作のイベントリスナー
-        menubars.forEach(menubar => menubar.addEventListener('mousedown', startDrag));
+            arrowBtn1.addEventListener('click', toggleVisibility);
+            arrowBtn2.addEventListener('click', toggleVisibility);
 
-        // side-btnのドラッグ操作のイベントリスナー
-        sideBtn.addEventListener('mousedown', startDrag);
+            function startDrag(event) {
+                isDragging = true;
+                startX = event.pageX;
+                menubars.forEach(menubar => menubar.style.cursor = "grabbing");
+                sideBtn.style.cursor = "grabbing";
+            }
 
-        // ドラッグ終了時の処理
-        document.addEventListener('mouseup', endDrag);
+            function endDrag() {
+                isDragging = false;
+                menubars.forEach(menubar => menubar.style.cursor = "grab");
+                sideBtn.style.cursor = "grab";
+            }
 
-        // ドラッグ中の動作を監視する
-        document.addEventListener('mousemove', onDrag);
+            function onDrag(event) {
+                if (isDragging) {
+                    const currentX = event.pageX;
+                    const deltaX = currentX - startX;
 
-        // リンクがドラッグ中に反応しないように preventDefault を追加
-        menubars.forEach(menubar => menubar.addEventListener('click', function(event) {
-            if (isDragging) event.preventDefault(); // ドラッグ中はリンク動作を無効化
-        }));
-        sideBtn.addEventListener('click', function(event) {
-            if (isDragging) event.preventDefault(); // ドラッグ中はリンク動作を無効化
+                    if (deltaX < -threshold) {
+                        hideElements();
+                    } else if (deltaX > threshold) {
+                        showElements();
+                    }
+                }
+            }
+
+            menubars.forEach(menubar => menubar.addEventListener('mousedown', startDrag));
+            sideBtn.addEventListener('mousedown', startDrag);
+            document.addEventListener('mouseup', endDrag);
+            document.addEventListener('mousemove', onDrag);
+
+            menubars.forEach(menubar => menubar.addEventListener('click', function(event) {
+                if (isDragging) event.preventDefault();
+            }));
+            sideBtn.addEventListener('click', function(event) {
+                if (isDragging) event.preventDefault();
+            });
         });
-    });
-</script>
+    </script>
 
+    <!-- 参加リンク -->
+    <a id="menubar_hdr" href="https://forms.gle/5AfDjNdrMo6gqYeY8">
+        <span>参加</span>
+        <i class="fas fa-link"></i>
+    </a>
 
+    <div id="side-btn">
+        <p><a href="https://github.com/ユーザー名/リポジトリ名/raw/main/sample.pdf" target="_blank"><i class="fas fa-file-alt"></i>チラシはこちら</a></p>
+    </div>
 
-<!--左上ボタン（参加アイコン）-->
-<a id="menubar_hdr" href="https://forms.gle/5AfDjNdrMo6gqYeY8">
-    <span>参加</span> <!-- 参加の文字を追加 -->
-    <i class="fas fa-link"></i> <!-- ここに表示するアイコンを指定 -->
-</a>
+    <!-- ページトップへ戻るボタン -->
+    <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
 
-<div id="side-btn">
-    <p><a href="https://github.com/ユーザー名/リポジトリ名/raw/main/sample.pdf" target="_blank"><i class="fas fa-file-alt"></i>チラシはこちら</a></p>
-</div>
-    
-<!-- ページトップへ戻るボタン -->
-<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
-
-<!-- ページの一番下に追加 -->
-<footer>
-    <h1 id="logo">
-        <a href="index.html">
-            <img src="https://github.com/hitopi/summer-festival-2024/raw/main/in_logo_6.png" alt="施設のロゴ">
-        </a>
-    </h1>
-</footer>
+    <!-- フッター -->
+    <footer>
+        <h1 id="logo">
+            <a href="index.html">
+                <img src="https://github.com/hitopi/summer-festival-2024/raw/main/in_logo_6.png" alt="施設のロゴ">
+            </a>
+        </h1>
+    </footer>
 
 </body>
 </html>
