@@ -1604,12 +1604,14 @@ main h2.flag::after {
 .content {
     visibility: hidden; /* 初期状態ではコンテンツは非表示 */
     opacity: 0;
-    transition: all 0.3s ease; /* スムーズな遷移 */
+    transform: scale(0.8); /* 初期状態で少し縮小 */
+    transition: all 0.6s ease-in-out; /* スムーズなアニメーション */
 }
 
 .content.visible {
     visibility: visible; /* ローダー終了後にコンテンツを表示 */
     opacity: 1; /* フェードイン効果でコンテンツを表示 */
+    transform: scale(1); /* 通常サイズに拡大 */
 }
 
 
