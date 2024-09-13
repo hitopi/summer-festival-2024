@@ -1548,16 +1548,16 @@ main h2.flag::after {
     flex-direction: column;
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.5s ease-out, visibility 0s 0.5s; /* visibilityもフェードアウトと同期 */
+    transition: opacity 0.5s ease-out, visibility 0s 0.5s;
     pointer-events: all; /* 初期状態でローダーはクリック可能 */
 }
 
 .loader.loaded {
-    opacity: 0; /* フェードアウト */
-    visibility: hidden; /* フェードアウト後に非表示 */
-    pointer-events: none; /* ロード完了後にクリック不可 */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     transition: opacity 0.5s ease-out, visibility 0s 0.5s;
-    display: none; /* 最終的にローダーを画面から完全に消す */
+    display: none; /* 完全に非表示 */
 }
 
 .loader span {
@@ -1605,6 +1605,7 @@ main h2.flag::after {
     .loader span {
         width: 50vw;
         height: 50vw;
+        animation: animate 4s ease-in-out infinite; /* スマホでもアニメーションを有効に */
     }
 
     .loader h2 {
@@ -1637,8 +1638,3 @@ main h2.flag::after {
     opacity: 1;
     transform: translateY(0);
 }
-
-
-
-
-
