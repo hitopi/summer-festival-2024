@@ -1541,7 +1541,7 @@ main h2.flag::after {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.9); /* 明るい半透明の背景で、ページと調和 */
+    background: #f7f7f7; /* 背景色 */
     display: flex;
     justify-content: center;
     align-items: center;
