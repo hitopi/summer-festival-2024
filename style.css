@@ -1560,6 +1560,10 @@ main h2.flag::after {
     display: none; /* 完全に非表示 */
 }
 
+.loader.loaded h2 {
+    display: none !important; /* ローダー終了後にh2を確実に非表示 */
+}
+
 .loader span {
     position: absolute;
     top: 50%;
@@ -1614,9 +1618,8 @@ main h2.flag::after {
         display: none !important; /* 小さい画面でもh2を確実に非表示 */
     }
 
-    /* 600px以下でもローダー全体を非表示にしないように調整 */
-    .loader.loaded {
-        display: none; /* ロードが終わった後に完全に非表示に */
+    .loader.loaded h2 {
+        display: none !important; /* ロードが終了したら完全にh2を非表示 */
     }
 }
 
@@ -1652,4 +1655,5 @@ main h2.flag::after {
     opacity: 1;
     transform: translateY(0);
 }
+
 
