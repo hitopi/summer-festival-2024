@@ -142,14 +142,29 @@
 </div> <!-- /#container -->
 
 <!-- ロード画面のスクリプト -->
-    <script>
-        window.onload = function () {
+<script>
+    window.onload = function () {
+        const loader = document.querySelector(".loader");
+        const content = document.querySelector(".content");
+
+        // 600px以下の画面幅の場合、ローダーを非表示にする
+        if (window.innerWidth <= 600) {
+            if (loader) {
+                loader.style.display = 'none';
+            }
+        } else {
+            // 600px以上の場合は1.3秒後にローダーを非表示にし、コンテンツを表示
             setTimeout(() => {
-                document.querySelector(".loader").classList.add("loaded"); /* ローダーを非表示に */
-                document.querySelector(".content").classList.add("visible"); /* コンテンツを表示 */
-            }, 300); /* 0.3秒後にコンテンツ表示 */
-        };
-    </script>
+                if (loader) {
+                    loader.classList.add("loaded");
+                }
+                if (content) {
+                    content.classList.add("visible");
+                }
+            }, 1300);
+        }
+    };
+</script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
