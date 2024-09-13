@@ -1614,10 +1614,11 @@ main h2.flag::after {
 
     .loader h2 {
         font-size: 1.5rem;
-        opacity: 0; /* 小さい画面ではテキストを非表示 */
-        display: none; /* 小さい画面でもh2を非表示 */
+        opacity: 0 !important; /* 小さい画面ではテキストを確実に非表示 */
+        display: none !important; /* 小さい画面でもh2を確実に非表示 */
     }
 }
+
 
 /* アニメーションの調整 */
 @keyframes animate {
