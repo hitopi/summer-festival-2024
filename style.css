@@ -1568,7 +1568,7 @@ main h2.flag::after {
 
 .loader span:nth-child(2) {
   animation-direction: reverse;
-  border-radius: 26% 74% 32% 68% / 7% 62% 38% 93%;
+  border-radius: 28% 72% 29% 71% / 52% 73% 27% 48%;
   animation-delay: -1s; /* アニメーションの開始を1秒遅らせる */
 }
 
