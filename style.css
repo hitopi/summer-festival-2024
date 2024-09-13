@@ -1607,30 +1607,15 @@ main h2.flag::after {
     animation-delay: -1.5s;
 }
 
-.loader h2 {
-    color: #2c53a1;
-    font-size: 2rem;
-    font-family: "Hiragino Maru Gothic Pro", sans-serif;
-    font-weight: 600;
-    z-index: 10000;
-    opacity: 1;
-    transition: opacity 0.5s ease-out;
-}
-
 /* 小さい画面用のスタイル */
 @media screen and (max-width: 600px) {
-    .loader span {
-        width: 50vw;
-        height: 50vw;
-        animation: animate 4s ease-in-out infinite !important; /* 強制的にアニメーションを適用 */
-    }
-
-    .loader h2 {
-        font-size: 1.5rem !important; /* 強制的にフォントサイズを適用 */
-        display: none !important; /* 小さい画面ではh2を表示させないことを強制 */
+    .loader {
+        display: none !important; /* 600px以下ではローダーを完全に非表示にする */
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
     }
 }
-
 
 /* アニメーションのスタイル */
 @keyframes animate {
@@ -1655,6 +1640,7 @@ main h2.flag::after {
     opacity: 1;
     transform: translateY(0);
 }
+
 
 
 
