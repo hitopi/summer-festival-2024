@@ -1548,20 +1548,31 @@ main h2.flag::after {
     flex-direction: column;
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
-    pointer-events: all; /* 初期状態でローダーはクリック可能 */
+    transition: opacity 0.5s ease-out, visibility 0s 0.5s;
+    pointer-events: all;
 }
 
 .loader.loaded {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+    transition: opacity 0.5s ease-out, visibility 0s 0.5s;
     display: none; /* 完全に非表示 */
 }
 
+/* h2が表示されないようにする */
+.loader h2 {
+    color: #2c53a1;
+    font-size: 2rem;
+    font-family: "Hiragino Maru Gothic Pro", sans-serif;
+    font-weight: 600;
+    z-index: 10000;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
 .loader.loaded h2 {
-    display: none !important; /* ローダー終了後にh2を確実に非表示 */
+    display: none; /* ローダーが消えた後、h2も確実に非表示にする */
 }
 
 .loader span {
@@ -1604,35 +1615,21 @@ main h2.flag::after {
     transition: opacity 0.5s ease-out;
 }
 
-/* スマホなど小さい画面用の設定 */
+/* 小さい画面用のスタイル */
 @media screen and (max-width: 600px) {
     .loader span {
         width: 50vw;
         height: 50vw;
-        animation: animate 4s ease-in-out infinite; /* スマホでもアニメーションを有効に */
+        animation: animate 4s ease-in-out infinite;
     }
 
     .loader h2 {
         font-size: 1.5rem;
-        opacity: 0 !important; /* 小さい画面ではテキストを確実に非表示 */
-        display: none !important; /* 小さい画面でもh2を確実に非表示 */
-    }
-
-    .loader.loaded h2 {
-        display: none !important; /* ロードが終了したら完全にh2を非表示 */
+        display: none; /* 小さい画面ではh2を表示させない */
     }
 }
 
-/* 他の@mediaの影響を排除する */
-@media screen and (min-width: 601px) {
-    /* 600px以上の画面では通常通り表示 */
-    .loader h2 {
-        opacity: 1;
-        display: block;
-    }
-}
-
-/* アニメーションの調整 */
+/* アニメーションのスタイル */
 @keyframes animate {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
@@ -1642,7 +1639,7 @@ main h2.flag::after {
     }
 }
 
-/* コンテンツの表示とフェードイン */
+/* コンテンツの表示 */
 .content {
     visibility: hidden;
     opacity: 0;
