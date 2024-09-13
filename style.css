@@ -1534,14 +1534,13 @@ main h2.flag::after {
 }
 
 
-/* ホームページのデザインに合わせたローダーのスタイル */
 .loader {
-    position: fixed; /* 画面全体を覆う */
+    position: absolute; /* fixedからabsoluteに変更 */
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #f7f7f7; /* 背景色 */
+    background: #f7f7f7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1553,58 +1552,37 @@ main h2.flag::after {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 800px; /* 固定値に設定 */
-    height: 800px; /* 固定値に設定 */
+    width: 70vw; /* 固定値ではなく、画面幅に応じた可変値に変更 */
+    height: 70vw; /* 固定値ではなく、画面幅に応じた可変値に変更 */
+    max-width: 800px; /* 最大幅を設定 */
+    max-height: 800px; /* 最大高さを設定 */
     border: 3px solid #2c53a1;
     transform: translate(-50%, -50%) rotate(0deg);
     transform-origin: center;
     animation: animate 4s ease-in-out infinite;
 }
 
-.loader span:nth-child(1) {
-  animation-duration: 2s;
-  border-radius: 54% 46% 82% 18% / 30% 52% 48% 70%;
-  animation-delay: -0.5s; /* アニメーションの開始を0.5秒遅らせる */
-}
-
-.loader span:nth-child(2) {
-  animation-direction: reverse;
-  border-radius: 28% 72% 29% 71% / 52% 73% 27% 48%;
-  animation-delay: -1s; /* アニメーションの開始を1秒遅らせる */
-}
-
-.loader span:nth-child(3) {
-  animation-duration: 5s;
-  border-radius: 59% 41% 63% 37% / 52% 73% 27% 48%;
-  animation-delay: -1.5s; /* アニメーションの開始を1.5秒遅らせる */
-}
-
 .loader h2 {
-    color: #2c53a1; /* サイトのテーマカラーに合わせた文字色 */
+    color: #2c53a1;
     font-size: 2rem;
-    font-family: "Hiragino Maru Gothic Pro", sans-serif; /* サイトと同じフォント */
-    font-weight: 600; /* 少し軽めの太さで柔らかい印象に */
-    z-index: 10000; /* テキストが図形の上に表示されるように */
+    font-family: "Hiragino Maru Gothic Pro", sans-serif;
+    font-weight: 600;
+    z-index: 10000;
 }
 
-.loaded {
-    display: none; /* ロード完了後にローダーを非表示に */
-}
-
-/* スマホなど小さい画面用の設定 */
 @media screen and (max-width: 600px) {
     .loader span {
-        width: 50vw; /* スマホの画面幅に合わせて調整 */
-        height: 50vw; /* スマホの画面幅に合わせて調整 */
+        width: 50vw;
+        height: 50vw;
     }
 
     .loader h2 {
-        font-size: 1.5rem; /* スマホ用にフォントサイズを調整 */
+        font-size: 1.5rem;
     }
 }
 
 .loaded {
-    display: none; /* ロード完了後にローダーを非表示に */
+    display: none;
 }
 
 /* アニメーションの調整 */
@@ -1619,14 +1597,15 @@ main h2.flag::after {
 
 /* コンテンツの表示とフェードイン */
 .content {
-    visibility: hidden; /* 初期状態ではコンテンツは非表示 */
+    visibility: hidden;
     opacity: 0;
-    transform: translateY(20px); /* 初期状態で少し下にずらす */
-    transition: all 0.6s ease-out; /* スムーズなアニメーション */
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
 }
 
 .content.visible {
-    visibility: visible; /* ローダー終了後にコンテンツを表示 */
-    opacity: 1; /* フェードイン効果でコンテンツを表示 */
-    transform: translateY(0); /* 元の位置に戻す */
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
+
