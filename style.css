@@ -1533,7 +1533,7 @@ main h2.flag::after {
 
 }
 
-
+/* ホームページのデザインに合わせたローダーのスタイル */
 .loader {
     position: absolute; /* fixedからabsoluteに変更 */
     top: 0;
