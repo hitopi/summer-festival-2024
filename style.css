@@ -1294,28 +1294,11 @@ p.btn {margin: 0;}
 
 /* 新しい当日のレイアウトセクション */
 .event-layout {
-    background-color: #eef1f7; /* 柔らかい青灰色の背景で洗練された印象 */
-    padding: 60px 20px;
-    border-radius: 12px; /* 滑らかな角丸 */
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1); /* エレガントな影 */
+    margin: 50px 0;
+    padding: 20px;
     text-align: center;
-    margin-bottom: 50px;
-}
-
-.event-layout h2 {
-    font-size: 2.6em;
-    font-weight: bold;
-    color: #2c53a1;
-    margin-bottom: 45px;
-    letter-spacing: 1px; /* 文字の間隔を少し広げてモダンな印象に */
-}
-
-.event-layout h2 span {
-    display: block;
-    font-size: 0.8em;
-    font-weight: normal;
-    color: #7a7a7a; /* 英語の部分には柔らかいグレーを使用 */
-    margin-top: 12px;
+    background-color: #f7f7f7;
+    border-radius: 40px; /* 背景の角を丸くする */
 }
 
 .layout-photo-container {
