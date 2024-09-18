@@ -801,7 +801,9 @@ p.btn {margin: 0;}
 
 /*ボタンを囲むブロック*/
 .btn {
-	text-align: center;	/*内容をセンタリング*/
+    text-align: center;    /*内容をセンタリング*/
+    max-width: 1600px;     /* 横幅の最大サイズを1600pxに設定 */
+    margin: 0 auto;        /* ボタンを中央に配置 */
 }
 
 /*ボタン*/
