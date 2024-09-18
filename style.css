@@ -797,45 +797,51 @@ ul.submenu li a:hover {
 
 /*btnの設定
 ---------------------------------------------------------------------------*/
-p.btn {margin: 0;}
+p.btn {
+    margin: 20px 0 0; /* 上に20pxのマージンを追加 */
+    text-align: center; /* p タグ自体のセンタリング */
+}
 
 /*ボタンを囲むブロック*/
 .btn {
     text-align: center;    /*内容をセンタリング*/
     max-width: 1600px;     /* 横幅の最大サイズを1600pxに設定 */
     margin: 0 auto;        /* ボタンを中央に配置 */
+    display: inline-block;  /* 要素をインラインブロックにして中央に寄せる */
 }
 
 /*ボタン*/
 .btn a,
 .btn input {
-	text-decoration: none;border: none;
-	display: block;
-	font-size: 1em;
-	box-shadow: 2px 2px 5px rgba(0,0,0,0.2);	/*ボックスの影。右へ、下へ、ぼかし幅の順。0,0,0は黒の事で0.2は色が20%出た状態。*/
-	background: #2c53a1;	/*背景色*/
-	letter-spacing: 0.1em;	/*文字間隔を少し広くする指定*/
-	color: #fff;			/*文字色*/
-	transition: 0.3s;		/*hoverまでにかける時間。0.3秒。*/
-	padding: 0.7em 1em;		/*上下、左右へのボタン内の余白*/
-	margin-top: 2em;		/*ボタンの上に１文字分のスペースを空ける*/
+    text-decoration: none;
+    border: none;
+    font-size: 1em;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);    /*ボックスの影。右へ、下へ、ぼかし幅の順。0,0,0は黒の事で0.2は色が20%出た状態。*/
+    background: #2c53a1;    /*背景色*/
+    letter-spacing: 0.1em;    /*文字間隔を少し広くする指定*/
+    color: #fff;            /*文字色*/
+    transition: 0.3s;        /*hoverまでにかける時間。0.3秒。*/
+    padding: 0.7em 1em;        /*上下、左右へのボタン内の余白*/
+    margin-top: 2em;        /*ボタンの上に１文字分のスペースを空ける*/
+    display: inline-block;    /* display を inline-block にして中央に寄せる */
 }
 
 /*ボタンのマウスオン時*/
 .btn a:hover,
 .btn input:hover {
-	cursor: pointer;			/*inputタグを使う場合に「手」のマークになるように。リンクと同じ表示になるようにという事です。*/
-	opacity: 1;					/*一番上のリンク設定でhoverにopacityを指定しているので、適用されないようにする。*/
-	filter: brightness(1.2);	/*少しだけ明るくする。*/
-	transform: scale(1.02);		/*実寸の102%に拡大*/
+    cursor: pointer;            /*inputタグを使う場合に「手」のマークになるように。リンクと同じ表示になるようにという事です。*/
+    opacity: 1;                    /*一番上のリンク設定でhoverにopacityを指定しているので、適用されないようにする。*/
+    filter: brightness(1.2);    /*少しだけ明るくする。*/
+    transform: scale(1.02);        /*実寸の102%に拡大*/
 }
 
 /*ボタン内にiタグを使った場合*/
 .btn i {
-	margin-left: 15px;		/*テキストとの間に空ける余白*/
-	opacity: 0.5;			/*透明度。色が50%でた状態。*/
-	transform: scale(1.4);	/*サイズを1.4倍にする*/
+    margin-left: 15px;        /*テキストとの間に空ける余白*/
+    opacity: 0.5;            /*透明度。色が50%でた状態。*/
+    transform: scale(1.4);    /*サイズを1.4倍にする*/
 }
+
 
 /*「資料請求はこちら」ボタン
 ---------------------------------------------------------------------------*/
