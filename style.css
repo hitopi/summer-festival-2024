@@ -176,7 +176,7 @@ body:not(.home) header #logo img {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .event-details {
         display: none; /* Hide the text on smaller screens */
     }
