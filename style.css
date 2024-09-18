@@ -178,11 +178,10 @@ body:not(.home) header #logo img {
 
 @media (max-width: 500px) {
     .event-details {
-        font-size: 1.8em;
-        top: 10%; /* Further adjustment for very small screens */
-        content: "10/4(金)"; /* Show only the date on smaller screens */
+        display: none; /* Hide the text on smaller screens */
     }
 }
+
 
 /*ヘッダー下のメニュー
 ---------------------------------------------------------------------------*/
