@@ -1687,6 +1687,51 @@ main h2.flag::after {
     transform: translateY(0);
 }
 
+/* New Event Layout Section */
+.event-layout {
+    background-color: #eef1f7; /* Subtle blue-grey background for a fresh look */
+    padding: 60px 20px;
+    border-radius: 12px; /* Smooth rounded corners */
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1); /* Deeper shadow for elegance */
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.event-layout h2 {
+    font-size: 2.6em;
+    font-weight: bold;
+    color: #2c53a1;
+    margin-bottom: 45px;
+    letter-spacing: 1px; /* Slight spacing for more modern typography */
+}
+
+.event-layout h2 span {
+    display: block;
+    font-size: 0.8em;
+    font-weight: normal;
+    color: #7a7a7a; /* Softer grey for the English text */
+    margin-top: 12px;
+}
+
+.layout-photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.layout-photo img {
+    max-width: 90%;
+    border-radius: 12px; /* Rounded corners on the image */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Deep shadow for the image */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth hover effect */
+}
+
+.layout-photo img:hover {
+    transform: scale(1.08); /* Slight zoom on hover */
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25); /* Larger shadow on hover */
+}
 
 
 
