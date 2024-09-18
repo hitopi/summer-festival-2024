@@ -1085,6 +1085,7 @@ p.btn {margin: 0;}
 /* テーブルのスタイル */
 .custom-table {
     width: 100%;
+    max-width: 1600px;
     margin: 20px 0;
     border-collapse: collapse; /* 境界線を一体化させる */
     text-align: center;
