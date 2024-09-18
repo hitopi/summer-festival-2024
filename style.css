@@ -1123,6 +1123,7 @@ p.btn {margin: 0;}
 
 /* 強調表示 */
 .highlight {
+    text-align: center;
     font-size: 1.5em;
     color: #e53935; /* 赤で強調 */
     font-weight: bold;
