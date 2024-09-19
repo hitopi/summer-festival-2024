@@ -159,13 +159,14 @@ body:not(.home) header #logo img {
 /* 日付と時間のテキスト部分 */
 .event-details {
     position: absolute;
-    top: 30%; /* Adjust this value to bring the text higher */
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: clamp(1.5em, 1.5em + 1vw, 2.2em); /* Font size smoothly increases, capped at 2.2em */
+    font-size: clamp(1em, 1.5vw, 2.2em); /* フォントサイズが自動的に調整されます */
     color: #fff;
     font-weight: bold;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    white-space: nowrap; /* 改行を防止 */
 }
 
 @media (max-width: 900px) {
