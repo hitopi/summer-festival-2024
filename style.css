@@ -392,53 +392,54 @@ main p {
 main p + p {margin-top: -10px;}
 
 
-/*フッターメニュー設定
+/* フッターメニュー設定
 ---------------------------------------------------------------------------*/
-/*ボックス全体の設定*/
+/* ボックス全体の設定 */
 #footermenu {
-	background: #333;	/*背景色*/
-	color: #FFFFFF;		/*文字色*/
-	font-size: 0.8em;	/*文字サイズ*/
-	display: flex;		/*flexボックスを使う指定*/
-	justify-content: space-between;	/*並びかたの種類の指定*/
-	align-items: flex-start;		/*垂直揃えの指定。上に配置されるように。*/
+    background: #333;  /* 背景色 */
+    color: #FFFFFF;    /* 文字色 */
+    font-size: 0.8em;  /* 文字サイズ */
+    display: flex;     /* flexボックスを使う指定 */
+    justify-content: space-between; /* 並び方の種類の指定 */
+    align-items: flex-start; /* 垂直揃えの指定。上に配置されるように。 */
 }
 
-/*ボックス内のリンクテキスト設定*/
+/* ボックス内のリンクテキスト設定 */
 #footermenu a {
-	text-decoration: none;
-	color: #FFFFFF;	/*文字色*/
+    text-decoration: none;
+    color: #FFFFFF;  /* 文字色 */
 }
 
-/*リンクテキストのマウスオン時*/
+/* リンクテキストのマウスオン時 */
 #footermenu a:hover {
-	color: #ccc;	/*文字色*/
+    color: #ccc;  /* マウスオン時の文字色 */
 }
 
-/*ulタグ（メニューの列単位）*/
+/* ulタグ（メニューの列単位） */
 #footermenu ul {
-	margin: 0;
-	padding: 0 2px;
-	flex: 1;
-	list-style: none;
+    margin: 0;
+    padding: 0 2px;
+    flex: 1;
+    list-style: none;
 }
 
-/*title*/
+/* title */
 #footermenu .title {
-	font-weight: bold;		/*太字にする*/
-	color: #ccc;			/*文字色*/
-	padding-bottom: 5px;	/*下に空けるスペース*/
+    font-weight: bold; /* 太字にする */
+    color: #ccc;       /* 文字色 */
+    padding-bottom: 5px; /* 下に空けるスペース */
 }
 
-
-/*フッター設定
+/* フッター設定
 ---------------------------------------------------------------------------*/
-footer small {font-size: 100%;}
+footer small {
+    font-size: 100%;
+}
 
 /* フッターブロック */
 footer {
     background: #2c53a1; /* ヘッダーと同じ背景色 */
-    position: relative; /* 絶対位置を相対位置に変更 */
+    position: relative;  /* 絶対位置を相対位置に変更 */
     padding: 20px;
     text-align: center;
     color: #FFFFFF;
@@ -448,16 +449,27 @@ footer {
     margin-top: 50px; /* フッター前に少しスペースを追加 */
 }
 
+/* フッター内のリンクテキストの設定 */
+footer a {
+    color: #FFFFFF; /* 文字色を白に設定 */
+    text-decoration: none; /* リンクの下線を削除 */
+}
+
+/* リンクにホバーしたときの色 */
+footer a:hover {
+    color: #ccc; /* ホバー時の文字色を薄いグレーに設定 */
+}
+
 /* ロゴ画像 */
 footer #logo {
-    margin: 0 auto;      /* 中央に配置 */
+    margin: 0 auto; /* 中央に配置 */
 }
 
 /* フッターロゴ画像の高さをheaderと統一 */
 footer #logo img {
     display: block;
-    height: 80px;        /* headerと同じ画像の高さ */
-    margin: 0 auto;      /* 中央配置 */
+    height: 80px;  /* headerと同じ画像の高さ */
+    margin: 0 auto; /* 中央配置 */
 }
 
 /*2カラムの場合
