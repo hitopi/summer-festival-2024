@@ -168,12 +168,42 @@ body:not(.home) header #logo img {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 1810px) and (min-width: 901px) {
+/* 1810px以下 */
+@media (max-width: 1810px) {
     .event-details {
-        font-size: 1.8em; /* Adjust font size for medium screens */
+        font-size: 2em;
     }
 }
 
+/* 1600px以下 */
+@media (max-width: 1600px) {
+    .event-details {
+        font-size: 1.8em;
+    }
+}
+
+/* 1400px以下 */
+@media (max-width: 1400px) {
+    .event-details {
+        font-size: 1.6em;
+    }
+}
+
+/* 1200px以下 */
+@media (max-width: 1200px) {
+    .event-details {
+        font-size: 1.4em;
+    }
+}
+
+/* 1000px以下 */
+@media (max-width: 1000px) {
+    .event-details {
+        font-size: 1.2em;
+    }
+}
+
+/* 900px以下 */
 @media (max-width: 900px) {
     .event-details {
         display: none; /* Hide the text on smaller screens */
