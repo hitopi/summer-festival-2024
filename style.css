@@ -169,14 +169,14 @@ body:not(.home) header #logo img {
 }
 
 /* Responsive styles for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .event-details {
         font-size: 2em;
         top: 15%; /* Adjust the position for smaller screens */
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .event-details {
         display: none; /* Hide the text on smaller screens */
     }
