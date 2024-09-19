@@ -395,8 +395,8 @@ main p + p {margin-top: -10px;}
 /*ボックス全体の設定*/
 #footermenu {
 	background: #333;	/*背景色*/
-	color: #999;		/*文字色*/
-	font-size: 0.7em;	/*文字サイズ*/
+	color: #FFFFFF;		/*文字色*/
+	font-size: 0.8em;	/*文字サイズ*/
 	display: flex;		/*flexボックスを使う指定*/
 	justify-content: space-between;	/*並びかたの種類の指定*/
 	align-items: flex-start;		/*垂直揃えの指定。上に配置されるように。*/
@@ -405,7 +405,7 @@ main p + p {margin-top: -10px;}
 /*ボックス内のリンクテキスト設定*/
 #footermenu a {
 	text-decoration: none;
-	color: #999;	/*文字色*/
+	color: #FFFFFF;	/*文字色*/
 }
 
 /*リンクテキストのマウスオン時*/
