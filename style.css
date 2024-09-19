@@ -439,8 +439,8 @@ footer {
     position: relative; /* 絶対位置を相対位置に変更 */
     padding: 20px;
     text-align: center;
-    color: #999;
-    font-size: 0.6em;
+    color: #FFFFFF;
+    font-size: 0.8em;
     bottom: 0; /* ページの下部に固定 */
     width: 100%;
     margin-top: 50px; /* フッター前に少しスペースを追加 */
