@@ -159,7 +159,7 @@ body:not(.home) header #logo img {
 /* 日付と時間のテキスト部分 */
 .event-details {
     position: absolute;
-    top: 20%; /* Adjust this value to bring the text higher */
+    top: 30%; /* Adjust this value to bring the text higher */
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2.0em;
