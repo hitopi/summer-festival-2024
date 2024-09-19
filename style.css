@@ -168,11 +168,18 @@ body:not(.home) header #logo img {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 1810px) and (min-width: 901px) {
+    .event-details {
+        font-size: 1.8em; /* Adjust font size for medium screens */
+    }
+}
+
 @media (max-width: 900px) {
     .event-details {
         display: none; /* Hide the text on smaller screens */
     }
 }
+
 
 
 /*ヘッダー下のメニュー
