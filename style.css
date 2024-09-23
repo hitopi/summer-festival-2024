@@ -872,6 +872,16 @@ p.btn {margin: 0;}
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
+span.icon {
+    display: inline-block;  /* インラインブロックに設定 */
+    padding: 10px 20px;  /* 十分な内側余白を設定 */
+    background-color: rgba(0, 150, 255, 0.6);  /* バックグラウンドカラーを設定（お好みで） */
+    border-radius: 50%;  /* 完全な丸にする */
+    line-height: normal;  /* 行の高さを通常に設定 */
+    margin-top: -30px; /* 上部の位置を調整 */
+    position: relative; /* 位置を調整するために相対位置を使用 */
+}
+
 
 /*「資料請求はこちら」ボタン
 ---------------------------------------------------------------------------*/
