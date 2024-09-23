@@ -840,6 +840,39 @@ p.btn {margin: 0;}
 	transform: scale(1.4);	/*サイズを1.4倍にする*/
 }
 
+/*過去の写真*/
+.list.blur {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.list.blur::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    border-radius: 50%;
+    transition: transform 0.6s ease, opacity 0.8s ease;
+}
+
+.list.blur:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.list.blur:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
 /*「資料請求はこちら」ボタン
 ---------------------------------------------------------------------------*/
 /* side-btnをmenubarの下に配置する */
